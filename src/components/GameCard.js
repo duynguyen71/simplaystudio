@@ -8,42 +8,37 @@ import {
   Heading,
   Image,
   CardFooter,
+  Divider,
+  ButtonGroup,
+  Box,
+  Container,
 } from "@chakra-ui/react";
-function GameCard({ title, description, rating, id }) {
+const GameCard = (props) => {
+  const { name, thumb } = props;
+
   return (
-    <>
-      <Card
-        cursor={"pointer"}
-        direction={{ base: "column", sm: "row" }}
-        overflow="hidden"
-        variant="outline"
-        align={"center"}
+    <Box
+      boxSize={"300"}
+      borderRadius={"md"}
+      position="relative"
+      backgroundImage={`${process.env.PUBLIC_URL}/images/6.5_ver2023.4.1 1.png`}
+      backgroundPosition={"center"}
+      backgroundRepeat={"no-repeat"}
+      backgroundSize={"cover"}
+    >
+      {/* Content */}
+      <Box
+        p="1"
+        borderRadius={"md"}
+        bg="purple.500"
+        bottom={-5}
+        left={10}
+        position={"absolute"}
       >
-        <Image
-          objectFit="cover"
-          maxW={{ base: "100%", sm: "300px" }}
-          src="https://images.unsplash.com/photo-1667489022797-ab608913feeb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw5fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=800&q=60"
-          alt="Caffe Latte"
-        />
-
-        <Stack>
-          <CardBody>
-            <Heading size="md">The perfect latte</Heading>
-            <Text py="2">
-              Caffè latte is a coffee beverage of Italian origin made with
-              espresso and steamed milk.
-            </Text>
-          </CardBody>
-
-          {/* <CardFooter> */}
-          {/* <Button variant='solid' colorScheme='blue'>
-                Buy Latte
-            </Button> */}
-          {/* </CardFooter> */}
-        </Stack>
-      </Card>
-    </>
+        <Text>{name}</Text>
+      </Box>
+    </Box>
   );
-}
+};
 
 export default GameCard;

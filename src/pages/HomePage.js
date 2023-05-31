@@ -1,41 +1,41 @@
-import { Box, Grid, GridItem, Image } from "@chakra-ui/react";
+import {
+  Box,
+  Flex,
+  Grid,
+  GridItem,
+  Heading,
+  Image,
+  Stack,
+} from "@chakra-ui/react";
 import React from "react";
 import GameCard from "../components/GameCard";
-import CaptionCarousel from "../components/Carousel";
+import { CaptionCarousel } from "../components/CaptionCarousel";
+import ImageCarousel from "../components/ImageCarousel";
+import games from "../data/game";
+import Hero from "../components/Hero";
+import CustomHeading from "../components/CustomHeading";
 
 const HomePage = () => {
   return (
-    <Box minH={"60vh"} padding={4}>
-      <Grid
-        // h="200px"
-        templateRows="repeat(1, 1fr)"
-        templateColumns="repeat(2, 1fr)"
-        gap={4}
-      >
-        <GridItem rowSpan={2} colSpan={1}>
-          <Box>
-            <Image
-              boxShadow={"md"}
-              borderRadius={"md"}
-              overflow={"hidden"}
-              objectFit="cover"
-              // maxW={{ base: "100%", sm: "400px" }}
-              src="https://images.unsplash.com/photo-1667489022797-ab608913feeb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw5fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=800&q=60"
-              alt="Caffe Latte"
-            />{" "}
-          </Box>
-        </GridItem>
-        <GridItem colSpan={2}>
-          <GameCard />
-        </GridItem>
-        <GridItem colSpan={2}>
-          <GameCard />
-        </GridItem>
-        <GridItem colSpan={4}>
-          <GameCard />
-        </GridItem>
-      </Grid>
-      <CaptionCarousel />
+    <Box minH={"100vh"} padding={4}>
+      <Box height={"5vh"} />
+      <Flex direction={"row"} justifyContent={"space-between"}>
+        {/* Hero */}
+        <Box flex={5}>
+          <Hero />
+        </Box>
+        <Box w={10} />
+        {/* Game Hight Light */}
+        <Box width={"50vw"} boxShadow="lg" flex={7}>
+          <CaptionCarousel games={games} />
+        </Box>
+      </Flex>
+      <CustomHeading text={"Top Free Games"} />
+      <Flex alignItems={"center"} justifyContent={"space-between"}>
+        {games.slice(0, 4).map((game, index) => (
+          <GameCard key={index} {...game} />
+        ))}
+      </Flex>
     </Box>
   );
 };

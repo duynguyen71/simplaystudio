@@ -11,9 +11,9 @@ import {
   IconButton,
   useColorModeValue,
 } from "@chakra-ui/react";
-import { FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
+import { FaTiktok, FaYoutube } from "react-icons/fa";
 import { BiMailSend } from "react-icons/bi";
-
+import socialMediaLinks from "../data/socialMediaLinks";
 import {} from "@chakra-ui/icons";
 import { AppStoreBadge, PlayStoreBadge } from "./StoreBadges";
 
@@ -88,14 +88,11 @@ export default function LargeWithNewsletter() {
               © 2023 Fireworks Play. All rights reserved
             </Text>
             <Stack direction={"row"} spacing={6}>
-              <SocialButton label={"Twitter"} href={"#"}>
-                <FaTwitter />
-              </SocialButton>
-              <SocialButton label={"YouTube"} href={"#"}>
+              <SocialButton label={"YouTube"} href={socialMediaLinks.youtube}>
                 <FaYoutube />
               </SocialButton>
-              <SocialButton label={"Instagram"} href={"#"}>
-                <FaInstagram />
+              <SocialButton label={"Tiktok"} href={socialMediaLinks.tiktok}>
+                <FaTiktok />
               </SocialButton>
             </Stack>
           </Stack>

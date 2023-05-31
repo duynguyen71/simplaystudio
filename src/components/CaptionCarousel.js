@@ -7,10 +7,10 @@ import {
   Heading,
   Text,
   Container,
+  Image,
+  AspectRatio,
 } from "@chakra-ui/react";
-// Here we have used react-icons package for the icons
 import { BiLeftArrowAlt, BiRightArrowAlt } from "react-icons/bi";
-// And react-slick as our Carousel Lib
 import Slider from "react-slick";
 import games from "../data/game";
 // Settings for the slider
@@ -26,7 +26,7 @@ const settings = {
   slidesToScroll: 1,
 };
 
-export default function CaptionCarousel() {
+export const CaptionCarousel = ({ games }) => {
   const [slider, setSlider] = useState();
 
   const top = useBreakpointValue({ base: "90%", md: "50%" });
@@ -49,11 +49,10 @@ export default function CaptionCarousel() {
 
   return (
     <>
-      <Box minH="5vh" />
       {/*  */}
       <Box
         position={"relative"}
-        height={"600px"}
+        height={"70vh"}
         width={"full"}
         overflow={"hidden"}
         borderRadius={"md"}
@@ -85,40 +84,47 @@ export default function CaptionCarousel() {
         >
           <BiRightArrowAlt size="40px" />
         </IconButton>
-        <Slider {...settings} ref={(slider) => setSlider(slider)}>
-          {games.map((game, index) => (
-            <Box
-              key={index}
-              height={"6xl"}
-              position="relative"
-              backgroundPosition="center"
-              backgroundRepeat="no-repeat"
-              backgroundSize="cover"
-              backgroundImage={`url(${
-                cards[Math.floor(Math.random() * 3)].image
-              })`}
-            >
-              <Container size="container.lg" height="600px" position="relative">
-                <Stack
-                  spacing={6}
-                  w={"full"}
-                  maxW={"lg"}
-                  position="absolute"
-                  top="50%"
-                  transform="translate(0, -50%)"
+        <AspectRatio height={"100%"} ratio={"4/5"}>
+          {/* <AspectRatio height={"100%"} ratio={"16/9"}> */}
+          <Slider {...settings} ref={(slider) => setSlider(slider)}>
+            {games.map((game, index) => (
+              <Box
+                key={index}
+                // height={"6xl"}
+                position="relative"
+                backgroundPosition="center"
+                backgroundRepeat="no-repeat"
+                backgroundSize="cover"
+                backgroundImage={`${
+                  process.env.PUBLIC_URL
+                }/images/6.5_ver2023.4.1 ${index + 1}.png`}
+              >
+                <Container
+                  size="container.lg"
+                  height="600px"
+                  position="relative"
                 >
-                  <Heading fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }}>
-                    {game.name}
-                  </Heading>
-                  <Text fontSize={{ base: "md", lg: "lg" }} color="GrayText">
-                    {game.shortDescription}
-                  </Text>
-                </Stack>
-              </Container>
-            </Box>
-          ))}
-        </Slider>
+                  <Stack
+                    spacing={6}
+                    w={"full"}
+                    maxW={"lg"}
+                    position="absolute"
+                    top="50%"
+                    transform="translate(0, -50%)"
+                  >
+                    <Heading fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }}>
+                      {game.name}
+                    </Heading>
+                    <Text fontSize={{ base: "md", lg: "lg" }} color="GrayText">
+                      {game.shortDescription}
+                    </Text>
+                  </Stack>
+                </Container>
+              </Box>
+            ))}
+          </Slider>
+        </AspectRatio>
       </Box>
     </>
   );
-}
+};
