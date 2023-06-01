@@ -10,33 +10,41 @@ import {
   useColorModeValue,
   createIcon,
 } from "@chakra-ui/react";
+import { isIOS, isMacOs } from "react-device-detect";
+import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
     <Container maxW={"3xl"}>
       <Stack
         as={Box}
+        overflow={"hidden"}
         textAlign={"center"}
         spacing={{ base: 8, md: 14 }}
         py={{ base: 20, md: 36 }}
       >
-        <Heading
-          fontWeight={600}
-          fontSize={{ base: "2xl", sm: "4xl", md: "6xl" }}
-          lineHeight={"110%"}
+        <motion.div
+          initial={{ x: -100, y: -100, rotate: 0, scale: 1 }}
+          animate={{ x: 0, y: 0, rotate: 0, scale: 1 }}
         >
-          Simplay
-          {/* <br /> */}
-          <Text as={"span"} color={"red.400"}>
-            {" "}
-            Studio
+          <Heading
+            fontWeight={600}
+            fontSize={{ base: "2xl", sm: "4xl", md: "6xl" }}
+            lineHeight={"110%"}
+          >
+            Simplay
+            {/* <br /> */}
+            <Text as={"span"} color={"red.400"}>
+              {" "}
+              Studio
+            </Text>
+          </Heading>
+        </motion.div>
+        <Box textAlign={"center"} overflow={"hidden"} maxH={"25px"}>
+          <Text className="typewriter-effect" color={"gray.400"} fontSize="lg">
+            Our passion is to craft free games that challenge and captivate you.
           </Text>
-        </Heading>
-        <Text color={"gray.500"}>
-          Monetize your content by charging your most loyal readers and reward
-          them loyalty points. Give back to your loyal readers by granting them
-          access to your pre-releases and sneak-peaks.
-        </Text>
+        </Box>
         <Stack
           direction={"column"}
           spacing={3}
@@ -75,7 +83,7 @@ const Hero = () => {
               top={"-15px"}
               transform={"rotate(10deg)"}
             >
-              dowload free on app store
+              dowload free on {isIOS || isMacOs ? "App Store" : "Google Play"}
             </Text>
           </Box>
         </Stack>

@@ -1,5 +1,6 @@
 import {
   Box,
+  Divider,
   Flex,
   Grid,
   GridItem,
@@ -10,7 +11,6 @@ import {
 import React from "react";
 import GameCard from "../components/GameCard";
 import { CaptionCarousel } from "../components/CaptionCarousel";
-import ImageCarousel from "../components/ImageCarousel";
 import games from "../data/game";
 import Hero from "../components/Hero";
 import CustomHeading from "../components/CustomHeading";
@@ -26,16 +26,18 @@ const HomePage = () => {
         </Box>
         <Box w={10} />
         {/* Game Hight Light */}
-        <Box width={"50vw"} boxShadow="lg" flex={7}>
+        <Box boxShadow="lg" flex={7}>
           <CaptionCarousel games={games} />
         </Box>
       </Flex>
-      <CustomHeading text={"Top Free Games"} />
-      <Flex alignItems={"center"} justifyContent={"space-between"}>
-        {games.slice(0, 4).map((game, index) => (
-          <GameCard key={index} {...game} />
-        ))}
-      </Flex>
+      <Box bg="gray.700" p={4} pb={8} boxShadow={"lg"}>
+        <CustomHeading text={"Top Free Games"} />
+        <Flex alignItems={"center"} justifyContent={"space-between"}>
+          {games.slice(0, 6).map((game, index) => (
+            <GameCard key={index} {...game} />
+          ))}
+        </Flex>
+      </Box>
     </Box>
   );
 };

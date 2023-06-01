@@ -1,0 +1,5 @@
+import { isAndroid, isIOS } from "react-device-detect";
+
+export const PUBLIC_IMAGE_URL = process.env.PUBLIC_URL + "/images";
+
+export const isIOSPlatform = () => {};

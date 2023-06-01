@@ -9,6 +9,7 @@ import {
   Container,
   Image,
   AspectRatio,
+  Button,
 } from "@chakra-ui/react";
 import { BiLeftArrowAlt, BiRightArrowAlt } from "react-icons/bi";
 import Slider from "react-slick";
@@ -52,7 +53,7 @@ export const CaptionCarousel = ({ games }) => {
       {/*  */}
       <Box
         position={"relative"}
-        height={"70vh"}
+        height={"60vh"}
         width={"full"}
         overflow={"hidden"}
         borderRadius={"md"}
@@ -118,6 +119,17 @@ export const CaptionCarousel = ({ games }) => {
                     <Text fontSize={{ base: "md", lg: "lg" }} color="GrayText">
                       {game.shortDescription}
                     </Text>
+                    <Box>
+                      <Button
+                        variant={"solid"}
+                        color={"white"}
+                        bgColor={"blue.300"}
+                        size={"md"}
+                        fontWeight={"normal"}
+                      >
+                        View Detail
+                      </Button>
+                    </Box>
                   </Stack>
                 </Container>
               </Box>

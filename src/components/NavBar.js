@@ -65,9 +65,20 @@ export default function WithAction() {
           />
           <HStack spacing={8} alignItems={"center"}>
             <Box cursor={"pointer"} onClick={() => navigate("/")}>
-              <Text fontSize={"xl"} letterSpacing={1} fontWeight={"bold"}>
-                Simplay Studio
-              </Text>
+              <HStack>
+                <Text fontSize={"xl"} letterSpacing={1} fontWeight={"bold"}>
+                  Simplay
+                </Text>
+                {""}
+                <Text
+                  fontSize={"xl"}
+                  letterSpacing={1}
+                  fontWeight={"bold"}
+                  color={"red.600"}
+                >
+                  Studio
+                </Text>
+              </HStack>
             </Box>
             <HStack
               as={"nav"}
