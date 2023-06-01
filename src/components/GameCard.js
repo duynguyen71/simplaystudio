@@ -1,21 +1,8 @@
 import React from "react";
-import {
-  Card,
-  CardBody,
-  Text,
-  Button,
-  Stack,
-  Heading,
-  Image,
-  CardFooter,
-  Divider,
-  ButtonGroup,
-  Box,
-  Container,
-} from "@chakra-ui/react";
+import { Text, Box } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
 const GameCard = (props) => {
-  const { name, thumb } = props;
+  const { name } = props;
 
   const navigate = useNavigate();
 

@@ -6,9 +6,11 @@ import { Box } from "@chakra-ui/react";
 
 const RootLayout = () => {
   const { pathname } = useLocation();
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [pathname]);
+
   return (
     <>
       <NavBar />

@@ -3,14 +3,8 @@ import {
   Box,
   IconButton,
   useBreakpointValue,
-  Stack,
-  Heading,
-  Text,
-  Container,
   AspectRatio,
   Image,
-  VStack,
-  Flex,
 } from "@chakra-ui/react";
 import { BiLeftArrowAlt, BiRightArrowAlt } from "react-icons/bi";
 import Slider from "react-slick";

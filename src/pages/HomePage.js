@@ -1,13 +1,4 @@
-import {
-  Box,
-  Divider,
-  Flex,
-  Grid,
-  GridItem,
-  Heading,
-  Image,
-  Stack,
-} from "@chakra-ui/react";
+import { Box, Flex } from "@chakra-ui/react";
 import React from "react";
 import GameCard from "../components/GameCard";
 import { CaptionCarousel } from "../components/CaptionCarousel";

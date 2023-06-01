@@ -9,7 +9,6 @@ import {
   Text,
   VStack,
 } from "@chakra-ui/react";
-import ReactPlayer from "react-player";
 import { PUBLIC_IMAGE_URL } from "../hooks";
 import CustomHeading from "../components/CustomHeading";
 import { motion } from "framer-motion";
