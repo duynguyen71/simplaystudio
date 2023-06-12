@@ -42,3 +42,15 @@ code {
     border-right-color: transparent;
   }
 }
+
+.text-outline-wrapper {
+  width: fit-content;
+  max-width: 100px;
+  height: fit-content;
+  border: 2px solid rgb(134, 133, 133);
+  margin-top: 10px;
+  margin-left: 10px;
+  background: white;
+  text-align: left;
+  /* max-height: 100px; */
+}

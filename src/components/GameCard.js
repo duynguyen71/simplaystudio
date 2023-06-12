@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, Box } from "@chakra-ui/react";
+import { Box, AspectRatio } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
 const GameCard = (props) => {
   const { name } = props;
@@ -7,24 +7,21 @@ const GameCard = (props) => {
   const navigate = useNavigate();
 
   return (
-    <Box
-      onClick={() => navigate(`/games/${name}`)}
-      cursor={"pointer"}
-      boxSize={"200"}
-      borderRadius={"md"}
-      position="relative"
-      backgroundImage={`${process.env.PUBLIC_URL}/images/6.5_ver2023.4.1 1.png`}
-      backgroundPosition={"center"}
-      backgroundRepeat={"no-repeat"}
-      backgroundSize={"cover"}
-      _hover={{
-        transform: "scale(1.05)",
-      }}
-      transition="0.3s ease-in-out"
-      // overflow={"hidden"}
-    >
-      {/* Content */}
+    <AspectRatio ratio={1}>
       <Box
+        onClick={() => navigate(`/games/${name}`)}
+        cursor={"pointer"}
+        borderRadius={"md"}
+        position="relative"
+        backgroundImage={`${process.env.PUBLIC_URL}/images/6.5_ver2023.4.1 1.png`}
+        backgroundPosition={"center"}
+        backgroundRepeat={"no-repeat"}
+        backgroundSize={"cover"}
+        transition="0.3s ease-in-out"
+      >
+        {/* Content */}
+        {/* <Box
+        w="100%"
         p="1"
         borderRadius={"md"}
         bg="red.600"
@@ -33,8 +30,9 @@ const GameCard = (props) => {
         position={"absolute"}
       >
         <Text>{name}</Text>
+      </Box> */}
       </Box>
-    </Box>
+    </AspectRatio>
   );
 };
 

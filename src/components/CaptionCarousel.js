@@ -12,6 +12,7 @@ import {
 } from "@chakra-ui/react";
 import { BiLeftArrowAlt, BiRightArrowAlt } from "react-icons/bi";
 import Slider from "react-slick";
+import { useNavigate } from "react-router-dom";
 const settings = {
   dots: true,
   arrows: false,
@@ -35,6 +36,7 @@ export const CaptionCarousel = ({ games }) => {
     <>
       {/*  */}
       <Box
+        boxShadow={"lg"}
         position={"relative"}
         height={"60vh"}
         width={"full"}
@@ -109,6 +111,7 @@ export const CaptionCarousel = ({ games }) => {
                       </Text>
                       <Box>
                         <Button
+                          onClick={() => console.log(slider)}
                           variant={"solid"}
                           color={"white"}
                           bgColor={"blue.300"}

@@ -4,6 +4,7 @@ import games from "../data/game";
 import {
   AspectRatio,
   Box,
+  Flex,
   HStack,
   Image,
   Text,
@@ -51,6 +52,14 @@ const GameDetailPage = () => {
           <Text>{game.shortDescription}</Text>
         </VStack>
       </HStack>
+      <Box height={"5vh"} />
+      {/* Game Upcoming Event */}
+      <VStack alignItems={"start"}>
+        <CustomHeading text={"Upcomming Event"} />
+        <Flex alignItems={"center"} justifyContent={"space-around"}>
+          <Box bg="blue.200" size="sm" mr="4"></Box>
+        </Flex>
+      </VStack>
       {/* <Box position={"absolute"} width={"100%"} height={"100%"}>
         <ReactPlayer
           url="https://www.youtube.com/watch?v=dQw4w9WgXcQ"

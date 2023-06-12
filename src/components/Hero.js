@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   Box,
   Heading,
@@ -9,13 +9,40 @@ import {
   Icon,
   useColorModeValue,
   createIcon,
+  HStack,
 } from "@chakra-ui/react";
 import { isIOS, isMacOs } from "react-device-detect";
-import { motion } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 const Hero = () => {
+  const { ref, inView } = useInView();
+  const animation = useAnimation();
+  const animation2 = useAnimation();
+
+  useEffect(() => {
+    if (inView) {
+      animation.start({
+        x: 0,
+        transition: {
+          duration: 0.5,
+        },
+      });
+      animation2.start({
+        x: 0,
+        transition: {
+          duration: 0.5,
+        },
+      });
+    }
+    if (!inView) {
+      animation.set({ x: -200 });
+      animation2.set({ x: 200 });
+    }
+  }, [inView, animation, animation2]);
+
   return (
-    <Container maxW={"3xl"}>
+    <Container ref={ref} maxW={"3xl"}>
       <Stack
         as={Box}
         overflow={"hidden"}
@@ -23,23 +50,29 @@ const Hero = () => {
         spacing={{ base: 8, md: 14 }}
         py={{ base: 20, md: 36 }}
       >
-        <motion.div
-          initial={{ x: -100, y: -100, rotate: 0, scale: 1 }}
-          animate={{ x: 0, y: 0, rotate: 0, scale: 1 }}
-        >
-          <Heading
-            fontWeight={600}
-            fontSize={{ base: "2xl", sm: "4xl", md: "6xl" }}
-            lineHeight={"110%"}
-          >
-            Simplay
-            {/* <br /> */}
-            <Text as={"span"} color={"red.400"}>
+        <HStack alignSelf={"center"} textAlign={"center"}>
+          <motion.div animate={animation}>
+            <Heading
+              fontWeight={600}
+              fontSize={{ base: "2xl", sm: "4xl", md: "6xl" }}
+              lineHeight={"110%"}
+            >
+              Simplay
+            </Heading>
+          </motion.div>
+          <motion.div animate={animation2}>
+            <Heading
+              fontWeight={600}
+              fontSize={{ base: "2xl", sm: "4xl", md: "6xl" }}
+              lineHeight={"110%"}
+              color={"red.400"}
+            >
               {" "}
               Studio
-            </Text>
-          </Heading>
-        </motion.div>
+            </Heading>
+          </motion.div>
+        </HStack>
+
         <Box textAlign={"center"} overflow={"hidden"} maxH={"25px"}>
           <Text className="typewriter-effect" color={"gray.400"} fontSize="lg">
             Our passion is to craft free games that challenge and captivate you.
