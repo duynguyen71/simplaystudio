@@ -9,10 +9,12 @@ import {
   Image,
   Text,
   VStack,
+  Grid,
+  GridItem,
 } from "@chakra-ui/react";
 import { PUBLIC_IMAGE_URL } from "../hooks";
 import CustomHeading from "../components/CustomHeading";
-import { motion } from "framer-motion";
+import { motion, px } from "framer-motion";
 const GameDetailPage = () => {
   // Get game name on param
   const { name } = useParams();
@@ -30,7 +32,14 @@ const GameDetailPage = () => {
 
   if (!game) return <></>;
   return (
-    <Box p={8} position={"relative"} minH={"80vh"} w={"100%"}>
+    <Box
+      position={"relative"}
+      minH={"80vh"}
+      w={"100%"}
+      py={[4, 10]}
+      px={[2, 10]}
+    >
+      <Box position={"relative"}></Box>
       <HStack spacing={8}>
         <motion.div
           initial={{ x: -100, y: -100, rotate: -45, scale: 0 }}
@@ -40,7 +49,7 @@ const GameDetailPage = () => {
             <AspectRatio ratio={1}>
               <Image
                 objectFit={"cover"}
-                src={`${PUBLIC_IMAGE_URL}/FireworksPlay.png`}
+                src={`${PUBLIC_IMAGE_URL}/${game.thumb}`}
               />
             </AspectRatio>
           </Box>
@@ -52,14 +61,30 @@ const GameDetailPage = () => {
           <Text>{game.shortDescription}</Text>
         </VStack>
       </HStack>
-      <Box height={"5vh"} />
+      {/* <Box height={"5vh"} /> */}
       {/* Game Upcoming Event */}
       <VStack alignItems={"start"}>
-        <CustomHeading text={"Upcomming Event"} />
-        <Flex alignItems={"center"} justifyContent={"space-around"}>
-          <Box bg="blue.200" size="sm" mr="4"></Box>
-        </Flex>
+        <CustomHeading text={"Game Gallery"} />
+        {/* <Flex alignItems={"center"} justifyContent={"space-around"}>
+          <Box bg="blue.200" si
+          ze="sm" mr="4"></Box>
+        </Flex> */}
+
+        <Grid templateColumns="repeat(2, 2fr)" gap={[2, 2]}>
+          {game.images.map((image, index) => (
+            <GridItem key={index} w="100%">
+              <Box overflow={"hidden"} borderRadius={"md"} w="100%">
+                <Image
+                  objectFit={"cover"}
+                  src={`${PUBLIC_IMAGE_URL}/${image}`}
+                />
+              </Box>
+              {/* <GameCard key={index} {...game} /> */}
+            </GridItem>
+          ))}
+        </Grid>
       </VStack>
+
       {/* <Box position={"absolute"} width={"100%"} height={"100%"}>
         <ReactPlayer
           url="https://www.youtube.com/watch?v=dQw4w9WgXcQ"

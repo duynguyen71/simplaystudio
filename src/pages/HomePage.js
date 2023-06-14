@@ -53,9 +53,17 @@ const HomePage = () => {
     }
   }, [inView, animation, animation2, animation3]);
   return (
-    <Box minH={"100vh"} padding={4}>
-      <Box height={"5vh"} />
-      <Flex direction={"row"} justifyContent={"space-between"}>
+    <Box
+      // minH={"100vh"}
+      padding={0}
+    >
+      <Box height={["2vh", "5vh", "5vh"]} />
+      {/* Main 1 */}
+      <Flex
+        direction={["column", "column", "row", "row", "row"]}
+        // justifyContent={"space-between"}
+        // alignItems={"center"}
+      >
         {/* Hero */}
         <Box flex={5}>
           <Hero />
@@ -66,17 +74,12 @@ const HomePage = () => {
           <CaptionCarousel games={games} />
         </Box>
       </Flex>
-      <Box
-        //  bg="gray.700"
-        px={8}
-        // pb={8}
-        boxShadow={"lg"}
-      >
+      {/* End of Main 1 */}
+
+      {/* Main 2 */}
+      <Box py={[4, 20]} px={[4, 8]} boxShadow={"lg"}>
         <CustomHeading text={"Our Games"} />
-        {/* <Flex alignItems={"center"} justifyContent={"space-between"}>
-       
-        </Flex> */}
-        <Grid templateColumns="repeat(2, 2fr)" gap={10}>
+        <Grid templateColumns="repeat(2, 2fr)" gap={[2, 10]}>
           {games.slice(0, 4).map((game, index) => (
             <GridItem w="100%">
               <GameCard key={index} {...game} />
@@ -84,17 +87,15 @@ const HomePage = () => {
           ))}
         </Grid>
       </Box>
+
+      {/* Main 3 */}
       <Box
         ref={ref}
-        my={10}
-        py={4}
+        my={[4, 8, 10]}
         alignItems={"center"}
         width={"100%"}
         textAlign={"center"}
         cursor={"pointer"}
-        _hover={{
-          bg: "gray.900",
-        }}
       >
         <motion.div animate={animation}>
           <BannerText text={"EXLORING THE"} />
@@ -106,7 +107,7 @@ const HomePage = () => {
           <BannerText text={"EVERY WEEK"} color="red" />
         </motion.div>
       </Box>
-      {/*  */}
+      {/* End of Main 3 */}
     </Box>
   );
 };

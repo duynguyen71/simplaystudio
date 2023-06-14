@@ -19,7 +19,7 @@ const RootLayout = () => {
     }
   };
   return (
-    <>
+    <Box overflowX={"hidden"} maxW={"100vw"}>
       <NavBar />
       <main>
         <Outlet />
@@ -35,7 +35,7 @@ const RootLayout = () => {
         size={"md"}
         as={AiOutlineArrowUp}
       />
-    </>
+    </Box>
   );
 };
 

@@ -20,14 +20,20 @@ const settings = {
   infinite: true,
   autoplay: true,
   speed: 500,
-  autoplaySpeed: 5000,
+  autoplaySpeed: 1500,
   slidesToShow: 1,
   slidesToScroll: 1,
+  pauseOnFocus: false,
+  // afterChange: (index) => {
+  // alert("Changed index: " + index);
+  // console.log("Changed index: " + index);
+  // },
 };
 
 export const CaptionCarousel = ({ games }) => {
   const navigate = useNavigate();
   const [slider, setSlider] = useState();
+  const [gameIndex, setGameIndex] = useState(0);
 
   const top = useBreakpointValue({ base: "90%", md: "50%" });
   const side = useBreakpointValue({ base: "30%", md: "40px" });
@@ -72,12 +78,23 @@ export const CaptionCarousel = ({ games }) => {
         </IconButton>
         <AspectRatio height={"100%"} ratio={"4/5"}>
           {/* <AspectRatio height={"100%"} ratio={"16/9"}> */}
-          <Slider {...settings} ref={(slider) => setSlider(slider)}>
+          <Slider
+            afterChange={(index) => {
+              setGameIndex(index);
+              // alert("CC");
+            }}
+            {...settings}
+            ref={(slider) => setSlider(slider)}
+          >
             {games.map((game, index) => {
               return (
                 <Box
                   key={index}
-                  onClick={() => navigate(`/games/${game.name}`)}
+                  onClick={() => {
+                    const g =
+                      games.find((m, index) => index === gameIndex) || 0;
+                    return navigate(`/games/${g.name}`);
+                  }}
                   // height={"6xl"}
                   position="relative"
                   backgroundPosition="center"

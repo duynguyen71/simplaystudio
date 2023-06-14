@@ -48,7 +48,7 @@ const Hero = () => {
         overflow={"hidden"}
         textAlign={"center"}
         spacing={{ base: 8, md: 14 }}
-        py={{ base: 20, md: 36 }}
+        py={{ base: 20, md: 36, xs: 0 }}
       >
         <HStack alignSelf={"center"} textAlign={"center"}>
           <motion.div animate={animation}>

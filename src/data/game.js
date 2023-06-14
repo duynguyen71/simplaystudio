@@ -4,9 +4,16 @@ const games = [
     shortDescription: "A Realistic 3D Fireworks Game!",
     bio: "Want to walk around the town and fire it up? Want to setup your own firework show? Everything you need about fireworks is in this Fireworks Play game.",
     description: "",
-    image: "/images/fireworks512.png",
-    thumb: "",
-    images: [],
+    image: "/fireworks512.png",
+    thumb: "FireworksPlay.png",
+    images: [
+      "/fwplay/1.png",
+      "/fwplay/1.png",
+      "/fwplay/1.png",
+      "/fwplay/1.png",
+      "/fwplay/1.png",
+      "/fwplay/1.png",
+    ],
     videos: [],
     platform: {
       ios: {
