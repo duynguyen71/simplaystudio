@@ -100,11 +100,17 @@ const GameDetailPage = () => {
 
       {/* Game Description */}
       <VStack py={[4, 5]} px={[2, 10]} textAlign={"start"} alignItems={"start"}>
-        <UnorderedList textColor={"gray.400"} fontSize={"18"} letterSpacing={1}>
-          <ListItem>
+        <UnorderedList
+          spacing={2}
+          fontWeight={"300"}
+          textColor={"gray.400"}
+          fontSize={"16"}
+          letterSpacing={1}
+        >
+          <span>
             Fireworks Pro is a simulation fireworks game. Download the game and
             enjoy realistic graphics, and much more:
-          </ListItem>
+          </span>
           <ListItem>
             With FPS mode, you can walk around the town to fire fireworks and
             make some explosions next to your neighbors.{" "}
