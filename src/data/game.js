@@ -5,6 +5,7 @@ const games = [
     bio: "Want to walk around the town and fire it up? Want to setup your own firework show? Everything you need about fireworks is in this Fireworks Play game.",
     description: "",
     image: "/fireworks512.png",
+    video: "/FWplay.MP4",
     thumb: "FireworksPlay.png",
     images: [
       "/fwplay/1.png",
@@ -17,11 +18,11 @@ const games = [
     videos: [],
     platform: {
       ios: {
-        link: "",
+        link: "itms-apps://itunes.apple.com/app/id1582752606",
         rating: "",
       },
       android: {
-        link: "",
+        link: "https://play.google.com/store/apps/details?id=com.bluedot.fireworks",
         rating: "",
       },
     },

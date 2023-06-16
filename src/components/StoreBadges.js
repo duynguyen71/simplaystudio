@@ -1,6 +1,7 @@
 export function PlayStoreBadge() {
   return (
     <svg
+      onClick={() => alert("sd")}
       width={150}
       height={45}
       viewBox="0 0 150 45"

@@ -18,20 +18,7 @@ const GameCard = (props) => {
         backgroundRepeat={"no-repeat"}
         backgroundSize={"cover"}
         transition="0.3s ease-in-out"
-      >
-        {/* Content */}
-        {/* <Box
-        w="100%"
-        p="1"
-        borderRadius={"md"}
-        bg="red.600"
-        bottom={-5}
-        left={2}
-        position={"absolute"}
-      >
-        <Text>{name}</Text>
-      </Box> */}
-      </Box>
+      ></Box>
     </AspectRatio>
   );
 };
