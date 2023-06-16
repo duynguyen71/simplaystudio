@@ -33,6 +33,32 @@ const router = createBrowserRouter([
       },
     ],
   },
+  {
+    path: "/simplaystudio",
+    element: <RootLayout />,
+    children: [
+      {
+        index: true,
+        element: <HomePage />,
+      },
+      {
+        path: "/articles",
+        element: <ArticleList />,
+      },
+      {
+        path: "/privacy",
+        element: <PrivacyPage />,
+      },
+      {
+        path: "/games",
+        element: <GamesPage />,
+      },
+      {
+        path: "/games/:name",
+        element: <GameDetailPage />,
+      },
+    ],
+  },
 ]);
 
 export default router;
