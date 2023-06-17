@@ -6,34 +6,6 @@ import PrivacyPage from "./pages/PrivacyPage";
 import GamesPage from "./pages/GamesPage";
 import GameDetailPage from "./pages/GameDetailPage";
 
-// const router = createBrowserRouter([
-//   {
-//     path: "/",
-//     element: <RootLayout />,
-//     children: [
-//       {
-//         index: true,
-//         element: <HomePage />,
-//       },
-//       {
-//         path: "/articles",
-//         element: <ArticleList />,
-//       },
-//       {
-//         path: "/privacy",
-//         element: <PrivacyPage />,
-//       },
-//       {
-//         path: "/games",
-//         element: <GamesPage />,
-//       },
-//       {
-//         path: "/games/:name",
-//         element: <GameDetailPage />,
-//       },
-//     ],
-//   },
-// ]);
 const router = createBrowserRouter([
   {
     path: "/",
@@ -44,20 +16,22 @@ const router = createBrowserRouter([
         element: <HomePage />,
       },
       {
-        path: "/articles",
+        path: "articles",
         element: <ArticleList />,
       },
       {
-        path: "/privacy",
+        path: "privacy",
         element: <PrivacyPage />,
       },
       {
-        path: "/games",
+        path: "games",
         element: <GamesPage />,
-      },
-      {
-        path: "/games/:name",
-        element: <GameDetailPage />,
+        children: [
+          {
+            path: ":name",
+            element: <GameDetailPage />,
+          },
+        ],
       },
     ],
   },
@@ -70,22 +44,25 @@ const router = createBrowserRouter([
         element: <HomePage />,
       },
       {
-        path: "/simplaystudio/articles",
+        path: "articles",
         element: <ArticleList />,
       },
       {
-        path: "/simplaystudio/privacy",
+        path: "privacy",
         element: <PrivacyPage />,
       },
       {
-        path: "/simplaystudio/games",
+        path: "games",
         element: <GamesPage />,
-      },
-      {
-        path: "/simplaystudio/games/:name",
-        element: <GameDetailPage />,
+        children: [
+          {
+            path: ":name",
+            element: <GameDetailPage />,
+          },
+        ],
       },
     ],
   },
 ]);
+
 export default router;
