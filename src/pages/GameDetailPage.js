@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import games from "../data/game";
 import {
@@ -19,6 +19,8 @@ import { PUBLIC_IMAGE_URL, PUBLIC_VIDEO_URL } from "../hooks";
 import CustomHeading from "../components/CustomHeading";
 import { motion } from "framer-motion";
 const GameDetailPage = () => {
+  const [isLoading, setLoading] = useState(true);
+
   // Get game name on param
   const { name } = useParams();
 
@@ -34,14 +36,14 @@ const GameDetailPage = () => {
   }, [game, navigate]);
 
   if (!game) return <></>;
+
+  const onLoadStart = () => {};
+
+  const onLoadEnd = () => {};
+
+  const onError = () => {};
   return (
-    <Box
-      position={"relative"}
-      minH={"80vh"}
-      w={"100%"}
-      // py={[4, 10]}
-      // px={[2, 10]}
-    >
+    <Box position={"relative"} minH={"80vh"} w={"100%"}>
       <Box position={"relative"}></Box>
 
       <VStack
@@ -92,7 +94,15 @@ const GameDetailPage = () => {
       {/* Game Video */}
       <Box height={"5"} />
       {game.video && (
-        <video loop controls={false} autoPlay muted>
+        <video
+          onLoadStart={onLoadStart}
+          onLoadedData={onLoadEnd}
+          onError={onError}
+          loop
+          controls={false}
+          autoPlay
+          muted
+        >
           <source src={`${PUBLIC_VIDEO_URL}/${game.video}`} type="video/mp4" />
         </video>
       )}

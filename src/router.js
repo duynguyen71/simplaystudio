@@ -5,11 +5,14 @@ import ArticleList from "./pages/ArticlesPage";
 import PrivacyPage from "./pages/PrivacyPage";
 import GamesPage from "./pages/GamesPage";
 import GameDetailPage from "./pages/GameDetailPage";
+import NotFound from "./pages/NotFound";
+import NotFoundPage from "./pages/NotFound";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <RootLayout />,
+    errorElement: <NotFoundPage />,
     children: [
       {
         index: true,
@@ -38,6 +41,7 @@ const router = createBrowserRouter([
   {
     path: "/simplaystudio",
     element: <RootLayout />,
+    errorElement: <NotFoundPage />,
     children: [
       {
         index: true,
