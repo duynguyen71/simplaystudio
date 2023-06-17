@@ -1,6 +1,7 @@
 {
   "name": "simplaystudio",
   "version": "0.1.0",
+  "homepage": "https://duynguyen71.github.io/simplaystudio",
   "private": true,
   "dependencies": {
     "@chakra-ui/icons": "^2.0.19",

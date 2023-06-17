@@ -6,6 +6,34 @@ import PrivacyPage from "./pages/PrivacyPage";
 import GamesPage from "./pages/GamesPage";
 import GameDetailPage from "./pages/GameDetailPage";
 
+// const router = createBrowserRouter([
+//   {
+//     path: "/",
+//     element: <RootLayout />,
+//     children: [
+//       {
+//         index: true,
+//         element: <HomePage />,
+//       },
+//       {
+//         path: "/articles",
+//         element: <ArticleList />,
+//       },
+//       {
+//         path: "/privacy",
+//         element: <PrivacyPage />,
+//       },
+//       {
+//         path: "/games",
+//         element: <GamesPage />,
+//       },
+//       {
+//         path: "/games/:name",
+//         element: <GameDetailPage />,
+//       },
+//     ],
+//   },
+// ]);
 const router = createBrowserRouter([
   {
     path: "/",
@@ -42,23 +70,22 @@ const router = createBrowserRouter([
         element: <HomePage />,
       },
       {
-        path: "/articles",
+        path: "/simplaystudio/articles",
         element: <ArticleList />,
       },
       {
-        path: "/privacy",
+        path: "/simplaystudio/privacy",
         element: <PrivacyPage />,
       },
       {
-        path: "/games",
+        path: "/simplaystudio/games",
         element: <GamesPage />,
       },
       {
-        path: "/games/:name",
+        path: "/simplaystudio/games/:name",
         element: <GameDetailPage />,
       },
     ],
   },
 ]);
-
 export default router;
