@@ -13,11 +13,14 @@ import {
   UnorderedList,
   ListItem,
   Button,
+  Spinner,
+  Stack,
 } from "@chakra-ui/react";
 import ReactStars from "react-rating-stars-component";
 import { PUBLIC_IMAGE_URL, PUBLIC_VIDEO_URL } from "../hooks";
 import CustomHeading from "../components/CustomHeading";
 import { motion } from "framer-motion";
+import BouncingDotsLoader from "../components/utils/BouncingDotsLoader";
 const GameDetailPage = () => {
   const [isLoading, setLoading] = useState(true);
 
@@ -37,15 +40,19 @@ const GameDetailPage = () => {
 
   if (!game) return <></>;
 
-  const onLoadStart = () => {};
+  const onLoadStart = () => {
+    setLoading(true);
+  };
 
-  const onLoadEnd = () => {};
+  const onLoadEnd = () => {
+    setLoading(false);
+  };
 
-  const onError = () => {};
+  const onError = () => {
+    setLoading(false);
+  };
   return (
     <Box position={"relative"} minH={"80vh"} w={"100%"}>
-      <Box position={"relative"}></Box>
-
       <VStack
         alignSelf={"start"}
         alignItems={"start"}
@@ -55,7 +62,8 @@ const GameDetailPage = () => {
         boxShadow={"md"}
         py={[4, 5]}
       >
-        <HStack px={[2, 10]} spacing={8}>
+        <Stack direction={["column", "row"]} px={[2, 10]} spacing={4}>
+          {/* Image */}
           <motion.div
             initial={{ x: -100, y: -100, rotate: -45, scale: 0 }}
             animate={{ x: 0, y: 0, rotate: 0, scale: 1 }}
@@ -69,10 +77,10 @@ const GameDetailPage = () => {
               </AspectRatio>
             </Box>
           </motion.div>
-
-          {/*  */}
-          <VStack alignItems={"start"} alignSelf={"start"}>
-            <CustomHeading text={"Fireworks Play"} />
+          {/* End of Image */}
+          {/* Game Download */}
+          <VStack spacing={1} alignItems={"start"} alignSelf={"start"}>
+            <Text>Fireworks Play</Text>
             <Text>{game.shortDescription}</Text>
             <ReactStars
               half={true}
@@ -83,9 +91,10 @@ const GameDetailPage = () => {
             />
             <Button bg={"green"}>Dowload now</Button>
           </VStack>
-        </HStack>
+          {/* End of Game Download */}
+        </Stack>
 
-        <VStack px={[2, 10]}>
+        <VStack py={4} px={[2, 10]}>
           <Text textAlign={"start"} alignSelf={"start"}>
             {game.bio}
           </Text>
@@ -93,6 +102,11 @@ const GameDetailPage = () => {
       </VStack>
       {/* Game Video */}
       <Box height={"5"} />
+      {isLoading && game.video && (
+        <Box p={4}>
+          <BouncingDotsLoader />
+        </Box>
+      )}
       {game.video && (
         <video
           onLoadStart={onLoadStart}
@@ -156,7 +170,10 @@ const GameDetailPage = () => {
       {/* Game Gallery */}
       <VStack px={[2, 10]} py={5} alignItems={"start"}>
         <CustomHeading text={"Game Gallery"} />
-        <Grid templateColumns="repeat(4, 4fr)" gap={[2, 2]}>
+        <Grid
+          templateColumns={["repeat(2 , 4fr)", "repeat(4, 4fr)"]}
+          gap={[2, 2]}
+        >
           {game.images.map((image, index) => (
             <GridItem key={index} w="100%">
               <Box overflow={"hidden"} borderRadius={"md"} w="100%">

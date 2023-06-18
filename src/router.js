@@ -27,14 +27,12 @@ const router = createBrowserRouter([
         element: <PrivacyPage />,
       },
       {
+        path: "games/:name",
+        element: <GameDetailPage />,
+      },
+      {
         path: "games",
         element: <GamesPage />,
-        children: [
-          {
-            path: ":name",
-            element: <GameDetailPage />,
-          },
-        ],
       },
     ],
   },
@@ -56,14 +54,12 @@ const router = createBrowserRouter([
         element: <PrivacyPage />,
       },
       {
+        path: "games/:name",
+        element: <GameDetailPage />,
+      },
+      {
         path: "games",
         element: <GamesPage />,
-        children: [
-          {
-            path: ":name",
-            element: <GameDetailPage />,
-          },
-        ],
       },
     ],
   },
