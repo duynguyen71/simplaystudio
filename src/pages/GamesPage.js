@@ -2,26 +2,29 @@ import React from "react";
 import { Box, SimpleGrid, Image, Text, VStack } from "@chakra-ui/react";
 import games from "../data/game";
 import { PUBLIC_IMAGE_URL } from "../hooks";
+import { useNavigate } from "react-router";
+import "./games-page.css";
+
 const GamesPage = () => {
+  const navigate = useNavigate();
   return (
     <Box>
       <Box p={8}>
-        <SimpleGrid spacing={"40px"} minChildWidth={"20vw"}>
+        <SimpleGrid spacing={["10px", "20px", "40px"]} minChildWidth={"40vw"}>
           {games.map((game, index) => {
             return (
               <VStack
-                overflow={"hidden"}
+                className="game-container"
+                // overflow={"hidden"}
                 cursor={"pointer"}
                 spacing={3}
                 alignItems={"start"}
                 p={4}
                 boxShadow={"lg"}
                 key={index}
+                onClick={() => navigate(`/games/${game.name}`)}
               >
                 <Image
-                  _hover={{
-                    scale: 10,
-                  }}
                   borderRadius={"md"}
                   src={`${PUBLIC_IMAGE_URL}/${game.thumb}`}
                 />

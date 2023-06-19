@@ -1,4 +1,12 @@
-import { Box, Flex, Grid, GridItem } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  Center,
+  Flex,
+  Grid,
+  GridItem,
+  useColorModeValue,
+} from "@chakra-ui/react";
 import React, { useEffect } from "react";
 import GameCard from "../components/GameCard";
 import { CaptionCarousel } from "../components/CaptionCarousel";
@@ -75,7 +83,7 @@ const HomePage = () => {
       {/* End of Main 1 */}
 
       {/* Main 2 */}
-      <Box maxW={"100%"} py={[4, 20]} px={[4, 8]} boxShadow={"lg"}>
+      <Box maxW={"100%"} py={[4, 10]} px={[4, 8]} boxShadow={"lg"}>
         <CustomHeading text={"Our Games"} />
         <Box>
           <Grid templateColumns="repeat(2, 2fr)" gap={[2, 10]}>
@@ -85,6 +93,20 @@ const HomePage = () => {
               </GridItem>
             ))}
           </Grid>
+          <Center>
+            <Box height={"30px"} />
+            <Button
+              textColor={useColorModeValue("gray.600", "gray.200")}
+              letterSpacing={2}
+              borderColor={"transparent"}
+              alignSelf={"center"}
+              alignContent={"center"}
+              variant={"outline"}
+              textDecoration={"underline"}
+            >
+              Show More
+            </Button>
+          </Center>
         </Box>
       </Box>
 
@@ -98,7 +120,10 @@ const HomePage = () => {
         cursor={"pointer"}
       >
         <motion.div animate={animation}>
-          <BannerText text={"EXLORING THE"} />
+          <BannerText
+            color={useColorModeValue("gray.600", "white")}
+            text={"EXLORING THE"}
+          />
         </motion.div>
         <motion.div animate={animation2}>
           <BannerText text={"COOL FEATURES"} color="yellow" />

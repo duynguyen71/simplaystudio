@@ -42,10 +42,10 @@ export const CaptionCarousel = ({ games }) => {
     <>
       {/*  */}
       <Box
-        boxShadow={"lg"}
+        // boxShadow={"lg"}
         position={"relative"}
         height={"60vh"}
-        width={"full"}
+        // width={"full"}
         overflow={"hidden"}
         borderRadius={"md"}
       >

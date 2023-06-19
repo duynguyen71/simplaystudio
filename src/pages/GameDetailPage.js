@@ -4,20 +4,17 @@ import games from "../data/game";
 import {
   AspectRatio,
   Box,
-  HStack,
   Image,
   Text,
   VStack,
   Grid,
   GridItem,
-  UnorderedList,
-  ListItem,
   Button,
-  Spinner,
   Stack,
+  useColorModeValue,
 } from "@chakra-ui/react";
 import ReactStars from "react-rating-stars-component";
-import { PUBLIC_IMAGE_URL, PUBLIC_VIDEO_URL } from "../hooks";
+import { PUBLIC_IMAGE_URL, PUBLIC_VIDEO_URL, isAppleProduct } from "../hooks";
 import CustomHeading from "../components/CustomHeading";
 import { motion } from "framer-motion";
 import BouncingDotsLoader from "../components/utils/BouncingDotsLoader";
@@ -61,8 +58,14 @@ const GameDetailPage = () => {
         borderRadius={"md"}
         boxShadow={"md"}
         py={[4, 5]}
+        height={"100%"}
       >
-        <Stack direction={["column", "row"]} px={[2, 10]} spacing={4}>
+        <Stack
+          height={"100%"}
+          direction={["column", "row"]}
+          px={[2, 10]}
+          spacing={4}
+        >
           {/* Image */}
           <motion.div
             initial={{ x: -100, y: -100, rotate: -45, scale: 0 }}
@@ -78,10 +81,17 @@ const GameDetailPage = () => {
             </Box>
           </motion.div>
           {/* End of Image */}
+
           {/* Game Download */}
           <VStack spacing={1} alignItems={"start"} alignSelf={"start"}>
-            <Text>Fireworks Play</Text>
-            <Text>{game.shortDescription}</Text>
+            <Text fontSize={"xl"} fontWeight={"500"} letterSpacing={1.2}>
+              {game.name}
+            </Text>
+            {game.shortDescription && (
+              <Text color={"gray.400"} fontStyle={"italic"}>
+                {game.shortDescription}
+              </Text>
+            )}
             <ReactStars
               half={true}
               edit={false}
@@ -89,16 +99,28 @@ const GameDetailPage = () => {
               size={20}
               activeColor="#ffd700"
             />
-            <Button bg={"green"}>Dowload now</Button>
+            <Box height={"100%"} />
+            <Button
+              onClick={() =>
+                isAppleProduct
+                  ? window.open(game.platform.ios.link)
+                  : window.open(game.platform.android.link)
+              }
+              bg={"green"}
+            >
+              Dowload now
+            </Button>
           </VStack>
           {/* End of Game Download */}
         </Stack>
 
-        <VStack py={4} px={[2, 10]}>
-          <Text textAlign={"start"} alignSelf={"start"}>
-            {game.bio}
-          </Text>
-        </VStack>
+        {game.bio && (
+          <VStack py={4} px={[2, 10]}>
+            <Text textAlign={"start"} alignSelf={"start"}>
+              {game.bio}
+            </Text>
+          </VStack>
+        )}
       </VStack>
       {/* Game Video */}
       <Box height={"5"} />
@@ -124,72 +146,34 @@ const GameDetailPage = () => {
 
       {/* Game Description */}
       <VStack py={[4, 5]} px={[2, 10]} textAlign={"start"} alignItems={"start"}>
-        <UnorderedList
-          spacing={2}
-          fontWeight={"300"}
-          textColor={"gray.400"}
-          fontSize={"16"}
-          letterSpacing={1}
-        >
-          <span>
-            Fireworks Pro is a simulation fireworks game. Download the game and
-            enjoy realistic graphics, and much more:
-          </span>
-          <ListItem>
-            With FPS mode, you can walk around the town to fire fireworks and
-            make some explosions next to your neighbors.{" "}
-          </ListItem>
-          <ListItem>
-            Plenty of fireworks: Sets, Chrysanthemum, Dahlia, Brocade,
-            Crossette, Ghost Shell, Strobe, Willow, Horsetail, Palm, Ground,
-            Comet, Letter, Number, Shape. It is guaranteed to add more!
-          </ListItem>
-          <ListItem>Simulate fireworks shows.</ListItem>
-          <ListItem>
-            {" "}
-            Easily walk around the town and play with fireworks stuff.
-          </ListItem>
-          <ListItem>
-            Flexible to customize your fireworks such as: color, height, time,
-            trail, size, angle, whistle.
-          </ListItem>
-          <ListItem>
-            {" "}
-            Amazing tools: undo, copy, cut when setting up fireworks.
-          </ListItem>
-          <ListItem>
-            Tap fireworks mode which is easy to play by tap on screen - allow
-            you relax and reduce stressful.
-          </ListItem>
-          <ListItem> Realistic fireworks and explosion sounds.</ListItem>
-          <ListItem> Real 3D fireworks game.</ListItem>
-        </UnorderedList>
+        {game.description}
       </VStack>
       {/* End of Game Description */}
 
       {/* Game Gallery */}
-      <VStack px={[2, 10]} py={5} alignItems={"start"}>
-        <CustomHeading text={"Game Gallery"} />
-        <Grid
-          templateColumns={["repeat(2 , 4fr)", "repeat(4, 4fr)"]}
-          gap={[2, 2]}
-        >
-          {game.images.map((image, index) => (
-            <GridItem key={index} w="100%">
-              <Box overflow={"hidden"} borderRadius={"md"} w="100%">
-                <Image
-                  objectFit={"cover"}
-                  src={`${PUBLIC_IMAGE_URL}/${image}`}
-                />
-              </Box>
-            </GridItem>
-          ))}
-        </Grid>
-      </VStack>
+      {game.images.length > 0 && (
+        <VStack px={[2, 10]} py={5} alignItems={"start"}>
+          <CustomHeading text={"Game Gallery"} />
+          <Grid
+            templateColumns={["repeat(2 , 4fr)", "repeat(4, 4fr)"]}
+            gap={[2, 4]}
+          >
+            {game.images.map((image, index) => (
+              <GridItem key={index} w="100%">
+                <Box overflow={"hidden"} borderRadius={"md"} w="100%">
+                  <Image
+                    objectFit={"cover"}
+                    src={`${PUBLIC_IMAGE_URL}/${image}`}
+                  />
+                </Box>
+              </GridItem>
+            ))}
+          </Grid>
+        </VStack>
+      )}
       {/* End of Game Gallery */}
 
       {/* Game Description  */}
-      <VStack></VStack>
     </Box>
   );
 };
