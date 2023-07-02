@@ -1,4 +1,5 @@
 import { Text } from "@chakra-ui/react";
+import { color } from "framer-motion";
 import React from "react";
 
 const BannerText = ({
@@ -6,11 +7,11 @@ const BannerText = ({
   text,
   fontSize = "80px",
   bgGradient,
+  style,
 }) => {
   return (
     <Text
-      // bgGradient="linear(to-l, #7928CA, #FF0080)"
-      // bgClip="text"
+      style={style}
       letterSpacing={"5px"}
       lineHeight={[1.1, 0.9]}
       fontWeight={"900"}

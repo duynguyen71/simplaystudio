@@ -16,12 +16,15 @@ import CustomHeading from "../components/CustomHeading";
 import BannerText from "../components/BannerText";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import { outLineStrokeStyle } from "../hooks";
+import { useNavigate } from "react-router-dom";
 
 const HomePage = () => {
   const { ref, inView } = useInView();
   const animation = useAnimation();
   const animation2 = useAnimation();
   const animation3 = useAnimation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (inView) {
@@ -64,12 +67,7 @@ const HomePage = () => {
     <Box position={"relative"} minH={"80vh"} w={"100%"}>
       <Box height={["2vh", "5vh", "5vh"]} />
       {/* Main 1 */}
-      <Flex
-        mx={4}
-        direction={["column", "column", "row", "row", "row"]}
-        // justifyContent={"space-between"}
-        // alignItems={"center"}
-      >
+      <Flex mx={4} direction={["column", "column", "row", "row", "row"]}>
         {/* Hero */}
         <Box alignSelf={"center"} flex={5}>
           <Hero />
@@ -84,10 +82,12 @@ const HomePage = () => {
 
       {/* Main 2 */}
       <Box maxW={"100%"} py={[4, 10]} px={[4, 8]} boxShadow={"lg"}>
-        <CustomHeading text={"Our Games"} />
+        <Box height={["2vh", "5vh", "5vh"]}>
+          <CustomHeading text={"Our Games"} />
+        </Box>
         <Box>
-          <Grid templateColumns="repeat(2, 2fr)" gap={[2, 10]}>
-            {games.slice(0, 4).map((game, index) => (
+          <Grid templateColumns="repeat(4, 4fr)" gap={[2, 10]}>
+            {games.slice(0, 8).map((game, index) => (
               <GridItem key={index}>
                 <GameCard key={index} {...game} />
               </GridItem>
@@ -96,6 +96,7 @@ const HomePage = () => {
           <Center>
             <Box height={"30px"} />
             <Button
+              onClick={() => navigate("/games")}
               textColor={useColorModeValue("gray.600", "gray.200")}
               letterSpacing={2}
               borderColor={"transparent"}
@@ -129,7 +130,7 @@ const HomePage = () => {
           <BannerText text={"COOL FEATURES"} color="yellow" />
         </motion.div>
         <motion.div animate={animation3}>
-          <BannerText text={"EVERY WEEK"} color="red" />
+          <BannerText text={"EVERY WEEK"} color="red.400" />
         </motion.div>
       </Box>
       {/* End of Main 3 */}

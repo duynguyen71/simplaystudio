@@ -10,10 +10,11 @@ const GameCard = (props) => {
   return (
     <AspectRatio ratio={1}>
       <Box
+        bg="gray.900"
         boxShadow={"lg"}
         onClick={() => navigate(`/games/${name}`)}
         cursor={"pointer"}
-        borderRadius={"100px"}
+        borderRadius={"20px"}
         position="relative"
         // backgroundImage={`${process.env.PUBLIC_URL}/images/6.5_ver2023.4.1 1.png`}
         backgroundImage={
