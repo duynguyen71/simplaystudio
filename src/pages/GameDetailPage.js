@@ -11,7 +11,8 @@ import {
   GridItem,
   Button,
   Stack,
-  useColorModeValue,
+  Flex,
+  HStack,
 } from "@chakra-ui/react";
 import ReactStars from "react-rating-stars-component";
 import { PUBLIC_IMAGE_URL, PUBLIC_VIDEO_URL, isAppleProduct } from "../hooks";
@@ -122,25 +123,52 @@ const GameDetailPage = () => {
           </VStack>
         )}
       </VStack>
-      {/* Game Video */}
-      <Box height={"5"} />
-      {isLoading && game.video && (
-        <Box p={4}>
+      {isLoading && game.videos.length > 0 && (
+        <Box textAlign={"center"} p={4}>
+          <Text color={"red.400"} fontStyle={"italic"}>
+            Loading video...
+          </Text>
           <BouncingDotsLoader />
         </Box>
       )}
-      {game.video && (
-        <video
-          onLoadStart={onLoadStart}
-          onLoadedData={onLoadEnd}
-          onError={onError}
-          loop
-          controls={false}
-          autoPlay
-          muted
+
+      {/* Game Video */}
+      {game.videos && (
+        // <video
+        //   onLoadStart={onLoadStart}
+        //   onLoadedData={onLoadEnd}
+        //   onError={onError}
+        //   loop
+        //   controls={false}
+        //   autoPlay
+        //   muted
+        // >
+        //   <source src={`${PUBLIC_VIDEO_URL}/${game.video}`} type="video/mp4" />
+        // </video>
+        <Stack
+          px={[2, 10]}
+          direction={"row"}
+          spacing={[2, 10]}
+          maxW={"100vw"}
+          overflowX={"scroll"}
         >
-          <source src={`${PUBLIC_VIDEO_URL}/${game.video}`} type="video/mp4" />
-        </video>
+          {game.videos.map((video, index) => (
+            <Box maxW={"100%"}>
+              <video
+                key={index}
+                onLoadStart={onLoadStart}
+                onLoadedData={onLoadEnd}
+                onError={onError}
+                loop
+                controls={false}
+                autoPlay
+                muted
+              >
+                <source src={`${PUBLIC_VIDEO_URL}/${video}`} type="video/mp4" />
+              </video>
+            </Box>
+          ))}
+        </Stack>
       )}
       {/* End of Game Video */}
 

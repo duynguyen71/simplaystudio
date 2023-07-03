@@ -1,5 +1,5 @@
 import React from "react";
-import { UnorderedList, ListItem } from "@chakra-ui/react";
+import { UnorderedList, ListItem, Box } from "@chakra-ui/react";
 
 const OneInchPunch = () => {
   return (
@@ -13,7 +13,9 @@ const OneInchPunch = () => {
       <span>
         Punch tremendous amounts of impact force at extremely close distances.
       </span>
-      <span>HOW TO PLAY</span>
+      <br />
+      <Box height={"1vh"} />
+      <span>HOW TO PLAY:</span>
       <ListItem>Aim and tap to punch.</ListItem>
       <ListItem>
         Upgrade power levels to generate more amounts of impact force.

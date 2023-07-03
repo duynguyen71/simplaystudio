@@ -70,7 +70,11 @@ export default function WithAction() {
             onClick={isOpen ? onClose : onOpen}
           />
           <HStack spacing={8} alignItems={"center"}>
-            <Box cursor={"pointer"} onClick={() => navigate("/")}>
+            <Box
+              display={["none", "block"]}
+              cursor={"pointer"}
+              onClick={() => navigate("/")}
+            >
               <HStack>
                 <Text fontSize={"xl"} letterSpacing={1} fontWeight={"bold"}>
                   Simplay

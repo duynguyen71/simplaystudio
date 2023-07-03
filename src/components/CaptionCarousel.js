@@ -9,6 +9,7 @@ import {
   Container,
   AspectRatio,
   Button,
+  HStack,
 } from "@chakra-ui/react";
 import { BiLeftArrowAlt, BiRightArrowAlt } from "react-icons/bi";
 import Slider from "react-slick";
@@ -35,21 +36,18 @@ export const CaptionCarousel = ({ games }) => {
   const [slider, setSlider] = useState();
   const [gameIndex, setGameIndex] = useState(0);
 
-  const top = useBreakpointValue({ base: "90%", md: "50%" });
-  const side = useBreakpointValue({ base: "30%", md: "40px" });
+  const top = useBreakpointValue(["80%", "50%"]);
+  const side = useBreakpointValue([0, "10px"]);
 
   return (
     <>
       {/*  */}
       <Box
-        // boxShadow={"lg"}
         position={"relative"}
         height={"60vh"}
-        // width={"full"}
         overflow={"hidden"}
         borderRadius={"md"}
       >
-        {/* CSS files for react-slick */}
         {/* Left Icon */}
         <IconButton
           aria-label="left-arrow"
@@ -95,7 +93,6 @@ export const CaptionCarousel = ({ games }) => {
                       games.find((m, index) => index === gameIndex) || 0;
                     return navigate(`/games/${g.name}`);
                   }}
-                  // height={"6xl"}
                   position="relative"
                   backgroundPosition="center"
                   backgroundRepeat="no-repeat"
@@ -122,7 +119,8 @@ export const CaptionCarousel = ({ games }) => {
                       </Heading>
                       <Text
                         fontSize={{ base: "md", lg: "lg" }}
-                        color="GrayText"
+                        // color="GrayText"
+                        color={"white"}
                       >
                         {game.shortDescription}
                       </Text>
@@ -131,7 +129,7 @@ export const CaptionCarousel = ({ games }) => {
                           onClick={() => console.log(slider)}
                           variant={"solid"}
                           color={"white"}
-                          bgColor={"blue.300"}
+                          bgColor={"red.400"}
                           size={"md"}
                           fontWeight={"normal"}
                         >

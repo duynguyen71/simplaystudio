@@ -7,11 +7,17 @@ const BannerText = ({
   text,
   fontSize = "80px",
   bgGradient,
-  style,
+  isStrokeStyle,
 }) => {
+  const useStrokeStyle = {
+    "-webkit-text-stroke": `1px ${color}`,
+    color: "transparent",
+  };
   return (
     <Text
-      style={style}
+      alignSelf={"center"}
+      textAlign={"center"}
+      style={isStrokeStyle && useStrokeStyle}
       letterSpacing={"5px"}
       lineHeight={[1.1, 0.9]}
       fontWeight={"900"}

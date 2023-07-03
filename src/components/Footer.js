@@ -70,7 +70,7 @@ export default function LargeWithNewsletter() {
               {/* <Logo color={useColorModeValue("gray.700", "white")} /> */}
             </Box>
             <Text fontSize={"sm"}>
-              © 2023 Fireworks Play. All rights reserved
+              © 2023 Simplay Studio. All rights reserved
             </Text>
             <Stack direction={"row"} spacing={6}>
               <SocialButton label={"YouTube"} href={socialMediaLinks.youtube}>

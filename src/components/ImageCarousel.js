@@ -63,6 +63,7 @@ const ImageCarousel = () => {
         <Slider {...settings} ref={(slider) => setSlider(slider)}>
           {[1, 2, 3, 4, 5, 6, 7].map((value, index) => (
             <Image
+              alt="image"
               key={value}
               src={`${process.env.PUBLIC_URL}/images/6.5_ver2023.4.1 ${
                 value + 1

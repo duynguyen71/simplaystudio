@@ -87,18 +87,19 @@ const Hero = () => {
         >
           <Button
             colorScheme={"green"}
-            bg={"green.400"}
+            // bg={"green.400"}
             rounded={"full"}
             px={6}
             _hover={{
               bg: "green.500",
             }}
+            variant={"outline"}
           >
             Browse
           </Button>
-          <Button variant={"link"} colorScheme={"blue"} size={"sm"}>
+          {/* <Button variant={"link"} colorScheme={"blue"} size={"sm"}>
             Learn more
-          </Button>
+          </Button> */}
           <Box>
             <Icon
               as={Arrow}

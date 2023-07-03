@@ -5,6 +5,8 @@ import {
   Flex,
   Grid,
   GridItem,
+  Spacer,
+  Text,
   useColorModeValue,
 } from "@chakra-ui/react";
 import React, { useEffect } from "react";
@@ -82,11 +84,14 @@ const HomePage = () => {
 
       {/* Main 2 */}
       <Box maxW={"100%"} py={[4, 10]} px={[4, 8]} boxShadow={"lg"}>
-        <Box height={["2vh", "5vh", "5vh"]}>
+        <Box height={["4vh", "5vh", "5vh"]}>
           <CustomHeading text={"Our Games"} />
         </Box>
         <Box>
-          <Grid templateColumns="repeat(4, 4fr)" gap={[2, 10]}>
+          <Grid
+            templateColumns={["repeat(2, 2fr)", "repeat(4, 4fr)"]}
+            gap={[2, 10]}
+          >
             {games.slice(0, 8).map((game, index) => (
               <GridItem key={index}>
                 <GameCard key={index} {...game} />
@@ -100,6 +105,7 @@ const HomePage = () => {
               textColor={useColorModeValue("gray.600", "gray.200")}
               letterSpacing={2}
               borderColor={"transparent"}
+              fontSize={["sm", "xl"]}
               alignSelf={"center"}
               alignContent={"center"}
               variant={"outline"}
@@ -121,16 +127,32 @@ const HomePage = () => {
         cursor={"pointer"}
       >
         <motion.div animate={animation}>
-          <BannerText
-            color={useColorModeValue("gray.600", "white")}
-            text={"EXLORING THE"}
-          />
+          <Flex>
+            <Spacer />
+
+            <BannerText
+              color={useColorModeValue("gray.600", "white")}
+              text={"EXLORING"}
+            />
+
+            <BannerText isStrokeStyle={true} text={"THE"} />
+            <Spacer />
+          </Flex>
         </motion.div>
         <motion.div animate={animation2}>
-          <BannerText text={"COOL FEATURES"} color="yellow" />
+          <Flex>
+            <Spacer />
+            <BannerText isStrokeStyle={true} text={"COOL"} color="yellow" />
+            <BannerText text={"FEATURES"} color="yellow" />
+            <Spacer />
+          </Flex>
         </motion.div>
         <motion.div animate={animation3}>
-          <BannerText text={"EVERY WEEK"} color="red.400" />
+          <Flex>
+            <Spacer />
+            <BannerText text={"EVERY WEEK"} color="red.400" />
+            <Spacer />
+          </Flex>
         </motion.div>
       </Box>
       {/* End of Main 3 */}

@@ -1,4 +1,5 @@
 import BambooDancing from "../components/description/BambooDancing";
+import Basketball from "../components/description/Basketball";
 import DuckHunter from "../components/description/DuckHunter";
 import EggDunk from "../components/description/EggDunk";
 import FireworkBabyDescription from "../components/description/FireworkBabyDescription";
@@ -25,7 +26,7 @@ const games = [
       "/fwplay/1.png",
       "/fwplay/1.png",
     ],
-    videos: [],
+    videos: ["/FWplay.MP4"],
     platform: {
       ios: {
         link: "itms-apps://itunes.apple.com/app/id1582752606",
@@ -117,6 +118,7 @@ const games = [
       },
     },
   },
+  // ONE INCH PUNCH
   {
     name: "One Inch Punch",
     shortDescription: "Improve punching power.",
@@ -125,7 +127,7 @@ const games = [
     thumb: "oneinchpunch512.png",
     image: "oneinchpunch512.png",
     images: [],
-    videos: [],
+    videos: ["/oneinchpunch1.mp4", "/oneinchpunch2.mp4", "/oneinchpunch3.mp4"],
     platform: {
       ios: {
         link: "",
@@ -137,16 +139,17 @@ const games = [
       },
     },
   },
+  // BASKETBALL
   {
     name: "Basketball",
     shortDescription:
       "A Real Basketball Arcade Machine!! Physic, Graphic and Sound are so real, so addictive.",
     bio: "This game will make you feel like your are in the real game center but it won’t cost your pocket because this game is completely FREE.",
-    description: "",
+    description: <Basketball />,
     thumb: "basketball.png",
     image: "basketball.png",
     images: [],
-    videos: [],
+    videos: ["/basketball1.mp4", "/basketball2.mp4", "/basketball3.mp4"],
     platform: {
       ios: {
         link: "",
