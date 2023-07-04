@@ -19,11 +19,11 @@ const RootLayout = () => {
     }
   };
   return (
-    <Box position={"relative"} w={"100%"} maxW={"100vw"}>
+    <Box position={"relative"}>
       <NavBar />
-      <main>
+      <Box maxW={"100vw"} overflow={"hidden"}>
         <Outlet />
-      </main>
+      </Box>
       <Box mt={10} />
       <LargeWithNewsletter />
       <Button

@@ -10,6 +10,8 @@ import {
   AspectRatio,
   Button,
   HStack,
+  useColorModeValue,
+  useColorMode,
 } from "@chakra-ui/react";
 import { BiLeftArrowAlt, BiRightArrowAlt } from "react-icons/bi";
 import Slider from "react-slick";
@@ -38,6 +40,9 @@ export const CaptionCarousel = ({ games }) => {
 
   const top = useBreakpointValue(["80%", "50%"]);
   const side = useBreakpointValue([0, "10px"]);
+
+  const descriptionColor = useColorModeValue("white", "white");
+  const imgBgColor = useColorModeValue("gray.200", "gray.800");
 
   return (
     <>
@@ -100,6 +105,7 @@ export const CaptionCarousel = ({ games }) => {
                   backgroundImage={`${
                     process.env.PUBLIC_URL
                   }/images/6.5_ver2023.4.1 ${index + 1}.png`}
+                  bgColor={imgBgColor}
                 >
                   <Container
                     size="container.lg"
@@ -114,13 +120,15 @@ export const CaptionCarousel = ({ games }) => {
                       top="50%"
                       transform="translate(0, -50%)"
                     >
-                      <Heading fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }}>
+                      <Heading
+                        color={descriptionColor}
+                        fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }}
+                      >
                         {game.name}
                       </Heading>
                       <Text
                         fontSize={{ base: "md", lg: "lg" }}
-                        // color="GrayText"
-                        color={"white"}
+                        color={descriptionColor}
                       >
                         {game.shortDescription}
                       </Text>

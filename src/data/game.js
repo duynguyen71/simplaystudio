@@ -99,6 +99,7 @@ const games = [
       },
     },
   },
+  // KNIFE GAME
   {
     name: "Knife Game",
     shortDescription: "Stab between the fingers game",
@@ -106,7 +107,7 @@ const games = [
     description: <KnifeGame />,
     thumb: "",
     images: [],
-    videos: [],
+    videos: ["/knifegame1.mp4", "/knifegame2.mp4", "/knifegame3.mp4"],
     platform: {
       ios: {
         link: "",

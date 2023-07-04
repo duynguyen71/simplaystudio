@@ -66,7 +66,7 @@ const HomePage = () => {
     }
   }, [inView, animation, animation2, animation3]);
   return (
-    <Box position={"relative"} minH={"80vh"} w={"100%"}>
+    <Box position={"relative"} minH={"80vh"}>
       <Box height={["2vh", "5vh", "5vh"]} />
       {/* Main 1 */}
       <Flex mx={4} direction={["column", "column", "row", "row", "row"]}>
@@ -83,39 +83,41 @@ const HomePage = () => {
       {/* End of Main 1 */}
 
       {/* Main 2 */}
-      <Box maxW={"100%"} py={[4, 10]} px={[4, 8]} boxShadow={"lg"}>
+      <Flex direction={"column"} py={[4, 10]} px={[4, 8]}>
         <Box height={["4vh", "5vh", "5vh"]}>
           <CustomHeading text={"Our Games"} />
         </Box>
-        <Box>
-          <Grid
-            templateColumns={["repeat(2, 2fr)", "repeat(4, 4fr)"]}
-            gap={[2, 10]}
+        <Grid
+          overflowX={"hidden"}
+          templateColumns={["repeat(2, 2fr)", "repeat(4, 4fr)"]}
+          gap={[2, 10]}
+        >
+          {games.slice(0, 8).map((game, index) => (
+            <GridItem key={index}>
+              <GameCard {...game} />
+            </GridItem>
+          ))}
+        </Grid>
+        <Box height={"30px"} />
+
+        <Center>
+          <Button
+            onClick={() => navigate("/games")}
+            textColor={useColorModeValue("red.400", "gray.400")}
+            letterSpacing={2}
+            fontStyle={"normal"}
+            fontWeight={"normal"}
+            borderColor={"transparent"}
+            fontSize={["sm", "md"]}
+            alignSelf={"center"}
+            alignContent={"center"}
+            variant={"outline"}
+            textDecoration={"underline"}
           >
-            {games.slice(0, 8).map((game, index) => (
-              <GridItem key={index}>
-                <GameCard key={index} {...game} />
-              </GridItem>
-            ))}
-          </Grid>
-          <Center>
-            <Box height={"30px"} />
-            <Button
-              onClick={() => navigate("/games")}
-              textColor={useColorModeValue("gray.600", "gray.200")}
-              letterSpacing={2}
-              borderColor={"transparent"}
-              fontSize={["sm", "xl"]}
-              alignSelf={"center"}
-              alignContent={"center"}
-              variant={"outline"}
-              textDecoration={"underline"}
-            >
-              Show More
-            </Button>
-          </Center>
-        </Box>
-      </Box>
+            Show More
+          </Button>
+        </Center>
+      </Flex>
 
       {/* Main 3 */}
       <Box
@@ -135,14 +137,22 @@ const HomePage = () => {
               text={"EXLORING"}
             />
 
-            <BannerText isStrokeStyle={true} text={"THE"} />
+            <BannerText
+              color={useColorModeValue("gray", "white")}
+              isStrokeStyle={true}
+              text={"THE"}
+            />
             <Spacer />
           </Flex>
         </motion.div>
         <motion.div animate={animation2}>
           <Flex>
             <Spacer />
-            <BannerText isStrokeStyle={true} text={"COOL"} color="yellow" />
+            <BannerText
+              color={useColorModeValue("black", "yellow")}
+              isStrokeStyle={true}
+              text={"COOL"}
+            />
             <BannerText text={"FEATURES"} color="yellow" />
             <Spacer />
           </Flex>

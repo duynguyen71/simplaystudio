@@ -103,8 +103,8 @@ export default function LargeWithNewsletter() {
                 }}
               />
               <IconButton
-                bg={useColorModeValue("green.400", "green.800")}
-                color={useColorModeValue("white", "gray.800")}
+                bg={useColorModeValue("red.400", "red.800")}
+                color={useColorModeValue("white", "white.800")}
                 _hover={{
                   bg: "green.600",
                 }}

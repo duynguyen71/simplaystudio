@@ -74,7 +74,11 @@ const Hero = () => {
         </HStack>
 
         <Box textAlign={"center"} overflow={"hidden"} maxH={"25px"}>
-          <Text className="typewriter-effect" color={"gray.400"} fontSize="lg">
+          <Text
+            className="typewriter-effect"
+            color={useColorModeValue("gray.700", "gray.400")}
+            fontSize="lg"
+          >
             Our passion is to craft free games that challenge and captivate you.
           </Text>
         </Box>
