@@ -153,7 +153,7 @@ const GameDetailPage = () => {
           overflowX={"scroll"}
         >
           {game.videos.map((video, index) => (
-            <Box maxW={"100%"}>
+            <Box maxW={"100%"} overflow={"hidden"} borderRadius={"md"}>
               <video
                 key={index}
                 onLoadStart={onLoadStart}

@@ -1,5 +1,6 @@
 import BambooDancing from "../components/description/BambooDancing";
 import Basketball from "../components/description/Basketball";
+import Cowboy from "../components/description/Cowboy";
 import DuckHunter from "../components/description/DuckHunter";
 import EggDunk from "../components/description/EggDunk";
 import FireworkBabyDescription from "../components/description/FireworkBabyDescription";
@@ -79,15 +80,16 @@ const games = [
       },
     },
   },
+  // COWBOY
   {
     name: "Cowboy Gun Shooting",
     shortDescription: "Shoot 'em up!",
     bio: "Train your eyes, train your hand skills with the cowboy gun shooting game (shooting game).",
-    description: "",
+    description: <Cowboy />,
     thumb: "cowboygunshooting512.png",
     image: "cowboygunshooting512.png",
     images: [],
-    videos: [],
+    videos: ["/cowboy1.mp4", "/cowboy2.mp4", "/cowboy3.mp4"],
     platform: {
       ios: {
         link: "",
@@ -203,6 +205,7 @@ const games = [
       },
     },
   },
+  // EGG DUNK
   {
     name: "Egg Dunk 3D",
     shortDescription: "A Realistic 3D Fireworks Game!",
@@ -211,7 +214,7 @@ const games = [
     thumb: "eggdunkicon512.png",
     image: "eggdunkicon512.png",
     images: [],
-    videos: [],
+    videos: ["/eggdunk1.mp4", "/eggdunk2.mp4", "/eggdunk3.mp4"],
     platform: {
       ios: {
         link: "",
