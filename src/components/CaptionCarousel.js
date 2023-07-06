@@ -9,9 +9,7 @@ import {
   Container,
   AspectRatio,
   Button,
-  HStack,
   useColorModeValue,
-  useColorMode,
 } from "@chakra-ui/react";
 import { BiLeftArrowAlt, BiRightArrowAlt } from "react-icons/bi";
 import Slider from "react-slick";
@@ -27,10 +25,6 @@ const settings = {
   slidesToShow: 1,
   slidesToScroll: 1,
   pauseOnFocus: false,
-  // afterChange: (index) => {
-  // alert("Changed index: " + index);
-  // console.log("Changed index: " + index);
-  // },
 };
 
 export const CaptionCarousel = ({ games }) => {
@@ -80,24 +74,25 @@ export const CaptionCarousel = ({ games }) => {
           <BiRightArrowAlt size="40px" />
         </IconButton>
         <AspectRatio height={"100%"} ratio={"4/5"}>
-          {/* <AspectRatio height={"100%"} ratio={"16/9"}> */}
           <Slider
             afterChange={(index) => {
-              setGameIndex(index);
-              // alert("CC");
+              // setGameIndex(index);
             }}
             {...settings}
             ref={(slider) => setSlider(slider)}
           >
             {games.map((game, index) => {
+              const navigateToFWPlay = () =>
+                navigate(`/games/${games[0].name}`);
               return (
                 <Box
                   key={index}
-                  onClick={() => {
-                    const g =
-                      games.find((m, index) => index === gameIndex) || 0;
-                    return navigate(`/games/${g.name}`);
-                  }}
+                  // onClick={() => {
+                  //   const g =
+                  //     games.find((m, index) => index === gameIndex) || 0;
+                  //   return navigate(`/games/${g.name}`);
+                  // }}
+                  onClick={navigateToFWPlay}
                   position="relative"
                   backgroundPosition="center"
                   backgroundRepeat="no-repeat"
@@ -134,7 +129,7 @@ export const CaptionCarousel = ({ games }) => {
                       </Text>
                       <Box>
                         <Button
-                          onClick={() => console.log(slider)}
+                          onClick={navigateToFWPlay}
                           variant={"solid"}
                           color={"white"}
                           bgColor={"red.400"}

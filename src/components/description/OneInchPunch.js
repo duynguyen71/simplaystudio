@@ -1,12 +1,17 @@
 import React from "react";
-import { UnorderedList, ListItem, Box } from "@chakra-ui/react";
+import {
+  UnorderedList,
+  ListItem,
+  Box,
+  useColorModeValue,
+} from "@chakra-ui/react";
 
 const OneInchPunch = () => {
   return (
     <UnorderedList
       spacing={2}
       fontWeight={"300"}
-      textColor={"gray.400"}
+      textColor={useColorModeValue("gray.700", "gray.300")}
       fontSize={"16"}
       letterSpacing={1}
     >

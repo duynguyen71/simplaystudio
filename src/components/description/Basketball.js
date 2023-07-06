@@ -1,5 +1,11 @@
 import React from "react";
-import { UnorderedList, ListItem, OrderedList, Box } from "@chakra-ui/react";
+import {
+  UnorderedList,
+  ListItem,
+  OrderedList,
+  Box,
+  useColorModeValue,
+} from "@chakra-ui/react";
 
 const Basketball = () => {
   return (
@@ -7,7 +13,7 @@ const Basketball = () => {
       <UnorderedList
         spacing={2}
         fontWeight={"300"}
-        textColor={"gray.400"}
+        textColor={useColorModeValue("gray.700", "gray.300")}
         fontSize={"16"}
         letterSpacing={1}
       >
@@ -27,7 +33,7 @@ const Basketball = () => {
       <OrderedList
         spacing={2}
         fontWeight={"300"}
-        textColor={"gray.400"}
+        textColor={useColorModeValue("gray.700", "gray.300")}
         fontSize={"16"}
         letterSpacing={1}
       >
@@ -36,7 +42,7 @@ const Basketball = () => {
         <UnorderedList
           spacing={2}
           fontWeight={"300"}
-          textColor={"gray.400"}
+          textColor={useColorModeValue("gray.700", "gray.300")}
           fontSize={"16"}
           letterSpacing={1}
         >
@@ -52,7 +58,7 @@ const Basketball = () => {
         <UnorderedList
           spacing={2}
           fontWeight={"300"}
-          textColor={"gray.400"}
+          textColor={useColorModeValue("gray.700", "gray.300")}
           fontSize={"16"}
           letterSpacing={1}
         >

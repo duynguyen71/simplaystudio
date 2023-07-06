@@ -51,11 +51,11 @@ const games = [
     videos: [],
     platform: {
       ios: {
-        link: "",
+        link: "itms-apps://itunes.apple.com/app/id1599063905",
         rating: "",
       },
       android: {
-        link: "",
+        link: "https://play.google.com/store/apps/details?id=com.bluedot.fireworkskids",
         rating: "",
       },
     },
@@ -71,11 +71,11 @@ const games = [
     videos: [],
     platform: {
       ios: {
-        link: "",
+        link: "itms-apps://itunes.apple.com/app/id1550492151",
         rating: "",
       },
       android: {
-        link: "",
+        link: "https://play.google.com/store/apps/details?id=com.bluedot.jetbrother",
         rating: "",
       },
     },
@@ -92,11 +92,11 @@ const games = [
     videos: ["/cowboy1.mp4", "/cowboy2.mp4", "/cowboy3.mp4"],
     platform: {
       ios: {
-        link: "",
+        link: "itms-apps://itunes.apple.com/app/id1541522775",
         rating: "",
       },
       android: {
-        link: "",
+        link: "https://play.google.com/store/apps/details?id=com.bluedot.cowboygunshooting",
         rating: "",
       },
     },
@@ -107,16 +107,17 @@ const games = [
     shortDescription: "Stab between the fingers game",
     bio: "Be careful! Do NOT try in real life.",
     description: <KnifeGame />,
-    thumb: "",
+    thumb: "knifegame.png",
+    image: "knifegame.png",
     images: [],
     videos: ["/knifegame1.mp4", "/knifegame2.mp4", "/knifegame3.mp4"],
     platform: {
       ios: {
-        link: "",
+        link: "itms-apps://itunes.apple.com/app/id1508878493",
         rating: "",
       },
       android: {
-        link: "",
+        link: "https://play.google.com/store/apps/details?id=com.bluedot.knifegame",
         rating: "",
       },
     },
@@ -133,11 +134,11 @@ const games = [
     videos: ["/oneinchpunch1.mp4", "/oneinchpunch2.mp4", "/oneinchpunch3.mp4"],
     platform: {
       ios: {
-        link: "",
+        link: "itms-apps://itunes.apple.com/app/id1571513391",
         rating: "",
       },
       android: {
-        link: "",
+        link: "https://play.google.com/store/apps/details?id=com.bluedot.oneinchpunch",
         rating: "",
       },
     },
@@ -155,11 +156,11 @@ const games = [
     videos: ["/basketball1.mp4", "/basketball2.mp4", "/basketball3.mp4"],
     platform: {
       ios: {
-        link: "",
+        link: "itms-apps://itunes.apple.com/app/id1473843389",
         rating: "",
       },
       android: {
-        link: "",
+        link: "https://play.google.com/store/apps/details?id=com.bluedot.basketball.mini",
         rating: "",
       },
     },
@@ -169,17 +170,17 @@ const games = [
     shortDescription: "Let's dance with the bamboo poles!",
     bio: "Bamboo Dancing - Nhay Sap a traditional cultural dance performed in Vietnam. Now let's play it in casual video game style.",
     description: <BambooDancing />,
-    thumb: "bambodancing.png",
-    image: "bambodancing.png",
+    thumb: "bamboodancing.png",
+    image: "bamboodancing.png",
     images: [],
     videos: [],
     platform: {
       ios: {
-        link: "",
+        link: "itms-apps://itunes.apple.com/app/id1503977442",
         rating: "",
       },
       android: {
-        link: "",
+        link: "https://play.google.com/store/apps/details?id=com.bluedot.bamboodancing",
         rating: "",
       },
     },
@@ -196,11 +197,11 @@ const games = [
     videos: [],
     platform: {
       ios: {
-        link: "",
+        link: "itms-apps://itunes.apple.com/app/id1462581286",
         rating: "",
       },
       android: {
-        link: "",
+        link: "https://play.google.com/store/apps/details?id=com.bluedot.twinfly",
         rating: "",
       },
     },
@@ -217,11 +218,11 @@ const games = [
     videos: ["/eggdunk1.mp4", "/eggdunk2.mp4", "/eggdunk3.mp4"],
     platform: {
       ios: {
-        link: "",
+        link: "itms-apps://itunes.apple.com/app/id1459262316",
         rating: "",
       },
       android: {
-        link: "",
+        link: "https://play.google.com/store/apps/details?id=com.bluedot.eggdunk",
         rating: "",
       },
     },
@@ -237,11 +238,11 @@ const games = [
     videos: [],
     platform: {
       ios: {
-        link: "",
+        link: "itms-apps://itunes.apple.com/app/id1462581286",
         rating: "",
       },
       android: {
-        link: "",
+        link: "https://play.google.com/store/apps/details?id=com.bluedot.protectisland&fbclid",
         rating: "",
       },
     },
@@ -257,11 +258,11 @@ const games = [
     videos: [],
     platform: {
       ios: {
-        link: "",
+        link: "itms-apps://itunes.apple.com/app/id1465901420",
         rating: "",
       },
       android: {
-        link: "",
+        link: "https://play.google.com/store/apps/details?id=com.bluedot.duckhunter",
         rating: "",
       },
     },

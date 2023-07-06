@@ -1,5 +1,5 @@
 import React from "react";
-import { UnorderedList, ListItem } from "@chakra-ui/react";
+import { UnorderedList, ListItem, useColorModeValue } from "@chakra-ui/react";
 
 const EggDunk = () => {
   return (
@@ -7,7 +7,7 @@ const EggDunk = () => {
       <UnorderedList
         spacing={2}
         fontWeight={"300"}
-        textColor={"gray.400"}
+        textColor={useColorModeValue("gray.700", "gray.300")}
         fontSize={"16"}
         letterSpacing={1}
       >
@@ -18,7 +18,7 @@ const EggDunk = () => {
       <UnorderedList
         spacing={2}
         fontWeight={"300"}
-        textColor={"gray.400"}
+        textColor={useColorModeValue("gray.700", "gray.300")}
         fontSize={"16"}
         letterSpacing={1}
       >

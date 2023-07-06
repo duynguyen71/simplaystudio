@@ -11,8 +11,6 @@ import {
   GridItem,
   Button,
   Stack,
-  Flex,
-  HStack,
 } from "@chakra-ui/react";
 import ReactStars from "react-rating-stars-component";
 import { PUBLIC_IMAGE_URL, PUBLIC_VIDEO_URL, isAppleProduct } from "../hooks";
