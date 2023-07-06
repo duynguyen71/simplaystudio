@@ -85,7 +85,7 @@ const HomePage = () => {
       {/* Main 2 */}
       <Flex direction={"column"} py={[4, 10]} px={[4, 8]}>
         <Box height={["4vh", "5vh", "5vh"]}>
-          <CustomHeading text={"Our Games"} />
+          <CustomHeading color={"red.400"} text={"Our Games"} />
         </Box>
         <Grid
           overflowX={"hidden"}

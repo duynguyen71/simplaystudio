@@ -45,9 +45,18 @@ const games = [
     shortDescription: "Tap & Enjoy Fireworks",
     bio: "This fireworks game is a simple way to relax by tapping on the screen. Especially for kids, they can explore fireworks styles and change color or shape if they want to.",
     description: <FireworkBabyDescription />,
-    thumb: "/FireworksPlay.png",
-    image: "/FireworksPlay.png",
-    images: [],
+    thumb: "/fireworksbaby.png",
+    image: "/fireworksbaby.png",
+    images: [
+      "/fwbaby/fwbaby1.jpeg",
+      "/fwbaby/fwbaby2.jpeg",
+      "/fwbaby/fwbaby3.jpeg",
+      "/fwbaby/fwbaby4.jpeg",
+      "/fwbaby/fwbaby5.jpeg",
+      "/fwbaby/fwbaby6.jpeg",
+      "/fwbaby/fwbaby7.jpeg",
+      "/fwbaby/fwbaby8.jpeg",
+    ],
     videos: [],
     platform: {
       ios: {
