@@ -5,6 +5,7 @@ import {
   Box,
   useColorModeValue,
 } from "@chakra-ui/react";
+import ListTitle from "./ListTitle";
 
 const OneInchPunch = () => {
   return (
@@ -15,12 +16,12 @@ const OneInchPunch = () => {
       fontSize={"16"}
       letterSpacing={1}
     >
-      <span>
+      <ListTitle>
         Punch tremendous amounts of impact force at extremely close distances.
-      </span>
+      </ListTitle>
       <br />
       <Box height={"1vh"} />
-      <span>HOW TO PLAY:</span>
+      <ListTitle>How to play</ListTitle>
       <ListItem>Aim and tap to punch.</ListItem>
       <ListItem>
         Upgrade power levels to generate more amounts of impact force.

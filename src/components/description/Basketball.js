@@ -6,6 +6,7 @@ import {
   Box,
   useColorModeValue,
 } from "@chakra-ui/react";
+import ListTitle from "./ListTitle";
 
 const Basketball = () => {
   return (
@@ -17,7 +18,7 @@ const Basketball = () => {
         fontSize={"16"}
         letterSpacing={1}
       >
-        <span>How to Play</span>
+        <ListTitle>How to Play</ListTitle>
         <ListItem>Pick up a ball in allowing area.</ListItem>
         <ListItem>Wipe up to shoot.</ListItem>
         <ListItem>
@@ -37,7 +38,7 @@ const Basketball = () => {
         fontSize={"16"}
         letterSpacing={1}
       >
-        <span>Game Mode:</span>
+        <ListTitle>Game Mode</ListTitle>
         <ListItem>Timer</ListItem>
         <UnorderedList
           spacing={2}
@@ -72,10 +73,10 @@ const Basketball = () => {
         </UnorderedList>
       </OrderedList>
       <Box height={"1vh"} />
-      <span>
+      <ListTitle>
         You think your can be the best player!? Compare your score in the Game
         Center Leaderboards with all players in around the world :).
-      </span>
+      </ListTitle>
     </>
   );
 };

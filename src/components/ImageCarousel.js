@@ -3,12 +3,18 @@ import {
   Box,
   IconButton,
   useBreakpointValue,
+  Stack,
+  Heading,
+  Text,
+  Container,
   AspectRatio,
-  Image,
+  Button,
+  useColorModeValue,
 } from "@chakra-ui/react";
 import { BiLeftArrowAlt, BiRightArrowAlt } from "react-icons/bi";
 import Slider from "react-slick";
-
+import { useNavigate } from "react-router-dom";
+import { PUBLIC_IMAGE_URL } from "../hooks";
 const settings = {
   dots: true,
   arrows: false,
@@ -16,65 +22,117 @@ const settings = {
   infinite: true,
   autoplay: true,
   speed: 500,
-  autoplaySpeed: 3000,
+  autoplaySpeed: 1500,
   slidesToShow: 1,
   slidesToScroll: 1,
+  pauseOnFocus: false,
 };
-const ImageCarousel = () => {
+
+export const ImageCarousel = ({ games }) => {
+  const navigate = useNavigate();
   const [slider, setSlider] = useState();
+  const [gameIndex, setGameIndex] = useState(0);
 
-  const top = useBreakpointValue({ base: "90%", md: "50%" });
-  const side = useBreakpointValue({ base: "30%", md: "40px" });
+  const top = useBreakpointValue(["80%", "50%"]);
+  const side = useBreakpointValue([0, "10px"]);
 
+  const descriptionColor = useColorModeValue("white", "white");
+  const imgBgColor = useColorModeValue("gray.200", "gray.800");
+  const navigateToFWPlay = () => navigate(`/games/${games[0].name}`);
   return (
-    <Box
-      position={"relative"}
-      width={"full"}
-      height={"50vh"}
-      overflow={"hidden"}
-      alignItems={"center"}
-      borderRadius={"md"}
-    >
-      <IconButton
-        aria-label="left-arrow"
-        variant="ghost"
-        position="absolute"
-        left={side}
-        top={top}
-        transform={"translate(0%, -50%)"}
-        zIndex={2}
-        onClick={() => slider?.slickPrev()}
-      >
-        <BiLeftArrowAlt size="40px" />
-      </IconButton>
-      <IconButton
-        aria-label="right-arrow"
-        variant="ghost"
-        position="absolute"
-        right={side}
-        top={top}
-        transform={"translate(0%, -50%)"}
-        zIndex={2}
-        onClick={() => slider?.slickNext()}
-      >
-        <BiRightArrowAlt size="40px" />
-      </IconButton>
-      <AspectRatio height={"100%"} ratio={"16/9"}>
-        <Slider {...settings} ref={(slider) => setSlider(slider)}>
-          {[1, 2, 3, 4, 5, 6, 7].map((value, index) => (
-            <Image
-              key={value}
-              src={`${process.env.PUBLIC_URL}/images/6.5_ver2023.4.1 ${
-                value + 1
-              }.png`}
-              objectFit="cover"
-            />
-          ))}
-          {/* </Box> */}
+    <>
+      {/*  */}
+      <Box position={"relative"} overflow={"hidden"} borderRadius={"md"}>
+        {/* Left Icon */}
+        <IconButton
+          aria-label="left-arrow"
+          variant="ghost"
+          position="absolute"
+          left={side}
+          top={top}
+          transform={"translate(0%, -50%)"}
+          zIndex={2}
+          onClick={() => slider?.slickPrev()}
+        >
+          <BiLeftArrowAlt size="40px" />
+        </IconButton>
+        {/* Right Icon */}
+        <IconButton
+          aria-label="right-arrow"
+          variant="ghost"
+          position="absolute"
+          right={side}
+          top={top}
+          transform={"translate(0%, -50%)"}
+          zIndex={2}
+          onClick={() => slider?.slickNext()}
+        >
+          <BiRightArrowAlt size="40px" />
+        </IconButton>
+        <Slider
+          afterChange={(index) => {}}
+          {...settings}
+          ref={(slider) => setSlider(slider)}
+        >
+          {games[0].images.map((img, index) => {
+            return (
+              <Box
+                key={index}
+                onClick={navigateToFWPlay}
+                position="relative"
+                backgroundPosition="center"
+                backgroundRepeat="no-repeat"
+                backgroundSize="cover"
+                // backgroundImage={`${
+                //   process.env.PUBLIC_URL
+                // }/images/6.5_ver2023.4.1 ${index + 1}.png`}
+                bgImage={`${PUBLIC_IMAGE_URL}/${img}`}
+                bgColor={imgBgColor}
+              >
+                <Container
+                  size="container.lg"
+                  height="600px"
+                  position="relative"
+                >
+                  <Stack
+                    spacing={6}
+                    w={"full"}
+                    maxW={"lg"}
+                    position="absolute"
+                    top="50%"
+                    transform="translate(0, -50%)"
+                  >
+                    <Heading
+                      // color={descriptionColor}
+                      fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }}
+                    >
+                      {games[0].name}
+                    </Heading>
+                    <Text
+                      fontSize={{ base: "md", lg: "lg" }}
+                      // color={'white'}
+                    >
+                      {games[0].shortDescription}
+                    </Text>
+                    <Box>
+                      <Button
+                        onClick={navigateToFWPlay}
+                        variant={"solid"}
+                        color={"white"}
+                        bgColor={"red.400"}
+                        size={"md"}
+                        fontWeight={"normal"}
+                      >
+                        View Detail
+                      </Button>
+                    </Box>
+                  </Stack>
+                </Container>
+              </Box>
+            );
+          })}
         </Slider>
-      </AspectRatio>
-    </Box>
+      </Box>
+    </>
   );
 };
-
-export default ImageCarousel;

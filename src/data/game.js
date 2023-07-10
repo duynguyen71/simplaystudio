@@ -21,11 +21,13 @@ const games = [
     thumb: "FireworksPlay.png",
     images: [
       "/fwplay/1.png",
-      "/fwplay/1.png",
-      "/fwplay/1.png",
-      "/fwplay/1.png",
-      "/fwplay/1.png",
-      "/fwplay/1.png",
+      "/fwplay/2.png",
+      "/fwplay/3.png",
+      "/fwplay/4.png",
+      "/fwplay/5.png",
+      "/fwplay/6.png",
+      "/fwplay/7.png",
+      "/fwplay/8.png",
     ],
     videos: ["/FWplay.MP4"],
     platform: {

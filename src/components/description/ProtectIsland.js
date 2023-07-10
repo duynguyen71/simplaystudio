@@ -1,5 +1,6 @@
 import React from "react";
 import { UnorderedList, ListItem, useColorModeValue } from "@chakra-ui/react";
+import ListTitle from "./ListTitle";
 
 const ProtectIsland = () => {
   return (
@@ -16,7 +17,7 @@ const ProtectIsland = () => {
         of them. King Kong, the king of this island is fighting against these
         enemies. All you need to do is help him defense coming missiles.
       </span>
-      <span>HOW TO PLAY</span>
+      <ListTitle>How to play</ListTitle>
       <ListItem>
         Tap on left or right side to throw coconut tree to defense the rockets.
         Remember that you should not not miss any of rockets otherwise the

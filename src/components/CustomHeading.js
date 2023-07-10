@@ -3,7 +3,12 @@ import React from "react";
 
 const CustomHeading = ({ text, color }) => {
   return (
-    <Text color={color} fontWeight={"400"} fontSize={["12px", "18 px"]} mb={3}>
+    <Text
+      color={color}
+      fontWeight={"medium"}
+      fontSize={["12px", "18px"]}
+      mb={3}
+    >
       {text}
     </Text>
   );

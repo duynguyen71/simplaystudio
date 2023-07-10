@@ -14,6 +14,7 @@ import {
 import { BiLeftArrowAlt, BiRightArrowAlt } from "react-icons/bi";
 import Slider from "react-slick";
 import { useNavigate } from "react-router-dom";
+import { PUBLIC_IMAGE_URL } from "../hooks";
 const settings = {
   dots: true,
   arrows: false,
@@ -42,6 +43,8 @@ export const CaptionCarousel = ({ games }) => {
     <>
       {/*  */}
       <Box
+        border={"1px"}
+        borderColor={useColorModeValue("red.100", "gray.700")}
         position={"relative"}
         height={"60vh"}
         overflow={"hidden"}
@@ -97,9 +100,10 @@ export const CaptionCarousel = ({ games }) => {
                   backgroundPosition="center"
                   backgroundRepeat="no-repeat"
                   backgroundSize="cover"
-                  backgroundImage={`${
-                    process.env.PUBLIC_URL
-                  }/images/6.5_ver2023.4.1 ${index + 1}.png`}
+                  // backgroundImage={`${
+                  //   process.env.PUBLIC_URL
+                  // }/images/6.5_ver2023.4.1 ${index + 1}.png`}
+                  backgroundImage={`${PUBLIC_IMAGE_URL}/${game.thumb}`}
                   bgColor={imgBgColor}
                 >
                   <Container

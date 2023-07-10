@@ -1,5 +1,6 @@
 import React from "react";
 import { UnorderedList, ListItem, useColorModeValue } from "@chakra-ui/react";
+import ListTitle from "./ListTitle";
 
 const BambooDancing = () => {
   return (
@@ -10,7 +11,7 @@ const BambooDancing = () => {
       fontSize={"16"}
       letterSpacing={1}
     >
-      <span>How to Play</span>
+      <ListTitle>How to play</ListTitle>
       <ListItem>
         Touch down and hold a little bit to increase jump force then release to
         jump, avoid jump on the bamboo poles!

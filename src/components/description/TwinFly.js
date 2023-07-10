@@ -1,5 +1,6 @@
 import React from "react";
 import { UnorderedList, ListItem, useColorModeValue } from "@chakra-ui/react";
+import ListTitle from "./ListTitle";
 
 const TwinFly = () => {
   return (
@@ -10,7 +11,7 @@ const TwinFly = () => {
       fontSize={"16"}
       letterSpacing={1}
     >
-      <span>How to Play</span>
+      <ListTitle>How to Play</ListTitle>
       <ListItem>
         Use a finger (just ONE finger) to touch on the screen and hold until a
         man flies up then release and touch the screen again for the other man

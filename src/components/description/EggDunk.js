@@ -1,5 +1,6 @@
 import React from "react";
 import { UnorderedList, ListItem, useColorModeValue } from "@chakra-ui/react";
+import ListTitle from "./ListTitle";
 
 const EggDunk = () => {
   return (
@@ -11,7 +12,7 @@ const EggDunk = () => {
         fontSize={"16"}
         letterSpacing={1}
       >
-        <span>How to Play</span>
+        <ListTitle>How to Play</ListTitle>
         <ListItem>Drag to aim and release to shoot.</ListItem>
       </UnorderedList>
 
@@ -22,7 +23,7 @@ const EggDunk = () => {
         fontSize={"16"}
         letterSpacing={1}
       >
-        <span>GAME FEATURES</span>
+        <ListTitle>Game features</ListTitle>
         <ListItem>Easy control by one finger</ListItem>
         <ListItem>Arcade mode and level mode</ListItem>
         <ListItem>Many egg skins for fun</ListItem>

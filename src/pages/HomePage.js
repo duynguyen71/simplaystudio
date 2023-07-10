@@ -20,6 +20,7 @@ import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { outLineStrokeStyle } from "../hooks";
 import { useNavigate } from "react-router-dom";
+import { ImageCarousel } from "../components/ImageCarousel";
 
 const HomePage = () => {
   const { ref, inView } = useInView();
@@ -83,9 +84,9 @@ const HomePage = () => {
       {/* End of Main 1 */}
 
       {/* Main 2 */}
-      <Flex direction={"column"} py={[4, 10]} px={[4, 8]}>
+      <Flex direction={"column"} my={[4, 8, 10]} px={[4, 8]}>
         <Box height={["4vh", "5vh", "5vh"]}>
-          <CustomHeading color={"red.400"} text={"Our Games"} />
+          <CustomHeading color={"white.400"} text={"Our Games"} />
         </Box>
         <Grid
           overflowX={"hidden"}
@@ -166,6 +167,9 @@ const HomePage = () => {
         </motion.div>
       </Box>
       {/* End of Main 3 */}
+      {/* Main 4 */}
+      <ImageCarousel games={games} />
+      {/* End of Main 4 */}
     </Box>
   );
 };

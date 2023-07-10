@@ -1,5 +1,6 @@
 import React from "react";
 import { UnorderedList, ListItem, useColorModeValue } from "@chakra-ui/react";
+import ListTitle from "./ListTitle";
 
 const DuckHunter = () => {
   return (
@@ -10,7 +11,7 @@ const DuckHunter = () => {
       fontSize={"16"}
       letterSpacing={1}
     >
-      <span>How to Play</span>
+      <ListTitle>How to Play</ListTitle>
       <ListItem>Aim and tap to punch.</ListItem>
       <ListItem>
         Upgrade power levels to generate more amounts of impact force.

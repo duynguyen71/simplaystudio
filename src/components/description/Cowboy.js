@@ -5,6 +5,7 @@ import {
   Text,
   useColorModeValue,
 } from "@chakra-ui/react";
+import ListTitle from "./ListTitle";
 
 const Cowboy = () => {
   return (
@@ -34,7 +35,7 @@ const Cowboy = () => {
           your shooting skills.
         </Text>
         <br />
-        <Text>TWO GAME MODES IN SHOOTING GAME:</Text>
+        <ListTitle>Two game modes in shooting game</ListTitle>
         <ListItem>
           Arcade is a classic game mode. What you need to do is shoot all random
           targets and don’t miss any of them. Try to score the highest score as
@@ -44,10 +45,10 @@ const Cowboy = () => {
           Quick Draw (also known as Fast Draw) is the ability to quickly draw a
           handgun and accurately fire it upon a target in the process.
         </ListItem>
-        <span>
+        <ListTitle>
           You can also compare your scores with all players around the world.
           The leaderboards are displayed on the board in the saloon.
-        </span>
+        </ListTitle>
       </UnorderedList>
     </>
   );

@@ -1,5 +1,6 @@
 import React from "react";
 import { UnorderedList, ListItem, useColorModeValue } from "@chakra-ui/react";
+import ListTitle from "./ListTitle";
 
 const FireworkBabyDescription = () => {
   return (
@@ -10,7 +11,7 @@ const FireworkBabyDescription = () => {
       fontSize={"16"}
       letterSpacing={1}
     >
-      <span>FEATURES:</span>
+      <ListTitle>Features</ListTitle>
       <ListItem>Tap to explode fireworks</ListItem>
       <ListItem> Change fireworks shape</ListItem>
       <ListItem>Change fireworks color</ListItem>

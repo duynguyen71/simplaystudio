@@ -1,5 +1,6 @@
 import React from "react";
 import { UnorderedList, ListItem, useColorModeValue } from "@chakra-ui/react";
+import ListTitle from "./ListTitle";
 
 const KnifeGame = () => {
   return (
@@ -10,7 +11,7 @@ const KnifeGame = () => {
       fontSize={"16"}
       letterSpacing={1}
     >
-      <span>How to Play</span>
+      <ListTitle>How to Play</ListTitle>
       <ListItem>
         The knife game is the game that you stab between the fingers, wherein
         placing the palm of your hand down on a table with fingers apart, using

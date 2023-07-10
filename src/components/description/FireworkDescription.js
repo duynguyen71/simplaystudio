@@ -1,5 +1,6 @@
 import React from "react";
 import { UnorderedList, ListItem, useColorModeValue } from "@chakra-ui/react";
+import ListTitle from "./ListTitle";
 const FireworkDescription = () => {
   return (
     <>
@@ -10,10 +11,10 @@ const FireworkDescription = () => {
         fontSize={"16"}
         letterSpacing={1}
       >
-        <span>
+        <ListTitle>
           Fireworks Pro is a simulation fireworks game. Download the game and
           enjoy realistic graphics, and much more:
-        </span>
+        </ListTitle>
         <ListItem>
           With FPS mode, you can walk around the town to fire fireworks and make
           some explosions next to your neighbors.{" "}
