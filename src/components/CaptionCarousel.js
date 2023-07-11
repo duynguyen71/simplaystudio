@@ -22,7 +22,7 @@ const settings = {
   infinite: true,
   autoplay: true,
   speed: 500,
-  autoplaySpeed: 1500,
+  autoplaySpeed: 3000,
   slidesToShow: 1,
   slidesToScroll: 1,
   pauseOnFocus: false,
@@ -43,12 +43,12 @@ export const CaptionCarousel = ({ games }) => {
     <>
       {/*  */}
       <Box
-        border={"1px"}
+        border={["0", "1px"]}
         borderColor={useColorModeValue("red.100", "gray.700")}
         position={"relative"}
         height={"60vh"}
         overflow={"hidden"}
-        borderRadius={"md"}
+        borderRadius={["none", "md"]}
       >
         {/* Left Icon */}
         <IconButton

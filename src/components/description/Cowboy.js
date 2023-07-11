@@ -10,6 +10,7 @@ import ListTitle from "./ListTitle";
 const Cowboy = () => {
   return (
     <>
+      <blockquote>Shoot 'em up!</blockquote>
       <UnorderedList
         spacing={2}
         fontWeight={"300"}

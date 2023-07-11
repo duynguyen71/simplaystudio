@@ -18,7 +18,6 @@ import CustomHeading from "../components/CustomHeading";
 import BannerText from "../components/BannerText";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { outLineStrokeStyle } from "../hooks";
 import { useNavigate } from "react-router-dom";
 import { ImageCarousel } from "../components/ImageCarousel";
 
@@ -70,7 +69,7 @@ const HomePage = () => {
     <Box position={"relative"} minH={"80vh"}>
       <Box height={["2vh", "5vh", "5vh"]} />
       {/* Main 1 */}
-      <Flex mx={4} direction={["column", "column", "row", "row", "row"]}>
+      <Flex mx={[0, 4]} direction={["column", "column", "row", "row", "row"]}>
         {/* Hero */}
         <Box alignSelf={"center"} flex={5}>
           <Hero />

@@ -3,7 +3,7 @@ import React from "react";
 
 const ListTitle = ({ text, children }) => {
   return (
-    <Text fontSize={["12px", "18px"]} fontWeight={"medium"}>
+    <Text fontSize={["16px", "19px"]} fontWeight={"medium"}>
       {children}
     </Text>
   );

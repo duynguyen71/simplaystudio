@@ -21,7 +21,7 @@ const BannerText = ({
       letterSpacing={"5px"}
       lineHeight={[1.1, 0.9]}
       fontWeight={"900"}
-      fontSize={["20px", "30px", "60px", "80px"]}
+      fontSize={["40px", "60px", "80px"]}
       color={color}
     >
       {text}

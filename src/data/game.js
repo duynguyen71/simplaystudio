@@ -8,6 +8,7 @@ import FireworkDescription from "../components/description/FireworkDescription";
 import KnifeGame from "../components/description/KnifeGame";
 import OneInchPunch from "../components/description/OneInchPunch.js";
 import ProtectIsland from "../components/description/ProtectIsland";
+import Spaceman from "../components/description/Spaceman";
 import TwinFly from "../components/description/TwinFly";
 
 const games = [
@@ -75,7 +76,7 @@ const games = [
     name: "Spaceman",
     shortDescription: "Exploring the vast universe by a single tap.",
     bio: "In 2050, humankind has been building a vast number of star bases over the Solar system. The Crew brothers, one in their job of flying to Jupiter base, their ship hit a meteoroid and the explosion destroyed almost the ship, luckily one thrust engine still was working fine. Astronauts took turns to grab firmly on the engine, they continued on their journey to visit each star bases.",
-    description: "",
+    description: <Spaceman />,
     thumb: "spaceman512.png",
     image: "spaceman512.png",
     images: [],

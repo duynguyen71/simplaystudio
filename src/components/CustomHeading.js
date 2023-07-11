@@ -6,7 +6,7 @@ const CustomHeading = ({ text, color }) => {
     <Text
       color={color}
       fontWeight={"medium"}
-      fontSize={["12px", "18px"]}
+      fontSize={["18px", "20px"]}
       mb={3}
     >
       {text}

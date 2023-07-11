@@ -15,20 +15,22 @@ import games from "../data/game";
 import { PUBLIC_IMAGE_URL } from "../hooks";
 import { useNavigate } from "react-router";
 import "./games-page.css";
-import { BsArrowRight } from "react-icons/bs";
+import { ChevronRightIcon } from "@chakra-ui/icons";
 
 const GamesPage = () => {
   const navigate = useNavigate();
   const bgColor = useColorModeValue("gray.200", "gray.800");
   return (
     <Box>
-      <Box p={8}>
-        <SimpleGrid spacing={["30px", "40px", "50px"]} minChildWidth={"20vw"}>
+      <Box p={[4, 8]}>
+        <SimpleGrid
+          spacing={["20px", "40px", "50px"]}
+          minChildWidth={["30vw", "20vw"]}
+        >
           {games.map((game, index) => {
             return (
               <VStack
                 className="game-container"
-                // overflow={"hidden"}
                 cursor={"pointer"}
                 spacing={2}
                 alignItems={"start"}
@@ -52,11 +54,19 @@ const GamesPage = () => {
                 </Center>
                 <Spacer />
                 <HStack px={"30px"} width={"100%"}>
-                  <Text fontWeight={"500"} letterSpacing={2}>
+                  <Text
+                    fontSize={["sm", "md"]}
+                    fontWeight={"500"}
+                    letterSpacing={2}
+                  >
                     {game.name}
                   </Text>
                   <Spacer />
-                  <Button as={BsArrowRight}>s</Button>
+                  <Button
+                    size={"xl"}
+                    bg={"transparent"}
+                    as={ChevronRightIcon}
+                  />
                 </HStack>
               </VStack>
             );

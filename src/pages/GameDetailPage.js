@@ -83,7 +83,7 @@ const GameDetailPage = () => {
 
           {/* Game Download */}
           <VStack spacing={1} alignItems={"start"} alignSelf={"start"}>
-            <Text fontSize={"xl"} fontWeight={"500"} letterSpacing={1.2}>
+            <Text fontSize={"2xl"} fontWeight={"500"} letterSpacing={1.5}>
               {game.name}
             </Text>
             {game.shortDescription && (
@@ -121,6 +121,7 @@ const GameDetailPage = () => {
           </VStack>
         )}
       </VStack>
+
       {isLoading && game.videos.length > 0 && (
         <Box textAlign={"center"} p={4}>
           <Text color={"red.400"} fontStyle={"italic"}>
@@ -132,19 +133,8 @@ const GameDetailPage = () => {
 
       {/* Game Video */}
       {game.videos && (
-        // <video
-        //   onLoadStart={onLoadStart}
-        //   onLoadedData={onLoadEnd}
-        //   onError={onError}
-        //   loop
-        //   controls={false}
-        //   autoPlay
-        //   muted
-        // >
-        //   <source src={`${PUBLIC_VIDEO_URL}/${game.video}`} type="video/mp4" />
-        // </video>
         <Stack
-          px={[2, 10]}
+          px={[2, 4]}
           direction={"row"}
           spacing={[2, 10]}
           maxW={"100vw"}
@@ -171,14 +161,14 @@ const GameDetailPage = () => {
       {/* End of Game Video */}
 
       {/* Game Description */}
-      <VStack py={[4, 5]} px={[2, 10]} textAlign={"start"} alignItems={"start"}>
+      <VStack py={[4, 5]} px={[2, 4]} textAlign={"start"} alignItems={"start"}>
         {game.description}
       </VStack>
       {/* End of Game Description */}
 
       {/* Game Gallery */}
       {game.images.length > 0 && (
-        <VStack px={[2, 10]} py={5} alignItems={"start"}>
+        <VStack px={[2, 4]} py={5} alignItems={"start"}>
           <CustomHeading text={"Game Gallery"} />
           <Grid
             templateColumns={["repeat(2 , 4fr)", "repeat(4, 4fr)"]}
