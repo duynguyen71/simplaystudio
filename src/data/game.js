@@ -79,7 +79,7 @@ const games = [
     description: <Spaceman />,
     thumb: "spaceman512.png",
     image: "spaceman512.png",
-    images: [],
+    images: ["/spaceman/spaceman1.png"],
     videos: [],
     platform: {
       ios: {
@@ -100,7 +100,7 @@ const games = [
     description: <Cowboy />,
     thumb: "cowboygunshooting512.png",
     image: "cowboygunshooting512.png",
-    images: [],
+    images: ["/cowboy/cowboy1.png"],
     videos: ["/cowboy1.mp4", "/cowboy2.mp4", "/cowboy3.mp4"],
     platform: {
       ios: {
