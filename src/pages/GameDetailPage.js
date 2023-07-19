@@ -92,9 +92,11 @@ const GameDetailPage = () => {
               </Text>
             )}
             <ReactStars
+              key={game.platform.ios.rating}
               half={true}
               edit={false}
               value={4.5}
+              // halfIcon={<i className="fa fa-star-half-alt"></i>}
               size={20}
               activeColor="#ffd700"
             />
@@ -171,7 +173,7 @@ const GameDetailPage = () => {
         <VStack px={[2, 4]} py={5} alignItems={"start"}>
           <CustomHeading text={"Game Gallery"} />
           <Grid
-            templateColumns={["repeat(2 , 4fr)", "repeat(4, 4fr)"]}
+            templateColumns={["repeat(2 , 2fr)", "repeat(3, 3fr)"]}
             gap={[2, 4]}
           >
             {game.images.map((image, index) => (

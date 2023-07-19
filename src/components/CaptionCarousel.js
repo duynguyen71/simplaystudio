@@ -79,23 +79,25 @@ export const CaptionCarousel = ({ games }) => {
         <AspectRatio height={"100%"} ratio={"4/5"}>
           <Slider
             afterChange={(index) => {
-              // setGameIndex(index);
+              setGameIndex(index);
             }}
             {...settings}
             ref={(slider) => setSlider(slider)}
           >
             {games.map((game, index) => {
-              const navigateToFWPlay = () =>
-                navigate(`/games/${games[0].name}`);
+              // const navigateToFWPlay = () =>
+              //   navigate(`/games/${games[0].name}`);
+
+              const navigateToGame = () => {
+                const g = games.find((m, index) => index === gameIndex) || 0;
+                return navigate(`/games/${g.name}`);
+              };
+
               return (
                 <Box
                   key={index}
-                  // onClick={() => {
-                  //   const g =
-                  //     games.find((m, index) => index === gameIndex) || 0;
-                  //   return navigate(`/games/${g.name}`);
-                  // }}
-                  onClick={navigateToFWPlay}
+                  onClick={navigateToGame}
+                  // onClick={navigateToFWPlay}
                   position="relative"
                   backgroundPosition="center"
                   backgroundRepeat="no-repeat"
@@ -133,7 +135,7 @@ export const CaptionCarousel = ({ games }) => {
                       </Text>
                       <Box>
                         <Button
-                          onClick={navigateToFWPlay}
+                          onClick={navigateToGame}
                           variant={"solid"}
                           color={"white"}
                           bgColor={"red.400"}

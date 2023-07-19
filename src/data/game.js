@@ -246,7 +246,7 @@ const games = [
     description: <ProtectIsland />,
     thumb: "protectislandicon512.png",
     image: "protectislandicon512.png",
-    images: [],
+    images: ["/protectisland/protectisland1.jpeg"],
     videos: [],
     platform: {
       ios: {
@@ -266,7 +266,7 @@ const games = [
     description: <DuckHunter />,
     thumb: "duckhunter512.png",
     image: "duckhunter512.png",
-    images: [],
+    images: ["/duckhunter/duckhunter1.jpg"],
     videos: [],
     platform: {
       ios: {
