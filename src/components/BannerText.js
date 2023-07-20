@@ -10,7 +10,7 @@ const BannerText = ({
   isStrokeStyle,
 }) => {
   const useStrokeStyle = {
-    "-webkit-text-stroke": `1px ${color}`,
+    WebkitTextStroke: `1px ${color}`,
     color: "transparent",
   };
   return (

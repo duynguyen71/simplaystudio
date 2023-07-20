@@ -135,18 +135,15 @@ const GameDetailPage = () => {
 
       {/* Game Video */}
       {game.videos && (
-        <Stack
-          px={[0, 4]}
-          direction={"row"}
-          spacing={[2, 10]}
-          maxW={"100vw"}
-          h={"100%"}
-          overflowX={"scroll"}
-        >
+        <Stack px={[0, 4]} direction={"row"} spacing={[2, 10]} h={"100%"}>
           {game.videos.map((video, index) => (
-            <Box maxW={"100%"} overflow={"hidden"} borderRadius={"md"}>
+            <Box
+              key={index}
+              maxW={"100%"}
+              overflow={"hidden"}
+              borderRadius={"md"}
+            >
               <video
-                key={index}
                 onLoadStart={onLoadStart}
                 onLoadedData={onLoadEnd}
                 onError={onError}

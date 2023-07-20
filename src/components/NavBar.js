@@ -95,7 +95,7 @@ export default function WithAction() {
               display={{ base: "none", md: "flex" }}
             >
               {NavLinks.map((link) => (
-                <NavLink key={link.title} {...link} />
+                <NavLink onClickCb={onClose} key={link.title} {...link} />
               ))}
             </HStack>
           </HStack>

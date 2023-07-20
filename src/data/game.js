@@ -164,7 +164,7 @@ const games = [
     description: <Basketball />,
     thumb: "basketball.png",
     image: "basketball.png",
-    images: [],
+    images: ["/basketball/basketball.jpg"],
     videos: ["/basketball1.mp4", "/basketball2.mp4", "/basketball3.mp4"],
     platform: {
       ios: {
@@ -184,7 +184,7 @@ const games = [
     description: <BambooDancing />,
     thumb: "bamboodancing.png",
     image: "bamboodancing.png",
-    images: [],
+    images: ["/bamboodancing/bamboodancing.jpg"],
     videos: [],
     platform: {
       ios: {
@@ -205,7 +205,7 @@ const games = [
     description: <TwinFly />,
     thumb: "twinflyicon512.png",
     image: "twinflyicon512.png",
-    images: [],
+    images: ["/twinfly/twinfly.jpg"],
     videos: [],
     platform: {
       ios: {
@@ -226,7 +226,7 @@ const games = [
     description: <EggDunk />,
     thumb: "eggdunkicon512.png",
     image: "eggdunkicon512.png",
-    images: [],
+    images: ["/eggdunk/eggdunk.jpg"],
     videos: ["/eggdunk1.mp4", "/eggdunk2.mp4", "/eggdunk3.mp4"],
     platform: {
       ios: {
