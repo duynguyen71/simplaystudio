@@ -107,7 +107,7 @@ const GameDetailPage = () => {
                   ? window.open(game.platform.ios.link)
                   : window.open(game.platform.android.link)
               }
-              bg={"green"}
+              bg={"red.400"}
             >
               Dowload now
             </Button>
@@ -136,10 +136,11 @@ const GameDetailPage = () => {
       {/* Game Video */}
       {game.videos && (
         <Stack
-          px={[2, 4]}
+          px={[0, 4]}
           direction={"row"}
           spacing={[2, 10]}
           maxW={"100vw"}
+          h={"100%"}
           overflowX={"scroll"}
         >
           {game.videos.map((video, index) => (
