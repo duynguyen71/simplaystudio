@@ -68,7 +68,6 @@ export default function LargeWithNewsletter() {
                 boxSize={"100px"}
                 src={`${process.env.PUBLIC_URL}/logo.svg`}
               />
-              {/* <Logo color={useColorModeValue("gray.700", "white")} /> */}
             </Box>
             <Text fontSize={"sm"}>
               © 2023 Simplay Studio. All rights reserved
@@ -97,7 +96,11 @@ export default function LargeWithNewsletter() {
           </Stack>
           <Stack align={"flex-start"}>
             <ListHeader>Support</ListHeader>
-            <Link href={"/privacy"}>Privacy</Link>
+            <CustomNavLink
+              href={"/privacy"}
+              onClickCb={() => {}}
+              title={"Privacy"}
+            />
           </Stack>
           <Stack align={"flex-start"}>
             <ListHeader>Stay up to date</ListHeader>

@@ -5,6 +5,8 @@ import {
   Flex,
   Grid,
   GridItem,
+  Heading,
+  SimpleGrid,
   Spacer,
   Text,
   useColorModeValue,
@@ -20,17 +22,21 @@ import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useNavigate } from "react-router-dom";
 import { ImageCarousel } from "../components/ImageCarousel";
+import hightlightVideos from "../data/hightlightvideos";
+import VideoContainer from "../components/VideoContainer";
+import { PUBLIC_HIGHTLIGHTS_URL } from "../hooks";
 
 const HomePage = () => {
   const { ref, inView } = useInView();
+  const { ref2, inView2 } = useInView();
   const animation = useAnimation();
   const animation2 = useAnimation();
   const animation3 = useAnimation();
+  const animation4 = useAnimation();
   const navigate = useNavigate();
 
   useEffect(() => {
     if (inView) {
-      console.log("In view");
       animation.start({
         x: 0,
         transition: {
@@ -65,9 +71,27 @@ const HomePage = () => {
       });
     }
   }, [inView, animation, animation2, animation3]);
+
+  useEffect(() => {
+    if (inView2) {
+      animation4.start({
+        y: 0,
+        transition: {
+          ease: "easeOut",
+          duration: 0.5,
+        },
+      });
+    }
+    if (!inView2) {
+      animation4.start({
+        y: "100px",
+      });
+    }
+  }, [inView2, animation4]);
   return (
-    <Box position={"relative"} minH={"80vh"}>
+    <Flex direction={"column"} position={"relative"} minH={"80vh"}>
       <Box height={["2vh", "5vh", "5vh"]} />
+
       {/* Main 1 */}
       <Flex mx={[0, 4]} direction={["column", "column", "row", "row", "row"]}>
         {/* Hero */}
@@ -118,6 +142,7 @@ const HomePage = () => {
           </Button>
         </Center>
       </Flex>
+      {/* End of Main 2 */}
 
       {/* Main 3 */}
       <Box
@@ -166,10 +191,31 @@ const HomePage = () => {
         </motion.div>
       </Box>
       {/* End of Main 3 */}
+
       {/* Main 4 */}
       <ImageCarousel games={games} />
       {/* End of Main 4 */}
-    </Box>
+
+      {/* Main 5 */}
+      {/* <Box
+        my={[4, 8, 10]}
+        alignItems={"center"}
+        width={"100%"}
+        textAlign={"center"}
+        cursor={"pointer"}
+      >
+        <Flex>
+          <Spacer />
+          <BannerText
+            color={useColorModeValue("black", "yellow")}
+            text={"GAME"}
+          />
+          <BannerText isStrokeStyle={true} text={"HIGHLIGHTS"} color="yellow" />
+          <Spacer />
+        </Flex>
+      </Box> */}
+      {/* End of Main 5 */}
+    </Flex>
   );
 };
 
