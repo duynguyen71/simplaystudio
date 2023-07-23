@@ -17,6 +17,7 @@ import { BiMailSend } from "react-icons/bi";
 import socialMediaLinks from "../data/socialMediaLinks";
 import {} from "@chakra-ui/icons";
 import { AppStoreBadge, PlayStoreBadge } from "./StoreBadges";
+import CustomNavLink from "./CustomNavLink";
 
 const SocialButton = ({ children, label, href }) => {
   return (
@@ -83,8 +84,16 @@ export default function LargeWithNewsletter() {
           </Stack>
           <Stack align={"flex-start"}>
             <ListHeader>Contact</ListHeader>
-            <Link href={"/contact"}>Contact us</Link>
-            <Link href={"/articles"}>Articles</Link>
+            <CustomNavLink
+              href={"/contact"}
+              onClickCb={() => {}}
+              title={"Contact"}
+            />
+            <CustomNavLink
+              href={"/articles"}
+              onClickCb={() => {}}
+              title={"Article"}
+            />
           </Stack>
           <Stack align={"flex-start"}>
             <ListHeader>Support</ListHeader>

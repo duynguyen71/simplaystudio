@@ -11,7 +11,8 @@ import {
   Text,
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon, MoonIcon, SunIcon } from "@chakra-ui/icons";
-import { Link as RouterLink, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import CustomNavLink from "./CustomNavLink";
 const NavLinks = [
   {
     title: "Games",
@@ -26,26 +27,6 @@ const NavLinks = [
     href: "/privacy",
   },
 ];
-const NavLink = ({ title, href, onClickCb }) => (
-  <RouterLink
-    to={href}
-    onClick={() => {
-      onClickCb();
-    }}
-  >
-    <Text
-      px={2}
-      py={1}
-      rounded={"md"}
-      _hover={{
-        textDecoration: "none",
-        bg: useColorModeValue("gray.200", "gray.700"),
-      }}
-    >
-      {title}
-    </Text>
-  </RouterLink>
-);
 
 export default function WithAction() {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -95,7 +76,7 @@ export default function WithAction() {
               display={{ base: "none", md: "flex" }}
             >
               {NavLinks.map((link) => (
-                <NavLink onClickCb={onClose} key={link.title} {...link} />
+                <CustomNavLink onClickCb={onClose} key={link.title} {...link} />
               ))}
             </HStack>
           </HStack>
@@ -110,7 +91,7 @@ export default function WithAction() {
           <Box pb={4} display={{ md: "none" }}>
             <Stack as={"nav"} spacing={4}>
               {NavLinks.map((link) => (
-                <NavLink onClickCb={onClose} key={link.title} {...link} />
+                <CustomNavLink onClickCb={onClose} key={link.title} {...link} />
               ))}
             </Stack>
           </Box>
