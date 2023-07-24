@@ -63,12 +63,11 @@ export default function LargeWithNewsletter() {
           spacing={8}
         >
           <Stack spacing={6}>
-            <Box>
-              <Image
-                boxSize={"100px"}
-                src={`${process.env.PUBLIC_URL}/logo.svg`}
-              />
-            </Box>
+            <img
+              width={"120px"}
+              src={`${process.env.PUBLIC_URL}/logo.svg`}
+              alt="Logo"
+            />
             <Text fontSize={"sm"}>
               © 2023 Simplay Studio. All rights reserved
             </Text>
