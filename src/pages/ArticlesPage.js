@@ -68,7 +68,7 @@ const ArticleList = () => {
           <BlogTags tags={["Engineering", "Product"]} />
           <Heading as={"h2"} size={"xl"} marginTop="1">
             <Link textDecoration="none" _hover={{ textDecoration: "none" }}>
-              Blog article title
+              Fireworks Play new update weekly
             </Link>
           </Heading>
           <Text
@@ -96,13 +96,9 @@ const ArticleList = () => {
       <VStack paddingTop="40px" spacing="2" alignItems="flex-start">
         <Heading as="h2">What we write about</Heading>
         <Text as="p" fontSize="lg">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-          condimentum quam arcu, eu tempus tortor molestie at.
-        </Text>
-        <Text as="p" fontSize="lg">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-          condimentum quam arcu, eu tempus tortor molestie at. Vestibulum
-          pretium condimentum dignissim.
+          Regarding updates on our games or big new features coming up, we want
+          to keep you guys informed through this article page. We hope you enjoy
+          it and have fun playing our games
         </Text>
       </VStack>
     </Container>

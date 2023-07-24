@@ -2,7 +2,6 @@ import {
   Box,
   chakra,
   Container,
-  Link,
   SimpleGrid,
   Stack,
   Text,
@@ -10,7 +9,6 @@ import {
   Input,
   IconButton,
   useColorModeValue,
-  Image,
 } from "@chakra-ui/react";
 import { FaTiktok, FaYoutube } from "react-icons/fa";
 import { BiMailSend } from "react-icons/bi";

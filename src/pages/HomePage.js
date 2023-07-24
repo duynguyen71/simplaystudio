@@ -5,10 +5,7 @@ import {
   Flex,
   Grid,
   GridItem,
-  Heading,
-  SimpleGrid,
   Spacer,
-  Text,
   useColorModeValue,
 } from "@chakra-ui/react";
 import React, { useEffect } from "react";
@@ -23,16 +20,17 @@ import { useInView } from "react-intersection-observer";
 import { useNavigate } from "react-router-dom";
 import { ImageCarousel } from "../components/ImageCarousel";
 import hightlightVideos from "../data/hightlightvideos";
-import VideoContainer from "../components/VideoContainer";
 import { PUBLIC_HIGHTLIGHTS_URL } from "../hooks";
 
 const HomePage = () => {
+  const { ref: ref2, inView: inView2 } = useInView();
   const { ref, inView } = useInView();
-  const { ref2, inView2 } = useInView();
+
   const animation = useAnimation();
   const animation2 = useAnimation();
   const animation3 = useAnimation();
   const animation4 = useAnimation();
+  const animation5 = useAnimation();
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -75,7 +73,14 @@ const HomePage = () => {
   useEffect(() => {
     if (inView2) {
       animation4.start({
-        y: 0,
+        x: 0,
+        transition: {
+          ease: "easeOut",
+          duration: 0.5,
+        },
+      });
+      animation5.start({
+        x: 0,
         transition: {
           ease: "easeOut",
           duration: 0.5,
@@ -84,10 +89,13 @@ const HomePage = () => {
     }
     if (!inView2) {
       animation4.start({
-        y: "100px",
+        x: "300px",
+      });
+      animation5.start({
+        x: "-300px",
       });
     }
-  }, [inView2, animation4]);
+  }, [inView2, animation4, animation5]);
   return (
     <Flex direction={"column"} position={"relative"} minH={"80vh"}>
       <Box height={["2vh", "5vh", "5vh"]} />
@@ -197,23 +205,45 @@ const HomePage = () => {
       {/* End of Main 4 */}
 
       {/* Main 5 */}
-      {/* <Box
+      <Box
+        ref={ref2}
         my={[4, 8, 10]}
         alignItems={"center"}
         width={"100%"}
         textAlign={"center"}
         cursor={"pointer"}
       >
-        <Flex>
-          <Spacer />
-          <BannerText
-            color={useColorModeValue("black", "yellow")}
-            text={"GAME"}
-          />
-          <BannerText isStrokeStyle={true} text={"HIGHLIGHTS"} color="yellow" />
-          <Spacer />
-        </Flex>
-      </Box> */}
+        <motion.div animate={animation4}>
+          <Flex>
+            <Spacer />
+            <BannerText text={"HIGHLIGHTS"} color="red.400" />
+            <BannerText text={"OF"} color="white" />
+            <Spacer />
+          </Flex>
+        </motion.div>
+
+        <motion.div animate={animation5}>
+          <Flex>
+            <Spacer />
+            <BannerText isStrokeStyle={true} text={"THE WEEK"} color="yellow" />
+            <Spacer />
+          </Flex>
+        </motion.div>
+      </Box>
+      <Box p={[4, 8]}>
+        {hightlightVideos.map((s, index) => {
+          return (
+            <Box overflow={"hidden"} borderRadius={"md"} maxW={"20vw"}>
+              <video loop controls={false} autoPlay muted>
+                <source
+                  src={`${PUBLIC_HIGHTLIGHTS_URL}/${s}`}
+                  type="video/mp4"
+                />
+              </video>{" "}
+            </Box>
+          );
+        })}
+      </Box>
       {/* End of Main 5 */}
     </Flex>
   );

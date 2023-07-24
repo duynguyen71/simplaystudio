@@ -7,6 +7,7 @@ const articles = [
     video: "",
     embedYtbLink: "",
     gameData: null,
+    tags: ["Update", "Fireworks Play"],
   },
 ];
 

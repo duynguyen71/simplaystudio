@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import LargeWithNewsletter from "./components/Footer";
 import NavBar from "./components/NavBar";
 import { Outlet, useLocation } from "react-router-dom";
-import { Box, Button, IconButton } from "@chakra-ui/react";
+import { Box, IconButton } from "@chakra-ui/react";
 import { AiOutlineArrowUp } from "react-icons/ai";
 const RootLayout = () => {
   const { pathname } = useLocation();
