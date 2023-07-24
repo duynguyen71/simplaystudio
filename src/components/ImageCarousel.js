@@ -38,7 +38,7 @@ export const ImageCarousel = ({ games }) => {
 
   const descriptionColor = useColorModeValue("white", "white");
   const imgBgColor = useColorModeValue("gray.200", "gray.800");
-  const navigateToFWPlay = () => navigate(`/games/${games[0].name}`);
+  const navigateToFWPlay = () => navigate(`/games/${games[0].path}`);
   return (
     <>
       {/*  */}

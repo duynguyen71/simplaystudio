@@ -85,12 +85,9 @@ export const CaptionCarousel = ({ games }) => {
             ref={(slider) => setSlider(slider)}
           >
             {games.map((game, index) => {
-              // const navigateToFWPlay = () =>
-              //   navigate(`/games/${games[0].name}`);
-
               const navigateToGame = () => {
                 const g = games.find((m, index) => index === gameIndex) || 0;
-                return navigate(`/games/${g.name}`);
+                return navigate(`/games/${g.path}`);
               };
 
               return (

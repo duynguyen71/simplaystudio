@@ -39,7 +39,7 @@ const GamesPage = () => {
                 bgColor={bgColor}
                 borderRadius={"md"}
                 key={index}
-                onClick={() => navigate(`/games/${game.name}`)}
+                onClick={() => navigate(`/games/${game.path}`)}
               >
                 <Center>
                   <Image

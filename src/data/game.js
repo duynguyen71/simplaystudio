@@ -41,6 +41,7 @@ const games = [
         rating: "",
       },
     },
+    path: "Fireworks_Play",
   },
 
   {
@@ -71,6 +72,7 @@ const games = [
         rating: "",
       },
     },
+    path: "Fireworks_Baby",
   },
   {
     name: "Spaceman",
@@ -91,6 +93,7 @@ const games = [
         rating: "",
       },
     },
+    path: "Spaceman",
   },
   // COWBOY
   {
@@ -112,6 +115,7 @@ const games = [
         rating: "",
       },
     },
+    path: "Cowboy_Gun_Shooting",
   },
   // KNIFE GAME
   {
@@ -133,6 +137,7 @@ const games = [
         rating: "",
       },
     },
+    path: "Knife_Game",
   },
   // ONE INCH PUNCH
   {
@@ -154,6 +159,7 @@ const games = [
         rating: "",
       },
     },
+    path: "One_Inch_Punch",
   },
   // BASKETBALL
   {
@@ -176,6 +182,7 @@ const games = [
         rating: "",
       },
     },
+    path: "Basketball",
   },
   {
     name: "Bamboo Dancing",
@@ -196,6 +203,7 @@ const games = [
         rating: "",
       },
     },
+    path: "Bamboo_Dancing",
   },
   {
     name: "Twin Fly",
@@ -217,6 +225,7 @@ const games = [
         rating: "",
       },
     },
+    path: "Twin_Fly",
   },
   // EGG DUNK
   {
@@ -238,6 +247,7 @@ const games = [
         rating: "",
       },
     },
+    path: "Egg_Dunk_3D",
   },
   {
     name: "Protect Island",
@@ -258,6 +268,7 @@ const games = [
         rating: "",
       },
     },
+    path: "Protect_Island",
   },
   {
     name: "Duck Hunter",
@@ -278,6 +289,7 @@ const games = [
         rating: "",
       },
     },
+    path: "Duck_Hunter",
   },
 ];
 

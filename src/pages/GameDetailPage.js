@@ -23,7 +23,7 @@ const GameDetailPage = () => {
   // Get game name on param
   const { name } = useParams();
 
-  const game = games.find((game) => game.name === name);
+  const game = games.find((game) => game.path === name);
 
   const navigate = useNavigate();
 
