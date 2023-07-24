@@ -18,14 +18,9 @@ import {
   Textarea,
   useColorModeValue,
 } from "@chakra-ui/react";
-import {
-  MdPhone,
-  MdEmail,
-  MdLocationOn,
-  MdFacebook,
-  MdOutlineEmail,
-} from "react-icons/md";
-import { BsGithub, BsDiscord, BsPerson } from "react-icons/bs";
+import { MdEmail, MdLocationOn, MdOutlineEmail, MdPhone } from "react-icons/md";
+import { BsPerson } from "react-icons/bs";
+import { FaTiktok, FaYoutube } from "react-icons/fa";
 
 const Contact = () => {
   return (
@@ -38,7 +33,6 @@ const Contact = () => {
     >
       <Flex>
         <Box
-          //   bg="#02054B"
           bg={useColorModeValue("gray.100", "gray.900")}
           color="white"
           borderRadius="lg"
@@ -58,18 +52,7 @@ const Contact = () => {
                       <Button
                         size="md"
                         height="48px"
-                        width="200px"
-                        variant="ghost"
-                        color="#DCE2FF"
-                        _hover={{ border: "2px solid #1C6FEB" }}
-                        leftIcon={<MdPhone color="#1970F1" size="20px" />}
-                      >
-                        +91-988888888
-                      </Button>
-                      <Button
-                        size="md"
-                        height="48px"
-                        width="200px"
+                        width="250px"
                         variant="ghost"
                         color="#DCE2FF"
                         _hover={{ border: "2px solid #1C6FEB" }}
@@ -80,7 +63,7 @@ const Contact = () => {
                       <Button
                         size="md"
                         height="48px"
-                        width="200px"
+                        width="250px"
                         variant="ghost"
                         color="#DCE2FF"
                         _hover={{ border: "2px solid #1C6FEB" }}
@@ -97,28 +80,20 @@ const Contact = () => {
                     alignItems="flex-start"
                   >
                     <IconButton
-                      aria-label="facebook"
+                      aria-label="youtube"
                       variant="ghost"
                       size="lg"
                       isRound={true}
                       _hover={{ bg: "#0D74FF" }}
-                      icon={<MdFacebook size="28px" />}
+                      icon={<FaYoutube size="28px" />}
                     />
                     <IconButton
-                      aria-label="github"
+                      aria-label="tiktok"
                       variant="ghost"
                       size="lg"
                       isRound={true}
                       _hover={{ bg: "#0D74FF" }}
-                      icon={<BsGithub size="28px" />}
-                    />
-                    <IconButton
-                      aria-label="discord"
-                      variant="ghost"
-                      size="lg"
-                      isRound={true}
-                      _hover={{ bg: "#0D74FF" }}
-                      icon={<BsDiscord size="28px" />}
+                      icon={<FaTiktok size="28px" />}
                     />
                   </HStack>
                 </Box>
@@ -160,7 +135,7 @@ const Contact = () => {
                       <FormControl id="name" float="right">
                         <Button
                           variant="solid"
-                          bg="#0D74FF"
+                          bg="red.400"
                           color="white"
                           _hover={{}}
                         >
