@@ -63,10 +63,10 @@ const Article = () => {
                 />
               </Link>
             </Box>
-            <BlogTags tags={["Engineering", "Product"]} marginTop="3" />
+            <BlogTags tags={["FW Play", "New Update"]} marginTop="3" />
             <Heading fontSize="xl" marginTop="2">
               <Link textDecoration="none" _hover={{ textDecoration: "none" }}>
-                Some blog title
+                Fireworks Play update weekly
               </Link>
             </Heading>
             <Text as="p" fontSize="md" marginTop="2">
@@ -74,7 +74,7 @@ const Article = () => {
               industry.
             </Text>
             <BlogAuthor
-              name="John Doe"
+              name="Duy Nguyen"
               date={new Date("2021-04-06T19:01:27Z")}
             />
           </Box>
