@@ -230,11 +230,17 @@ const HomePage = () => {
           </Flex>
         </motion.div>
       </Box>
-      <Box p={[4, 8]}>
+      <Flex direction={["column", "column", "row"]} p={[2, 4, 8]}>
         {hightlightVideos.map((s, index) => {
           return (
-            <Box overflow={"hidden"} borderRadius={"md"} maxW={"20vw"}>
-              <video loop controls={false} autoPlay muted>
+            <Box
+              h={"100%"}
+              mr={[0, 0, 4]}
+              mb={[2, 4, 8]}
+              overflow={"hidden"}
+              borderRadius={"md"}
+            >
+              <video loop controls={false} autoPlay={false} muted>
                 <source
                   src={`${PUBLIC_HIGHTLIGHTS_URL}/${s}`}
                   type="video/mp4"
@@ -243,7 +249,7 @@ const HomePage = () => {
             </Box>
           );
         })}
-      </Box>
+      </Flex>
       {/* End of Main 5 */}
     </Flex>
   );
