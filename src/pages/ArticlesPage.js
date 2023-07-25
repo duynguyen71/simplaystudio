@@ -11,7 +11,7 @@ import {
   VStack,
   Flex,
 } from "@chakra-ui/react";
-import Article, { BlogAuthor, BlogTags } from "../components/Article";
+import Article, { BlogTags } from "../components/Article";
 import articles from "../data/articles";
 import { PUBLIC_IMAGE_URL } from "../hooks";
 

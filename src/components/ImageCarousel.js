@@ -30,12 +30,10 @@ const settings = {
 export const ImageCarousel = ({ games }) => {
   const navigate = useNavigate();
   const [slider, setSlider] = useState();
-  const [gameIndex, setGameIndex] = useState(0);
 
   const top = useBreakpointValue(["80%", "50%"]);
   const side = useBreakpointValue([0, "10px"]);
 
-  const descriptionColor = useColorModeValue("white", "white");
   const imgBgColor = useColorModeValue("gray.200", "gray.800");
   const navigateToFWPlay = () => navigate(`/games/${games[0].path}`);
   return (

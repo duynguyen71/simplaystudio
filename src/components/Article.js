@@ -3,7 +3,6 @@ import {
   Wrap,
   WrapItem,
   Box,
-  Link,
   Image,
   Heading,
   Text,

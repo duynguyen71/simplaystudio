@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import {
   Box,
-  Heading,
   Container,
   Text,
   Button,
@@ -9,10 +8,9 @@ import {
   Icon,
   useColorModeValue,
   createIcon,
-  HStack,
 } from "@chakra-ui/react";
 import { isIOS, isMacOs } from "react-device-detect";
-import { motion, useAnimation } from "framer-motion";
+import { useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
 const Hero = () => {

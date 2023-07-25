@@ -8,22 +8,21 @@ import {
   HStack,
   Icon,
 } from "@chakra-ui/react";
-import { MdPrivacyTip } from "react-icons/md";
+import { MdLockOutline } from "react-icons/md";
 const PrivacyPage = () => {
   return (
     <>
       <Container maxW={"7xl"} p="12">
-        {/* <Heading as="h1">Simplay Studio</Heading> */}
         <HStack>
-          <Icon boxSize={"6"} as={MdPrivacyTip} />
-          <Heading as="h2" marginTop="5" fontSize={"4xl"}>
+          <Icon boxSize={"8"} as={MdLockOutline} />
+          <Heading as="h1" marginTop="5" fontSize={"3xl"}>
             Privacy Policy
           </Heading>
         </HStack>
         {/* Agreement */}
         <Divider marginTop="5" />
         <VStack paddingTop="40px" spacing="2" alignItems="flex-start">
-          <Heading as="h3" fontSize={"2xl"}>
+          <Heading as="h2" fontSize={"xl"}>
             Agreement
           </Heading>
           <Text as="p" fontSize="lg">
@@ -34,7 +33,7 @@ const PrivacyPage = () => {
         {/* Collecting Data */}
         <Divider marginTop="3" />
         <VStack paddingTop="40px" spacing="2" alignItems="flex-start">
-          <Heading as="h3" fontSize={"2xl"}>
+          <Heading as="h3" fontSize={"xl"}>
             Collecting data
           </Heading>
           <Text as="p" fontSize="lg">
@@ -75,7 +74,7 @@ const PrivacyPage = () => {
         {/* Personal information */}
         <Divider marginTop="3" />
         <VStack paddingTop="40px" spacing="2" alignItems="flex-start">
-          <Heading as="h3" fontSize={"2xl"}>
+          <Heading as="h3" fontSize={"xl"}>
             Personal information
           </Heading>
           <Text as={"p"}>
@@ -88,7 +87,7 @@ const PrivacyPage = () => {
         {/* Responsibilities */}
         <Divider marginTop="3" />
         <VStack paddingTop="40px" spacing="2" alignItems="flex-start">
-          <Heading as="h3" fontSize={"2xl"}>
+          <Heading as="h3" fontSize={"xl"}>
             Responsibilities
           </Heading>
           <Text as={"p"}>
@@ -100,7 +99,7 @@ const PrivacyPage = () => {
         {/* Responsibilities */}
         <Divider marginTop="3" />
         <VStack paddingTop="40px" spacing="2" alignItems="flex-start">
-          <Heading as="h3" fontSize={"2xl"}>
+          <Heading as="h3" fontSize={"xl"}>
             Privacy updates
           </Heading>
           <Text as={"p"}>
@@ -112,7 +111,7 @@ const PrivacyPage = () => {
         {/* Questions */}
         <Divider marginTop="3" />
         <VStack paddingTop="40px" spacing="2" alignItems="flex-start">
-          <Heading as="h3" fontSize={"2xl"}>
+          <Heading as="h3" fontSize={"xl"}>
             Questions
           </Heading>
           <HStack>
