@@ -18,19 +18,16 @@ import {
   Textarea,
   useColorModeValue,
 } from "@chakra-ui/react";
-import { MdEmail, MdLocationOn, MdOutlineEmail, MdPhone } from "react-icons/md";
+import { MdEmail, MdLocationOn, MdOutlineEmail } from "react-icons/md";
 import { BsPerson } from "react-icons/bs";
 import { FaTiktok, FaYoutube } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
+import socialMediaLinks from "../data/socialMediaLinks";
 
 const Contact = () => {
+  const navigate = useNavigate();
   return (
-    <Container
-      // bg="#9DC4FB"
-      maxW="full"
-      mt={0}
-      centerContent
-      overflow="hidden"
-    >
+    <Container maxW="full" mt={0} centerContent overflow="hidden">
       <Flex>
         <Box
           bg={useColorModeValue("gray.100", "gray.900")}
@@ -67,6 +64,7 @@ const Contact = () => {
                         variant="ghost"
                         color="#DCE2FF"
                         _hover={{ border: "2px solid #1C6FEB" }}
+                        justifyContent={"flex-start"}
                         leftIcon={<MdLocationOn color="#1970F1" size="20px" />}
                       >
                         HCM, Viet Nam
@@ -80,6 +78,7 @@ const Contact = () => {
                     alignItems="flex-start"
                   >
                     <IconButton
+                      onClick={() => window.open(socialMediaLinks.youtube)}
                       aria-label="youtube"
                       variant="ghost"
                       size="lg"
@@ -88,6 +87,7 @@ const Contact = () => {
                       icon={<FaYoutube size="28px" />}
                     />
                     <IconButton
+                      onClick={() => window.open(socialMediaLinks.tiktok)}
                       aria-label="tiktok"
                       variant="ghost"
                       size="lg"
@@ -138,6 +138,7 @@ const Contact = () => {
                           bg="red.400"
                           color="white"
                           _hover={{}}
+                          onClick={() => navigate("/")}
                         >
                           Send Message
                         </Button>

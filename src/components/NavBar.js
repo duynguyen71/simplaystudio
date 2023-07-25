@@ -50,12 +50,9 @@ export default function WithAction() {
             display={{ md: "none" }}
             onClick={isOpen ? onClose : onOpen}
           />
+          {/* LOGO */}
           <HStack spacing={8} alignItems={"center"}>
-            <Box
-              display={["none", "block"]}
-              cursor={"pointer"}
-              onClick={() => navigate("/")}
-            >
+            <Box cursor={"pointer"} onClick={() => navigate("/")}>
               <HStack>
                 <Text fontSize={"xl"} letterSpacing={1} fontWeight={"bold"}>
                   Simplay
@@ -80,6 +77,7 @@ export default function WithAction() {
               ))}
             </HStack>
           </HStack>
+          {/* LOGO */}
           <HStack spacing={7} alignItems={"center"}>
             <Button onClick={toggleColorMode}>
               {colorMode === "light" ? <MoonIcon /> : <SunIcon />}

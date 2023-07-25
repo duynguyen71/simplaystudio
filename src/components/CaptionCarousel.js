@@ -22,7 +22,7 @@ const settings = {
   infinite: true,
   autoplay: true,
   speed: 500,
-  autoplaySpeed: 3000,
+  autoplaySpeed: 3500,
   slidesToShow: 1,
   slidesToScroll: 1,
   pauseOnFocus: false,

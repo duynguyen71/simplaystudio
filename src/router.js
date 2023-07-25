@@ -7,6 +7,7 @@ import GamesPage from "./pages/GamesPage";
 import GameDetailPage from "./pages/GameDetailPage";
 import NotFoundPage from "./pages/NotFound";
 import Contact from "./pages/Contact";
+import ArticlePage from "./pages/ArticlePage";
 
 const router = createBrowserRouter([
   {
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
       {
         path: "articles",
         element: <ArticleList />,
+      },
+      {
+        path: "articles/:id",
+        element: <ArticlePage />,
       },
       {
         path: "privacy",
@@ -52,6 +57,10 @@ const router = createBrowserRouter([
       {
         path: "articles",
         element: <ArticleList />,
+      },
+      {
+        path: "articles/:id",
+        element: <ArticlePage />,
       },
       {
         path: "privacy",

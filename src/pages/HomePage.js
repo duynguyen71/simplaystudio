@@ -98,10 +98,11 @@ const HomePage = () => {
   }, [inView2, animation4, animation5]);
   return (
     <Flex direction={"column"} position={"relative"} minH={"80vh"}>
-      <Box height={["2vh", "5vh", "5vh"]} />
-
       {/* Main 1 */}
-      <Flex mx={[0, 4]} direction={["column", "column", "row", "row", "row"]}>
+      <Flex
+        mx={[0, 4]}
+        direction={["column", "column", "column", "row", "row"]}
+      >
         {/* Hero */}
         <Box alignSelf={"center"} flex={5}>
           <Hero />
@@ -247,7 +248,7 @@ const HomePage = () => {
           return (
             <Box
               key={index}
-              // h={"100%"}
+              h={"100%"}
               mr={[0, 0, 4]}
               w={["100%", "100%", "50vw"]}
               mb={[2, 4, 8]}

@@ -7,7 +7,6 @@ import {
   Heading,
   Text,
   Container,
-  AspectRatio,
   Button,
   useColorModeValue,
 } from "@chakra-ui/react";
@@ -22,7 +21,7 @@ const settings = {
   infinite: true,
   autoplay: true,
   speed: 500,
-  autoplaySpeed: 1500,
+  autoplaySpeed: 2000,
   slidesToShow: 1,
   slidesToScroll: 1,
   pauseOnFocus: false,
@@ -31,17 +30,14 @@ const settings = {
 export const ImageCarousel = ({ games }) => {
   const navigate = useNavigate();
   const [slider, setSlider] = useState();
-  const [gameIndex, setGameIndex] = useState(0);
 
   const top = useBreakpointValue(["80%", "50%"]);
   const side = useBreakpointValue([0, "10px"]);
 
-  const descriptionColor = useColorModeValue("white", "white");
   const imgBgColor = useColorModeValue("gray.200", "gray.800");
   const navigateToFWPlay = () => navigate(`/games/${games[0].path}`);
   return (
     <>
-      {/*  */}
       <Box position={"relative"} overflow={"hidden"} borderRadius={"md"}>
         {/* Left Icon */}
         <IconButton
@@ -83,9 +79,6 @@ export const ImageCarousel = ({ games }) => {
                 backgroundPosition="center"
                 backgroundRepeat="no-repeat"
                 backgroundSize="cover"
-                // backgroundImage={`${
-                //   process.env.PUBLIC_URL
-                // }/images/6.5_ver2023.4.1 ${index + 1}.png`}
                 bgImage={`${PUBLIC_IMAGE_URL}/${img}`}
                 bgColor={imgBgColor}
               >
