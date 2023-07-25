@@ -45,14 +45,20 @@ export const BlogAuthor = (props) => {
 const Article = ({ article }) => {
   const navigate = useNavigate();
 
-  const onClick = () => {};
+  const onClick = () => {
+    navigate(`/articles/${article.id}`);
+  };
   return (
     <>
       <Wrap p={[2, 8]} spacing={["5px", "30px"]} marginTop="5">
         <WrapItem minW={"20vw"} maxW={"300px"}>
           <Box w="100%">
             <Box borderRadius="lg" overflow="hidden">
-              <Link textDecoration="none" _hover={{ textDecoration: "none" }}>
+              <Box
+                onClick={onClick}
+                textDecoration="none"
+                _hover={{ textDecoration: "none" }}
+              >
                 <Image
                   transform="scale(1.0)"
                   src={`${PUBLIC_IMAGE_URL}/${article.thumb}`}
@@ -64,13 +70,17 @@ const Article = ({ article }) => {
                     transform: "scale(1.05)",
                   }}
                 />
-              </Link>
+              </Box>
             </Box>
             {/* <BlogTags tags={["FW Play", "New Update"]} marginTop="3" /> */}
             <Heading fontWeight={"600"} fontSize={["md", "2xl"]} marginTop="2">
-              <Link textDecoration="none" _hover={{ textDecoration: "none" }}>
+              <Text
+                onClick={onClick}
+                textDecoration="none"
+                _hover={{ textDecoration: "none" }}
+              >
                 {article.title}
-              </Link>
+              </Text>
             </Heading>
             <Text as="p" fontSize={["xs", "md"]} marginTop="2">
               {article.description}

@@ -50,7 +50,7 @@ const Hero = () => {
         spacing={{ base: 8, md: 14 }}
         py={{ base: 20, md: 36, xs: 0 }}
       >
-        <HStack alignSelf={"center"} textAlign={"center"}>
+        {/* <HStack alignSelf={"center"} textAlign={"center"}>
           <motion.div animate={animation}>
             <Heading
               fontWeight={600}
@@ -71,14 +71,14 @@ const Hero = () => {
               Studio
             </Heading>
           </motion.div>
-        </HStack>
+        </HStack> */}
 
         <Box display={"inline-block"}>
           <Text
-            className="typed-out"
+            // className={["", "typed-out"]}
+            className={"typed-out"}
             color={useColorModeValue("gray.700", "gray.400")}
             fontSize={["sm", "md", "lg"]}
-            whiteSpace={["pre-wrap", "nowrap"]}
           >
             Our passion is to craft free games that challenge and captivate you.
           </Text>

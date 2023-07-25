@@ -15,13 +15,12 @@ code {
 /* Typewriter Effect */
 .typed-out {
   overflow: hidden;
-  border-right: 0.15em solid orange;
+  /* border-right: 0.15em solid orange; */
   /* white-space: nowrap; */
   font-size: 1.6rem;
-  width: 0;
-  /* animation: typing 1s forwards; */
-  animation: typewriter 4s steps(44) 1s 1 normal both,
-    blinkTextCursor 500ms infinite;
+  /* width: 0; */
+  /* animation: typewriter 4s steps(44) 1s 1 normal both, */
+  /* blinkTextCursor 500ms infinite; */
 }
 
 @keyframes typing {
