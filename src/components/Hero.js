@@ -73,11 +73,12 @@ const Hero = () => {
           </motion.div>
         </HStack>
 
-        <Box textAlign={"center"} overflow={"hidden"} maxH={"25px"}>
+        <Box display={"inline-block"}>
           <Text
-            className="typewriter-effect"
+            className="typed-out"
             color={useColorModeValue("gray.700", "gray.400")}
-            fontSize="lg"
+            fontSize={["sm", "md", "lg"]}
+            whiteSpace={["pre-wrap", "nowrap"]}
           >
             Our passion is to craft free games that challenge and captivate you.
           </Text>

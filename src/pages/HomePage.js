@@ -101,7 +101,10 @@ const HomePage = () => {
       <Box height={["2vh", "5vh", "5vh"]} />
 
       {/* Main 1 */}
-      <Flex mx={[0, 4]} direction={["column", "column", "row", "row", "row"]}>
+      <Flex
+        mx={[0, 4]}
+        direction={["column", "column", "column", "row", "row"]}
+      >
         {/* Hero */}
         <Box alignSelf={"center"} flex={5}>
           <Hero />
@@ -234,6 +237,7 @@ const HomePage = () => {
         {hightlightVideos.map((s, index) => {
           return (
             <Box
+              key={index}
               h={"100%"}
               mr={[0, 0, 4]}
               mb={[2, 4, 8]}

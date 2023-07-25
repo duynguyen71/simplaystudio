@@ -12,15 +12,32 @@ code {
     monospace;
 }
 
+/* Typewriter Effect */
+.typed-out {
+  overflow: hidden;
+  border-right: 0.15em solid orange;
+  /* white-space: nowrap; */
+  font-size: 1.6rem;
+  width: 0;
+  /* animation: typing 1s forwards; */
+  animation: typewriter 4s steps(44) 1s 1 normal both,
+    blinkTextCursor 500ms infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
 .typewriter-effect {
   position: relative;
   color: hsl(0, 0%, 68%);
-  /* font-weight: bold !important; */
-  /* font-family: "Anonymous Pro", monospace !important; */
-  /* letter-spacing: 7px !important; */
   overflow: hidden;
   border-right: 2px solid hsl(0, 0%, 80%);
-  /* white-space: nowrap; */
   white-space: pre-wrap;
   animation: typewriter 4s steps(44) 1s 1 normal both,
     blinkTextCursor 500ms infinite;
@@ -42,6 +59,7 @@ code {
     border-right-color: transparent;
   }
 }
+/*  */
 
 .text-outline-wrapper {
   width: fit-content;
@@ -52,7 +70,6 @@ code {
   margin-left: 10px;
   background: white;
   text-align: left;
-  /* max-height: 100px; */
 }
 
 /* Text outlined */
