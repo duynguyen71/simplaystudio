@@ -29,7 +29,7 @@ const ArticleList = () => {
       <Divider marginTop="5" />
       {/* Article */}
       <Flex>
-        {articles.map((aritcle, index) => {
+        {articles.slice(1).map((aritcle, index) => {
           return <Article key={index} article={aritcle} />;
         })}
       </Flex>

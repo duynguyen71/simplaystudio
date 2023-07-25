@@ -1,7 +1,7 @@
 const articles = [
   {
     id: 1,
-    title: "Fireworks Play new update weekly",
+    title: "FW Play update to Version 2023.7.2",
     detail: "Update date new map and items",
     itemList: [],
     description: "New Farm map is coming!!",
@@ -19,11 +19,29 @@ const articles = [
   },
   {
     id: 2,
-    title: "Fireworks Play new update weekly",
+    title: "FW Play update to Version 2023.7.1",
     detail: "Update date new map and items",
     itemList: [],
-    description: "Update date new map and items.",
-    thumb: "/articles/article1.PNG",
+    description: "July 4th show.",
+    thumb: "/articles/article22.PNG",
+    images: [
+      "/articles/article1.PNG",
+      "/articles/article2.PNG",
+      "/articles/article3.PNG",
+      "/articles/article4.PNG",
+      "/articles/article5.PNG",
+    ],
+    video: "https://youtu.be/zf-VPqxbPxQ",
+    embedYtbLink: "https://youtu.be/zf-VPqxbPxQ",
+    tags: ["Update", "Fireworks Play"],
+  },
+  {
+    id: 3,
+    title: "FW Play update to Version 2023.6.1",
+    detail: "Update date new map and items",
+    itemList: [],
+    description: "New map Big City, events feature, items.",
+    thumb: "/articles/article33.PNG",
     images: [
       "/articles/article1.PNG",
       "/articles/article2.PNG",
