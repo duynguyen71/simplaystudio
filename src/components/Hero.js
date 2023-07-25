@@ -14,11 +14,13 @@ import {
 import { isIOS, isMacOs } from "react-device-detect";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import { useNavigate } from "react-router-dom";
 
 const Hero = () => {
   const { ref, inView } = useInView();
   const animation = useAnimation();
   const animation2 = useAnimation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (inView) {
@@ -91,13 +93,13 @@ const Hero = () => {
         >
           <Button
             colorScheme={"green"}
-            // bg={"green.400"}
             rounded={"full"}
             px={6}
             _hover={{
               bg: "green.500",
             }}
             variant={"outline"}
+            onClick={() => navigate("/games")}
           >
             Browse
           </Button>

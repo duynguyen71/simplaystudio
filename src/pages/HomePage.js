@@ -182,11 +182,11 @@ const HomePage = () => {
           <Flex>
             <Spacer />
             <BannerText
-              color={useColorModeValue("black", "yellow")}
+              color={useColorModeValue("black", "orange")}
               isStrokeStyle={true}
               text={"COOL"}
             />
-            <BannerText text={"FEATURES"} color="yellow" />
+            <BannerText text={"FEATURES"} color="orange" />
             <Spacer />
           </Flex>
         </motion.div>
@@ -217,7 +217,10 @@ const HomePage = () => {
           <Flex>
             <Spacer />
             <BannerText text={"HIGHLIGHTS"} color="red.400" />
-            <BannerText text={"OF"} color="white" />
+            <BannerText
+              text={"OF"}
+              color={useColorModeValue("orange", "white")}
+            />
             <Spacer />
           </Flex>
         </motion.div>
@@ -225,22 +228,33 @@ const HomePage = () => {
         <motion.div animate={animation5}>
           <Flex>
             <Spacer />
-            <BannerText isStrokeStyle={true} text={"THE WEEK"} color="yellow" />
+            <BannerText
+              isStrokeStyle={true}
+              text={"THE WEEK"}
+              color={useColorModeValue("orange", "orange")}
+            />
             <Spacer />
           </Flex>
         </motion.div>
       </Box>
-      <Flex direction={["column", "column", "row"]} p={[2, 4, 8]}>
+      <Flex
+        alignItems={"center"}
+        justifyContent={"center"}
+        direction={["column", "column", "row"]}
+        p={[2, 4, 8]}
+      >
         {hightlightVideos.map((s, index) => {
           return (
             <Box
-              h={"100%"}
+              key={index}
+              // h={"100%"}
               mr={[0, 0, 4]}
+              w={["100%", "100%", "50vw"]}
               mb={[2, 4, 8]}
               overflow={"hidden"}
               borderRadius={"md"}
             >
-              <video loop controls={false} autoPlay={false} muted>
+              <video loop controls={false} autoPlay={true} muted>
                 <source
                   src={`${PUBLIC_HIGHTLIGHTS_URL}/${s}`}
                   type="video/mp4"

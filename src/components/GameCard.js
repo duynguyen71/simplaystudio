@@ -3,7 +3,7 @@ import { Box, AspectRatio, useColorModeValue, Text } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
 import { PUBLIC_IMAGE_URL } from "../hooks";
 const GameCard = (props) => {
-  const { name, thumb ,path} = props;
+  const { name, thumb, path } = props;
 
   const navigate = useNavigate();
 
@@ -16,6 +16,7 @@ const GameCard = (props) => {
         cursor={"pointer"}
         borderRadius={"20px"}
         position="relative"
+        objectFit={"cover"}
         backgroundImage={
           `${PUBLIC_IMAGE_URL}/${thumb}` ||
           `${process.env.PUBLIC_URL}/images/6.5_ver2023.4.1 1.png`
@@ -24,11 +25,7 @@ const GameCard = (props) => {
         backgroundRepeat={"no-repeat"}
         backgroundSize={"cover"}
         transition="0.3s ease-in-out"
-      >
-        {/* <Text position={"absolute"} top={5} right={5} color={"gray.600"}>
-          {name}
-        </Text> */}
-      </Box>
+      ></Box>
     </AspectRatio>
   );
 };

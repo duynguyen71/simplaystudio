@@ -69,7 +69,7 @@ const Contact = () => {
                         _hover={{ border: "2px solid #1C6FEB" }}
                         leftIcon={<MdLocationOn color="#1970F1" size="20px" />}
                       >
-                        HCM city, Tan Phu
+                        HCM, Viet Nam
                       </Button>
                     </VStack>
                   </Box>
