@@ -49,7 +49,7 @@ const Article = ({ article }) => {
   };
   return (
     <>
-      <Wrap p={[2, 8]} spacing={["5px", "30px"]} marginTop="5">
+      <Wrap p={[2, 4, 8]} spacing={["5px", "30px"]} marginTop="5">
         <WrapItem minW={"20vw"} maxW={"300px"}>
           <Box w="100%">
             <Box borderRadius="lg" overflow="hidden">
@@ -72,7 +72,7 @@ const Article = ({ article }) => {
               </Box>
             </Box>
             {/* <BlogTags tags={["FW Play", "New Update"]} marginTop="3" /> */}
-            <Heading fontWeight={"600"} fontSize={["md", "2xl"]} marginTop="2">
+            <Heading fontWeight={"600"} fontSize={["md", "xl"]} marginTop="2">
               <Text
                 onClick={onClick}
                 textDecoration="none"
@@ -81,7 +81,7 @@ const Article = ({ article }) => {
                 {article.title}
               </Text>
             </Heading>
-            <Text as="p" fontSize={["xs", "md"]} marginTop="2">
+            <Text as="p" fontSize={["sm", "md"]} marginTop="2">
               {article.description}
             </Text>
             {/* <BlogAuthor

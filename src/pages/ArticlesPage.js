@@ -39,7 +39,7 @@ const ArticleList = () => {
         <Heading fontSize={["lg", "3xl"]} as="h2">
           What we write about
         </Heading>
-        <Text as="p" fontSize="lg">
+        <Text as="p" fontSize={["md", "lg"]}>
           Regarding updates on our games or big new features coming up, we want
           to keep you guys informed through this article page. We hope you enjoy
           it and have fun playing our games.
