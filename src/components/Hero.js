@@ -40,7 +40,7 @@ const Hero = () => {
   }, [inView, animation, animation2]);
 
   return (
-    <Container ref={ref} maxW={"3xl"}>
+    <Container py={["8vh", "10vh", "15vh"]} ref={ref} maxW={"3xl"}>
       <Stack
         as={Box}
         overflow={"hidden"}

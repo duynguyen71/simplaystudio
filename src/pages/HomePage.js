@@ -98,8 +98,6 @@ const HomePage = () => {
   }, [inView2, animation4, animation5]);
   return (
     <Flex direction={"column"} position={"relative"} minH={"80vh"}>
-      <Box height={["2vh", "5vh", "5vh"]} />
-
       {/* Main 1 */}
       <Flex
         mx={[0, 4]}
