@@ -11,7 +11,7 @@ import {
   VStack,
   Flex,
 } from "@chakra-ui/react";
-import Article, { BlogTags } from "../components/Article";
+import ArticleCard, { BlogTags } from "../components/ArticleCard";
 import articles from "../data/articles";
 import { PUBLIC_IMAGE_URL } from "../hooks";
 
@@ -27,12 +27,13 @@ const ArticleList = () => {
         Latest articles
       </Heading>
       <Divider marginTop="5" />
-      {/* Article */}
+      {/* Article List */}
       <Flex>
-        {articles.slice(1).map((aritcle, index) => {
-          return <Article key={index} article={aritcle} />;
+        {articles.slice(1).map((article, index) => {
+          return <ArticleCard key={index} article={article} />;
         })}
       </Flex>
+      {/* End of Article List */}
 
       {/* Article Fotter Explain */}
       <VStack paddingTop="40px" spacing="2" alignItems="flex-start">

@@ -41,7 +41,7 @@ export const BlogAuthor = (props) => {
     </HStack>
   );
 };
-const Article = ({ article }) => {
+const ArticleCard = ({ article }) => {
   const navigate = useNavigate();
 
   const onClick = () => {
@@ -95,4 +95,4 @@ const Article = ({ article }) => {
   );
 };
 
-export default Article;
+export default ArticleCard;

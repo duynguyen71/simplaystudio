@@ -3,7 +3,7 @@ const articles = [
     id: 1,
     title: "FW Play update to Version 2023.7.2",
     detail: "Update date new map and items",
-    itemList: [],
+    itemList: ["Farm map", "Cocktail"],
     description: "New Farm map is coming!!",
     thumb: "/articles/article1.PNG",
     images: [
@@ -21,7 +21,7 @@ const articles = [
     id: 2,
     title: "FW Play update to Version 2023.7.1",
     detail: "Update date new map and items",
-    itemList: [],
+    itemList: ["July 4th shows"],
     description: "July 4th show.",
     thumb: "/articles/article22.PNG",
     images: [
