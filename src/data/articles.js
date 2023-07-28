@@ -3,7 +3,7 @@ const articles = [
     id: 1,
     title: "FW Play update to Version 2023.7.2",
     detail: "Update date new map and items",
-    itemList: ["Farm map", "Cocktail"],
+    itemList: ["Farm map", "Molotov Cocktail"],
     description: "New Farm map is coming!!",
     thumb: "/articles/article1.PNG",
     images: [
@@ -13,8 +13,8 @@ const articles = [
       "/articles/article4.PNG",
       "/articles/article5.PNG",
     ],
-    video: "https://youtu.be/zf-VPqxbPxQ",
-    embedYtbLink: "https://youtu.be/zf-VPqxbPxQ",
+    video: "https://www.youtube.com/embed/zf-VPqxbPxQ",
+    embedYtbLink: "https://www.youtube.com/embed/zf-VPqxbPxQ",
     tags: ["Update", "Fireworks Play"],
   },
   {

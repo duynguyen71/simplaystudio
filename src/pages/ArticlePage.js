@@ -1,11 +1,20 @@
-import { Box, Heading, Image, Text, VStack } from "@chakra-ui/react";
+import {
+  AspectRatio,
+  Box,
+  Flex,
+  Heading,
+  Image,
+  Text,
+  VStack,
+} from "@chakra-ui/react";
 import React, { useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import articles from "../data/articles";
 import { PUBLIC_IMAGE_URL } from "../hooks";
 
 const ArticlePage = () => {
   const { id } = useParams();
+
   const article = articles.find((a) => a.id == id);
 
   useEffect(() => {
@@ -13,8 +22,9 @@ const ArticlePage = () => {
   }, [id, article]);
 
   if (!article) return <></>;
+
   return (
-    <Box>
+    <Flex direction={"column"}>
       {/* Image Cover */}
       <Box>
         <Image
@@ -25,15 +35,16 @@ const ArticlePage = () => {
         />
       </Box>
       {/* End of Image Cover */}
-      <Box p={["4", "8", "12"]}>
-        <VStack spacing={0} alignItems={"flex-start"}>
+      {/* Detail */}
+      <Box my={"10"} px={["4", "8", "12"]}>
+        <VStack spacing={10} alignItems={"flex-start"}>
           <VStack alignItems={"flex-start"}>
             <Heading fontSize={"2xl"} as={"h1"}>
               {article.title}
             </Heading>
             <Text>{article.description}</Text>
           </VStack>
-          <Box p={8}>
+          <Box px={8}>
             <VStack alignItems={"flex-start"}>
               <Heading as={"h2"} fontSize={"xl"}>
                 New Items:{" "}
@@ -45,7 +56,29 @@ const ArticlePage = () => {
           </Box>
         </VStack>
       </Box>
-    </Box>
+      {/* End of Detail */}
+      {/* Ytb Video */}
+      <Box px={8}>
+        <AspectRatio w={"100%"} ratio={16 / 9}>
+          <iframe
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            title="YouTube video player"
+            frameborder="0"
+            allowfullscreen
+            src="https://www.youtube.com/embed/zf-VPqxbPxQ"
+          />
+        </AspectRatio>
+        {/* <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/zf-VPqxbPxQ"
+          title="YouTube video player"
+          frameborder="0"
+          allowfullscreen
+        ></iframe> */}
+      </Box>
+      {/* End of Ytb Video */}
+    </Flex>
   );
 };
 

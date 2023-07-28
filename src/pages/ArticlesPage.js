@@ -14,6 +14,7 @@ import {
 import ArticleCard, { BlogTags } from "../components/ArticleCard";
 import articles from "../data/articles";
 import { PUBLIC_IMAGE_URL } from "../hooks";
+import { useNavigate } from "react-router-dom";
 
 const ArticleList = () => {
   return (
@@ -54,6 +55,11 @@ export default ArticleList;
 
 const MainArticle = () => {
   const article = articles[0];
+  const navigate = useNavigate();
+
+  const onClick = (id) => {
+    navigate("/articles/" + article.id);
+  };
   return (
     <Box
       marginTop={{ base: "1", sm: "5" }}
@@ -74,14 +80,13 @@ const MainArticle = () => {
           marginLeft={{ base: "0", sm: "5%" }}
           marginTop="5%"
         >
-          <Link textDecoration="none" _hover={{ textDecoration: "none" }}>
-            <Image
-              borderRadius="lg"
-              src={`${PUBLIC_IMAGE_URL}/${article.thumb}`}
-              alt="bg image"
-              objectFit="contain"
-            />
-          </Link>
+          <Image
+            onClick={onClick}
+            borderRadius="lg"
+            src={`${PUBLIC_IMAGE_URL}/${article.thumb}`}
+            alt="bg image"
+            objectFit="contain"
+          />
         </Box>
         <Box zIndex="1" width="100%" position="absolute" height="100%">
           <Box
