@@ -7,8 +7,8 @@ import {
   Text,
   VStack,
 } from "@chakra-ui/react";
-import React, { useEffect } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import React from "react";
+import { useParams } from "react-router-dom";
 import articles from "../data/articles";
 import { PUBLIC_IMAGE_URL } from "../hooks";
 
@@ -17,17 +17,14 @@ const ArticlePage = () => {
 
   const article = articles.find((a) => a.id == id);
 
-  useEffect(() => {
-    console.log(article);
-  }, [id, article]);
-
   if (!article) return <></>;
 
   return (
     <Flex direction={"column"}>
       {/* Image Cover */}
-      <Box>
+      <Box p={[4, 8, 10]}>
         <Image
+          borderRadius={"10"}
           objectFit={"cover"}
           objectPosition={"center"}
           bgRepeat={"no-repeat"}
@@ -36,7 +33,7 @@ const ArticlePage = () => {
       </Box>
       {/* End of Image Cover */}
       {/* Detail */}
-      <Box my={"10"} px={["4", "8", "12"]}>
+      <Box my={[5, 8]} px={["4", "8", "12"]}>
         <VStack spacing={10} alignItems={"flex-start"}>
           <VStack alignItems={"flex-start"}>
             <Heading fontSize={"2xl"} as={"h1"}>
@@ -65,7 +62,7 @@ const ArticlePage = () => {
             title="YouTube video player"
             frameborder="0"
             allowfullscreen
-            src="https://www.youtube.com/embed/zf-VPqxbPxQ"
+            src={article.embedYtbLink}
           />
         </AspectRatio>
         {/* <iframe
