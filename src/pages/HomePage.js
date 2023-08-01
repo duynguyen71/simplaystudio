@@ -8,7 +8,7 @@ import {
   Spacer,
   useColorModeValue,
 } from "@chakra-ui/react";
-import React, { useEffect } from "react";
+import React, { useEffect, useMemo } from "react";
 import GameCard from "../components/GameCard";
 import { CaptionCarousel } from "../components/CaptionCarousel";
 import games from "../data/game";
@@ -101,7 +101,7 @@ const HomePage = () => {
       {/* Main 1 */}
       <Flex
         mx={[0, 4]}
-        direction={["column", "column", "column", "row", "row"]}
+        direction={["column", "column", "column", "column", "row"]}
       >
         {/* Hero */}
         <Box alignSelf={"center"} flex={5}>
@@ -116,8 +116,8 @@ const HomePage = () => {
       {/* End of Main 1 */}
 
       {/* Main 2 */}
-      <Flex direction={"column"} my={[4, 8, 10]} px={[4, 8]}>
-        <Box height={["4vh", "5vh", "5vh"]}>
+      <Flex direction={"column"} my={[8, 10, 12]} px={[4, 8]}>
+        <Box height={["5vh"]}>
           <CustomHeading color={"white.400"} text={"Our Games"} />
         </Box>
         <Grid
@@ -125,11 +125,13 @@ const HomePage = () => {
           templateColumns={["repeat(2, 2fr)", "repeat(4, 4fr)"]}
           gap={[2, 10]}
         >
-          {games.slice(0, 8).map((game, index) => (
-            <GridItem key={index}>
-              <GameCard {...game} />
-            </GridItem>
-          ))}
+          {games.slice(0, 8).map((game, index) => {
+            return (
+              <GridItem key={index}>
+                <GameCard {...game} />
+              </GridItem>
+            );
+          })}
         </Grid>
         <Box height={"30px"} />
 
@@ -156,7 +158,7 @@ const HomePage = () => {
       {/* Main 3 */}
       <Box
         ref={ref}
-        my={[4, 8, 10]}
+        mb={[4, 8, 10]}
         alignItems={"center"}
         width={"100%"}
         textAlign={"center"}

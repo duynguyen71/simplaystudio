@@ -42,7 +42,7 @@ const Hero = () => {
   }, [inView, animation, animation2]);
 
   return (
-    <Container py={["8vh", "10vh", "15vh"]} ref={ref} maxW={"3xl"}>
+    <Container py={["4vh", "6vh", "12vh"]} ref={ref} maxW={"3xl"}>
       <Stack
         as={Box}
         overflow={"hidden"}
@@ -50,35 +50,12 @@ const Hero = () => {
         spacing={{ base: 8, md: 14 }}
         py={{ base: 20, md: 36, xs: 0 }}
       >
-        {/* <HStack alignSelf={"center"} textAlign={"center"}>
-          <motion.div animate={animation}>
-            <Heading
-              fontWeight={600}
-              fontSize={{ base: "2xl", sm: "4xl", md: "6xl" }}
-              lineHeight={"110%"}
-            >
-              Simplay
-            </Heading>
-          </motion.div>
-          <motion.div animate={animation2}>
-            <Heading
-              fontWeight={600}
-              fontSize={{ base: "2xl", sm: "4xl", md: "6xl" }}
-              lineHeight={"110%"}
-              color={"red.400"}
-            >
-              {" "}
-              Studio
-            </Heading>
-          </motion.div>
-        </HStack> */}
-
         <Box display={"inline-block"}>
           <Text
             // className={["", "typed-out"]}
             className={"typed-out"}
             color={useColorModeValue("gray.700", "gray.400")}
-            fontSize={["sm", "md", "lg"]}
+            fontSize={["md", "xl", "3xl"]}
           >
             Our passion is to craft free games that challenge and captivate you.
           </Text>
