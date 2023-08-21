@@ -1,5 +1,32 @@
 const articles = [
   {
+    id: 3,
+    title: "FW Play update to Version 2023.8.1",
+    detail: "Fireworks Play v2023.8.1 - 14 new shells",
+    itemList: [
+      "Horsetail 06, 07, 08",
+      "Dahlia 11, 12, 13",
+      "Chrysanthemum 16, 17, 18",
+      "Strobe 08",
+      "Ring Strobe 02",
+      "Palm 04",
+      "Crossette 10",
+      "Butterfly 01",
+    ],
+    description: "Fireworks Play v2023.8.1 - 14 new shells",
+    thumb: "/articles/article44.PNG",
+    images: [
+      "/articles/article1.PNG",
+      "/articles/article2.PNG",
+      "/articles/article3.PNG",
+      "/articles/article4.PNG",
+      "/articles/article5.PNG",
+    ],
+    video: "https://www.youtube.com/embed/QRu6hj8uQkY",
+    embedYtbLink: "https://www.youtube.com/embed/QRu6hj8uQkY",
+    tags: ["Update", "Fireworks Play"],
+  },
+  {
     id: 2,
     title: "FW Play update to Version 2023.7.1",
     detail: "Update date new Farm map and Molotov Cocktail",
