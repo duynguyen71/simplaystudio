@@ -26,6 +26,10 @@ const NavLinks = [
     title: "Privacy",
     href: "/privacy",
   },
+  {
+    title: "Release Note",
+    href: "/release-note",
+  },
 ];
 
 export default function WithAction() {

@@ -8,6 +8,7 @@ import GameDetailPage from "./pages/GameDetailPage";
 import NotFoundPage from "./pages/NotFound";
 import Contact from "./pages/Contact";
 import ArticlePage from "./pages/ArticlePage";
+import ReleaseNote from "./pages/ReleaseNote";
 
 const router = createBrowserRouter([
   {
@@ -43,6 +44,10 @@ const router = createBrowserRouter([
         path: "contact",
         element: <Contact />,
       },
+      {
+        path: "release-note",
+        element: <ReleaseNote />,
+      },
     ],
   },
   {
@@ -77,6 +82,10 @@ const router = createBrowserRouter([
       {
         path: "contact",
         element: <Contact />,
+      },
+      {
+        path: "release-note",
+        element: <ReleaseNote />,
       },
     ],
   },
