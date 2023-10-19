@@ -19,7 +19,7 @@ const games = [
     description: <FireworkDescription />,
     image: "/fireworks512.png",
     video: "/FWplay.MP4",
-    thumb: "FireworksPlay.png",
+    thumb: "fwplay.png",
     images: [
       "/fwplay/1.png",
       "/fwplay/2.png",
