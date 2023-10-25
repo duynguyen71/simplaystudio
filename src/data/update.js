@@ -1,20 +1,20 @@
 export const updates = [
+  // {
+  //   version: "Version 2023.9.1 | Version Code 52",
+  //   changes: [
+  //     "Update what’s new link https://simplaystudio.com/release-note.",
+  //     "Fix Palm 04 'Local' space.",
+  //     "Fix map farm ground collider.",
+  //     "Support mouse and keyboard input control.",
+  //     "Screenshot a bulk of fireworks and objects for app preview.",
+  //   ],
+  // },
   {
     version: "Version 2023.10.1 | Version Code 53",
     changes: [
       "Happy Halloween!",
       "Moving the train.",
-      "Support mouse and keyboard."
-    ],
-  },
-  {
-    version: "Version 2023.9.1 | Version Code 52",
-    changes: [
-      "Update what’s new link https://simplaystudio.com/release-note.",
-      "Fix Palm 04 'Local' space.",
-      "Fix map farm ground collider.",
-      "Support mouse and keyboard input control.",
-      "Screenshot a bulk of fireworks and objects for app preview.",
+      "Support mouse and keyboard.",
     ],
   },
   {
