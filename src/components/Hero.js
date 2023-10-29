@@ -57,7 +57,7 @@ const Hero = () => {
             color={useColorModeValue("gray.700", "gray.400")}
             fontSize={["md", "xl", "3xl"]}
           >
-            Our passion is crafting simulation games.
+            Our passion is crafting fun simulation games.
           </Text>
         </Box>
         <Stack
