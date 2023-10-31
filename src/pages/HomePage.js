@@ -5,6 +5,7 @@ import {
   Flex,
   Grid,
   GridItem,
+  SimpleGrid,
   Spacer,
   useColorModeValue,
 } from "@chakra-ui/react";
@@ -122,10 +123,14 @@ const HomePage = () => {
         </Box>
         <Grid
           overflowX={"hidden"}
-          templateColumns={["repeat(2, 2fr)", "repeat(4, 4fr)"]}
+          templateColumns={[
+            "repeat(2, 2fr)",
+            "repeat(3, 3fr)",
+            "repeat(5, 5fr)",
+          ]}
           gap={[2, 10]}
         >
-          {games.slice(0, 8).map((game, index) => {
+          {games.slice(0, 5).map((game, index) => {
             return (
               <GridItem key={index}>
                 <GameCard {...game} />
@@ -133,6 +138,7 @@ const HomePage = () => {
             );
           })}
         </Grid>
+
         <Box height={"30px"} />
 
         <Center>

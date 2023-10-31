@@ -44,36 +44,36 @@ const games = [
     path: "Fireworks_Play",
   },
 
-  {
-    name: "Fireworks Baby",
-    shortDescription: "Tap & Enjoy Fireworks",
-    bio: "This fireworks game is a simple way to relax by tapping on the screen. Especially for kids, they can explore fireworks styles and change color or shape if they want to.",
-    description: <FireworkBabyDescription />,
-    thumb: "/fireworksbaby.png",
-    image: "/fireworksbaby.png",
-    images: [
-      "/fwbaby/fwbaby1.jpeg",
-      "/fwbaby/fwbaby2.jpeg",
-      "/fwbaby/fwbaby3.jpeg",
-      "/fwbaby/fwbaby4.jpeg",
-      "/fwbaby/fwbaby5.jpeg",
-      "/fwbaby/fwbaby6.jpeg",
-      "/fwbaby/fwbaby7.jpeg",
-      "/fwbaby/fwbaby8.jpeg",
-    ],
-    videos: [],
-    platform: {
-      ios: {
-        link: "itms-apps://itunes.apple.com/app/id1599063905",
-        rating: "",
-      },
-      android: {
-        link: "https://play.google.com/store/apps/details?id=com.bluedot.fireworkskids",
-        rating: "",
-      },
-    },
-    path: "Fireworks_Baby",
-  },
+  // {
+  //   name: "Fireworks Baby",
+  //   shortDescription: "Tap & Enjoy Fireworks",
+  //   bio: "This fireworks game is a simple way to relax by tapping on the screen. Especially for kids, they can explore fireworks styles and change color or shape if they want to.",
+  //   description: <FireworkBabyDescription />,
+  //   thumb: "/fireworksbaby.png",
+  //   image: "/fireworksbaby.png",
+  //   images: [
+  //     "/fwbaby/fwbaby1.jpeg",
+  //     "/fwbaby/fwbaby2.jpeg",
+  //     "/fwbaby/fwbaby3.jpeg",
+  //     "/fwbaby/fwbaby4.jpeg",
+  //     "/fwbaby/fwbaby5.jpeg",
+  //     "/fwbaby/fwbaby6.jpeg",
+  //     "/fwbaby/fwbaby7.jpeg",
+  //     "/fwbaby/fwbaby8.jpeg",
+  //   ],
+  //   videos: [],
+  //   platform: {
+  //     ios: {
+  //       link: "itms-apps://itunes.apple.com/app/id1599063905",
+  //       rating: "",
+  //     },
+  //     android: {
+  //       link: "https://play.google.com/store/apps/details?id=com.bluedot.fireworkskids",
+  //       rating: "",
+  //     },
+  //   },
+  //   path: "Fireworks_Baby",
+  // },
   {
     name: "Spaceman",
     shortDescription: "Exploring the vast universe by a single tap.",
@@ -96,27 +96,27 @@ const games = [
     path: "Spaceman",
   },
   // COWBOY
-  {
-    name: "Cowboy Gun Shooting",
-    shortDescription: "Shoot 'em up!",
-    bio: "Train your eyes, train your hand skills with the cowboy gun shooting game (shooting game).",
-    description: <Cowboy />,
-    thumb: "cowboygunshooting512.png",
-    image: "cowboygunshooting512.png",
-    images: ["/cowboy/cowboy1.png"],
-    videos: ["/cowboy1.mp4", "/cowboy2.mp4", "/cowboy3.mp4"],
-    platform: {
-      ios: {
-        link: "itms-apps://itunes.apple.com/app/id1541522775",
-        rating: "",
-      },
-      android: {
-        link: "https://play.google.com/store/apps/details?id=com.bluedot.cowboygunshooting",
-        rating: "",
-      },
-    },
-    path: "Cowboy_Gun_Shooting",
-  },
+  // {
+  //   name: "Cowboy Gun Shooting",
+  //   shortDescription: "Shoot 'em up!",
+  //   bio: "Train your eyes, train your hand skills with the cowboy gun shooting game (shooting game).",
+  //   description: <Cowboy />,
+  //   thumb: "cowboygunshooting512.png",
+  //   image: "cowboygunshooting512.png",
+  //   images: ["/cowboy/cowboy1.png"],
+  //   videos: ["/cowboy1.mp4", "/cowboy2.mp4", "/cowboy3.mp4"],
+  //   platform: {
+  //     ios: {
+  //       link: "itms-apps://itunes.apple.com/app/id1541522775",
+  //       rating: "",
+  //     },
+  //     android: {
+  //       link: "https://play.google.com/store/apps/details?id=com.bluedot.cowboygunshooting",
+  //       rating: "",
+  //     },
+  //   },
+  //   path: "Cowboy_Gun_Shooting",
+  // },
   // KNIFE GAME
   {
     name: "Knife Game",
@@ -140,27 +140,27 @@ const games = [
     path: "Knife_Game",
   },
   // ONE INCH PUNCH
-  {
-    name: "One Inch Punch",
-    shortDescription: "Improve punching power.",
-    bio: "Punch tremendous amounts of impact force at extremely close distances.",
-    description: <OneInchPunch />,
-    thumb: "oneinchpunch512.png",
-    image: "oneinchpunch512.png",
-    images: [],
-    videos: ["/oneinchpunch1.mp4", "/oneinchpunch2.mp4", "/oneinchpunch3.mp4"],
-    platform: {
-      ios: {
-        link: "itms-apps://itunes.apple.com/app/id1571513391",
-        rating: "",
-      },
-      android: {
-        link: "https://play.google.com/store/apps/details?id=com.bluedot.oneinchpunch",
-        rating: "",
-      },
-    },
-    path: "One_Inch_Punch",
-  },
+  // {
+  //   name: "One Inch Punch",
+  //   shortDescription: "Improve punching power.",
+  //   bio: "Punch tremendous amounts of impact force at extremely close distances.",
+  //   description: <OneInchPunch />,
+  //   thumb: "oneinchpunch512.png",
+  //   image: "oneinchpunch512.png",
+  //   images: [],
+  //   videos: ["/oneinchpunch1.mp4", "/oneinchpunch2.mp4", "/oneinchpunch3.mp4"],
+  //   platform: {
+  //     ios: {
+  //       link: "itms-apps://itunes.apple.com/app/id1571513391",
+  //       rating: "",
+  //     },
+  //     android: {
+  //       link: "https://play.google.com/store/apps/details?id=com.bluedot.oneinchpunch",
+  //       rating: "",
+  //     },
+  //   },
+  //   path: "One_Inch_Punch",
+  // },
   // BASKETBALL
   {
     name: "Basketball",
@@ -184,49 +184,49 @@ const games = [
     },
     path: "Basketball",
   },
-  {
-    name: "Bamboo Dancing",
-    shortDescription: "Let's dance with the bamboo poles!",
-    bio: "Bamboo Dancing - Nhay Sap a traditional cultural dance performed in Vietnam. Now let's play it in casual video game style.",
-    description: <BambooDancing />,
-    thumb: "bamboodancing.png",
-    image: "bamboodancing.png",
-    images: ["/bamboodancing/bamboodancing.jpg"],
-    videos: [],
-    platform: {
-      ios: {
-        link: "itms-apps://itunes.apple.com/app/id1503977442",
-        rating: "",
-      },
-      android: {
-        link: "https://play.google.com/store/apps/details?id=com.bluedot.bamboodancing",
-        rating: "",
-      },
-    },
-    path: "Bamboo_Dancing",
-  },
-  {
-    name: "Twin Fly",
-    shortDescription:
-      "Two boys who are practicing to fly. But at the same time only one can fly.",
-    bio: "",
-    description: <TwinFly />,
-    thumb: "twinflyicon512.png",
-    image: "twinflyicon512.png",
-    images: ["/twinfly/twinfly.jpg"],
-    videos: [],
-    platform: {
-      ios: {
-        link: "itms-apps://itunes.apple.com/app/id1462581286",
-        rating: "",
-      },
-      android: {
-        link: "https://play.google.com/store/apps/details?id=com.bluedot.twinfly",
-        rating: "",
-      },
-    },
-    path: "Twin_Fly",
-  },
+  // {
+  //   name: "Bamboo Dancing",
+  //   shortDescription: "Let's dance with the bamboo poles!",
+  //   bio: "Bamboo Dancing - Nhay Sap a traditional cultural dance performed in Vietnam. Now let's play it in casual video game style.",
+  //   description: <BambooDancing />,
+  //   thumb: "bamboodancing.png",
+  //   image: "bamboodancing.png",
+  //   images: ["/bamboodancing/bamboodancing.jpg"],
+  //   videos: [],
+  //   platform: {
+  //     ios: {
+  //       link: "itms-apps://itunes.apple.com/app/id1503977442",
+  //       rating: "",
+  //     },
+  //     android: {
+  //       link: "https://play.google.com/store/apps/details?id=com.bluedot.bamboodancing",
+  //       rating: "",
+  //     },
+  //   },
+  //   path: "Bamboo_Dancing",
+  // },
+  // {
+  //   name: "Twin Fly",
+  //   shortDescription:
+  //     "Two boys who are practicing to fly. But at the same time only one can fly.",
+  //   bio: "",
+  //   description: <TwinFly />,
+  //   thumb: "twinflyicon512.png",
+  //   image: "twinflyicon512.png",
+  //   images: ["/twinfly/twinfly.jpg"],
+  //   videos: [],
+  //   platform: {
+  //     ios: {
+  //       link: "itms-apps://itunes.apple.com/app/id1462581286",
+  //       rating: "",
+  //     },
+  //     android: {
+  //       link: "https://play.google.com/store/apps/details?id=com.bluedot.twinfly",
+  //       rating: "",
+  //     },
+  //   },
+  //   path: "Twin_Fly",
+  // },
   // EGG DUNK
   {
     name: "Egg Dunk 3D",
@@ -249,48 +249,48 @@ const games = [
     },
     path: "Egg_Dunk_3D",
   },
-  {
-    name: "Protect Island",
-    shortDescription: "",
-    bio: "Just tap to play a retro game!. King Kong, the king of the island is fighting against enemies.",
-    description: <ProtectIsland />,
-    thumb: "protectislandicon512.png",
-    image: "protectislandicon512.png",
-    images: ["/protectisland/protectisland1.jpeg"],
-    videos: [],
-    platform: {
-      ios: {
-        link: "itms-apps://itunes.apple.com/app/id1462581286",
-        rating: "",
-      },
-      android: {
-        link: "https://play.google.com/store/apps/details?id=com.bluedot.protectisland&fbclid",
-        rating: "",
-      },
-    },
-    path: "Protect_Island",
-  },
-  {
-    name: "Duck Hunter",
-    shortDescription: "Classic and challenging duck hunting game.",
-    bio: "",
-    description: <DuckHunter />,
-    thumb: "duckhunter512.png",
-    image: "duckhunter512.png",
-    images: ["/duckhunter/duckhunter1.jpg"],
-    videos: [],
-    platform: {
-      ios: {
-        link: "itms-apps://itunes.apple.com/app/id1465901420",
-        rating: "",
-      },
-      android: {
-        link: "https://play.google.com/store/apps/details?id=com.bluedot.duckhunter",
-        rating: "",
-      },
-    },
-    path: "Duck_Hunter",
-  },
+  // {
+  //   name: "Protect Island",
+  //   shortDescription: "",
+  //   bio: "Just tap to play a retro game!. King Kong, the king of the island is fighting against enemies.",
+  //   description: <ProtectIsland />,
+  //   thumb: "protectislandicon512.png",
+  //   image: "protectislandicon512.png",
+  //   images: ["/protectisland/protectisland1.jpeg"],
+  //   videos: [],
+  //   platform: {
+  //     ios: {
+  //       link: "itms-apps://itunes.apple.com/app/id1462581286",
+  //       rating: "",
+  //     },
+  //     android: {
+  //       link: "https://play.google.com/store/apps/details?id=com.bluedot.protectisland&fbclid",
+  //       rating: "",
+  //     },
+  //   },
+  //   path: "Protect_Island",
+  // },
+  // {
+  //   name: "Duck Hunter",
+  //   shortDescription: "Classic and challenging duck hunting game.",
+  //   bio: "",
+  //   description: <DuckHunter />,
+  //   thumb: "duckhunter512.png",
+  //   image: "duckhunter512.png",
+  //   images: ["/duckhunter/duckhunter1.jpg"],
+  //   videos: [],
+  //   platform: {
+  //     ios: {
+  //       link: "itms-apps://itunes.apple.com/app/id1465901420",
+  //       rating: "",
+  //     },
+  //     android: {
+  //       link: "https://play.google.com/store/apps/details?id=com.bluedot.duckhunter",
+  //       rating: "",
+  //     },
+  //   },
+  //   path: "Duck_Hunter",
+  // },
 ];
 
 export default games;
