@@ -1,14 +1,13 @@
 export const updates = [
-  // {
-  //   version: "Version 2023.9.1 | Version Code 52",
-  //   changes: [
-  //     "Update what’s new link https://simplaystudio.com/release-note.",
-  //     "Fix Palm 04 'Local' space.",
-  //     "Fix map farm ground collider.",
-  //     "Support mouse and keyboard input control.",
-  //     "Screenshot a bulk of fireworks and objects for app preview.",
-  //   ],
-  // },
+  {
+    version: "Version 2023.12.1 | Version Code 54",
+    changes: [
+      " Merry Christmas!",
+      "New firecrackers: Red Firecracker Pack, Tiger Roar, Blaze Tank, Thunder Tank, Fury Tank, Plane.",
+      "New explosions: Naval Mine, Ground Mine.",
+      "New specials: Hot-air Balloon.",
+    ],
+  },
   {
     version: "Version 2023.10.1 | Version Code 53",
     changes: [
