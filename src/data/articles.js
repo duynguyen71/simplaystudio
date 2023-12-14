@@ -1,5 +1,21 @@
 const articles = [
   {
+    id: 4,
+    title: "Fireworks Play ver2023.12.1 - Merry Christmas",
+    detail: "Mery Christmas!",
+    itemList: [
+      "New firecrackers: Red Firecracker Pack, Tiger Roar, Blaze Tank, Thunder Tank, Fury Tank, Plane.",
+      "New explosions: Naval Mine, Ground Mine.",
+      "New specials: Hot-air Balloon.",
+    ],
+    description: "Mery Christmas!",
+    thumb: "/articles/article55.PNG",
+    images: [],
+    video: "https://www.youtube.com/embed/s7FgM5SXlOc",
+    embedYtbLink: "https://www.youtube.com/embed/s7FgM5SXlOc",
+    tags: ["Update", "Fireworks Play", "Mery Christmas!"],
+  },
+  {
     id: 3,
     title: "FW Play update to Version 2023.8.1",
     detail: "Fireworks Play v2023.8.1 - 14 new shells",

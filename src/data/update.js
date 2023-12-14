@@ -2,7 +2,7 @@ export const updates = [
   {
     version: "Version 2023.12.1 | Version Code 54",
     changes: [
-      " Merry Christmas!",
+      "Merry Christmas!",
       "New firecrackers: Red Firecracker Pack, Tiger Roar, Blaze Tank, Thunder Tank, Fury Tank, Plane.",
       "New explosions: Naval Mine, Ground Mine.",
       "New specials: Hot-air Balloon.",
