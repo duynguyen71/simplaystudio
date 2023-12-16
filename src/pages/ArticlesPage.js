@@ -101,6 +101,7 @@ const MainArticle = () => {
         </Box>
       </Box>
       <Box
+        onClick={onClick}
         display="flex"
         flex="1"
         flexDirection="column"

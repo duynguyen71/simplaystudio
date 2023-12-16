@@ -36,10 +36,12 @@ const ArticlePage = () => {
       <Box my={[5, 8]} px={["4", "8", "12"]}>
         <VStack spacing={10} alignItems={"flex-start"}>
           <VStack alignItems={"flex-start"}>
-            <Heading fontSize={"2xl"} as={"h1"}>
+            <Heading color="#F56565" fontSize={"2xl"} as={"h1"}>
               {article.title}
             </Heading>
             <Text>{article.description}</Text>
+            <Box height={"2vh"} />
+            {article.detail}
           </VStack>
           <Box px={8}>
             <VStack alignItems={"flex-start"}>
@@ -47,7 +49,7 @@ const ArticlePage = () => {
                 New Items:{" "}
               </Heading>
               {article.itemList.map((item, index) => {
-                return <Text>{item}</Text>;
+                return <Text index={index}>{item}</Text>;
               })}
             </VStack>
           </Box>
