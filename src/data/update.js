@@ -1,5 +1,14 @@
 export const updates = [
   {
+    version: "Version 2024.2.1 | Version Code 55",
+    changes: [
+      "New props: Confetti Cannon, Confetti Shooter, Confetti Shooter 2, Dual Spinner, Spray Machine.",
+      "New shells: Fish in water.",
+      "New 51 customizable cakes.",
+      "Firework effects more realistic.",
+    ],
+  },
+  {
     version: "Version 2023.12.1 | Version Code 54",
     changes: [
       "Merry Christmas!",
