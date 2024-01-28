@@ -115,7 +115,24 @@ const HomePage = () => {
         </Box>
       </Flex>
       {/* End of Main 1 */}
-
+      <Box pt={10}>
+        <Box>
+          <video
+            controls
+            width="100%"
+            maxW="600px"
+            rounded="md"
+            shadow="md"
+            outline="none"
+          >
+            <source
+              src="https://d3egih0we6no8h.cloudfront.net/FWAppPreview.webm"
+              type="video/webm"
+            />
+            Your browser does not support the video tag.
+          </video>
+        </Box>
+      </Box>
       {/* Main 2 */}
       <Flex direction={"column"} my={[8, 10, 12]} px={[4, 8]}>
         <Box height={["5vh"]}>
