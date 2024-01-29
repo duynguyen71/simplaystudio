@@ -1,6 +1,6 @@
 export const updates = [
   {
-    version: "Version 2024.2.1 | Version Code 55",
+    version: "Version 2024.1.1",
     changes: [
       "New props: Confetti Cannon, Confetti Shooter, Confetti Shooter 2, Dual Spinner, Spray Machine.",
       "New shells: Fish in water.",
@@ -9,7 +9,7 @@ export const updates = [
     ],
   },
   {
-    version: "Version 2023.12.1 | Version Code 54",
+    version: "Version 2023.12.1",
     changes: [
       "Merry Christmas!",
       "New firecrackers: Red Firecracker Pack, Tiger Roar, Blaze Tank, Thunder Tank, Fury Tank, Plane.",
@@ -18,7 +18,7 @@ export const updates = [
     ],
   },
   {
-    version: "Version 2023.10.1 | Version Code 53",
+    version: "Version 2023.10.1",
     changes: [
       "Happy Halloween!",
       "Moving the train.",
@@ -26,7 +26,7 @@ export const updates = [
     ],
   },
   {
-    version: "Version 2023.9.1 | Version Code 52",
+    version: "Version 2023.9.1",
     changes: [
       "New specials: RPG Firework gun.",
       "Dummy cars in the Big City map.",
@@ -34,28 +34,28 @@ export const updates = [
     ],
   },
   {
-    version: "Version 2023.8.2 | Version Code 51",
+    version: "Version 2023.8.2",
     changes: [
       "6 new shells: Crossette 11, 12, 13; Dahlia 14, 15, 16.",
       "3 new cakes: Eye of Osiris, Garden of Eden, Azure Skies.",
     ],
   },
   {
-    version: "Version 2023.8.1 | Version Code 50",
+    version: "Version 2023.8.1",
     changes: [
       "14 new shells: Horsetail 06, 07, 08; Dahlia 11, 12, 13; Chrysanthemum 16, 17, 18; Strobe 08; Ring Strobe 02; Palm 04; Crossette 10; Butterfly 01.",
     ],
   },
   {
-    version: "Version 2023.7.2 | Version Code 49",
+    version: "Version 2023.7.2",
     changes: ["New map: Farm.", "New explosion: Molotov Cocktail."],
   },
   {
-    version: "Version 2023.7.1 | Version Code 48",
+    version: "Version 2023.7.1",
     changes: ["July 4th shows."],
   },
   {
-    version: "Version 2023.6.1 | Version Code 47",
+    version: "Version 2023.6.1",
     changes: [
       "New map: Big City.",
       "Added events feature.",
@@ -66,7 +66,7 @@ export const updates = [
     ],
   },
   {
-    version: "Version 2023.5.2 | Version Code 46",
+    version: "Version 2023.5.2",
     changes: [
       "New special: Magic Reloadable Tube.",
       "New fireworks skin: Carnival (Mine 07), Uranus (Big Shell 02), Glare Zone (Fountain 01).",
@@ -77,7 +77,7 @@ export const updates = [
     ],
   },
   {
-    version: "Version 2023.5.1 | Version Code 45",
+    version: "Version 2023.5.1",
     changes: [
       "New cakes: Rebel Waves, Red Glittering, Gold Titanium, Strobing Missiles, Red Alert, Pyro Fan, Salute, 600 Shots Salute, Straight Shootout.",
       "New candle: Crunchy Balls, Parachute Flare.",
@@ -86,11 +86,11 @@ export const updates = [
     ],
   },
   {
-    version: "Version 2023.4.3 | Version Code 44",
+    version: "Version 2023.4.3",
     changes: ["New explosion: Spaceship."],
   },
   {
-    version: "Version 2023.4.2 | Version Code 43",
+    version: "Version 2023.4.2",
     changes: [
       "New map: Samurai.",
       "New fireworks: Extreme Shock.",
@@ -100,7 +100,7 @@ export const updates = [
     ],
   },
   {
-    version: "Version 2023.4.1 | Version Code 42",
+    version: "Version 2023.4.1",
     changes: [
       "New Props: Speaker.",
       "New Firecracker String.",
@@ -110,7 +110,7 @@ export const updates = [
     ],
   },
   {
-    version: "Version 2023.3.2 | Version Code 41",
+    version: "Version 2023.3.2",
     changes: [
       "New shells: Classic 22 to 27.",
       "10 new fireworks skins.",
@@ -118,7 +118,7 @@ export const updates = [
     ],
   },
   {
-    version: "Version 2023.3.1 | Version Code 40",
+    version: "Version 2023.3.1",
     changes: [
       "New rockets: 3 Stage Nuclear, Kwiton Bomb, Salute.",
       "New shells: Salute, Kwiton Bomb.",
@@ -126,7 +126,7 @@ export const updates = [
     ],
   },
   {
-    version: "Version 2023.2.3 | Version Code 39",
+    version: "Version 2023.2.3",
     changes: [
       "Nuclear Rocket.",
       "New fireworks: Classic 19, 20, 21.",
@@ -134,7 +134,7 @@ export const updates = [
     ],
   },
   {
-    version: "Version 2023.2.2 | Version Code 38",
+    version: "Version 2023.2.2",
     changes: [
       "Fixed Firework Spawning Tool bug.",
       "New Firework Spawning Tool.",
@@ -143,7 +143,7 @@ export const updates = [
     ],
   },
   {
-    version: "Version 2023.2.1 | Version Code 37",
+    version: "Version 2023.2.1",
     changes: [
       "Reloadable Tubes: Size S, M.",
       "New firecrackers: Dum Dum 30, 50, Scream 2, Mega 1.",
@@ -152,7 +152,7 @@ export const updates = [
     ],
   },
   {
-    version: "Version 2023.1.2 | Version Code 35",
+    version: "Version 2023.1.2",
     changes: [
       "New fireworks shells: Chrysanthemum 09, 10, 11, Strobe 06, Ghost Shell 06, Classic 13, 14, 15, 16.",
       "New firecrackers: Kwitis, Kwitis Boom Shell.",
@@ -160,7 +160,7 @@ export const updates = [
     ],
   },
   {
-    version: "Version 2023.1.1 | Version Code 34",
+    version: "Version 2023.1.1",
     changes: [
       "Remote firing system.",
       "Configurable for Big shell, Mine/Fountain.",
@@ -172,7 +172,7 @@ export const updates = [
     ],
   },
   {
-    version: "Version 2022.12.3 | Version Code 33",
+    version: "Version 2022.12.3",
     changes: [
       "Props: Music Box, Christmas Tree.",
       "Firecracker: Candy.",
@@ -181,7 +181,7 @@ export const updates = [
     ],
   },
   {
-    version: "Version 2022.12.2 | Version Code 32",
+    version: "Version 2022.12.2",
     changes: [
       "Merry Christmas!",
       "Winter and snow effects.",
@@ -191,29 +191,29 @@ export const updates = [
     ],
   },
   {
-    version: "Version 2022.12.1 | Version Code 31",
+    version: "Version 2022.12.1",
     changes: ["Shotguns, Rifle, Gun Target Stand."],
   },
   {
-    version: "Version 2022.11.3 | Version Code 30",
+    version: "Version 2022.11.3",
     changes: ["New 'Revolver' and Skeet Shooting Machine."],
   },
   {
-    version: "Version 2022.11.2 | Version Code 29",
+    version: "Version 2022.11.2",
     changes: [
       "Updated on cake that allows you to select shell effect, high, color.",
     ],
   },
   {
-    version: "Version 2022.11.1 | Version Code 28",
+    version: "Version 2022.11.1",
     changes: ["Bingo 2.", "New 'Ball' launcher.", "Day night system."],
   },
   {
-    version: "Version 2022.10.3 | Version Code 26",
+    version: "Version 2022.10.3",
     changes: ["Performance optimization and bug fixes."],
   },
   {
-    version: "Version 2022.10.2 | Version Code 25",
+    version: "Version 2022.10.2",
     changes: [
       "Happy Halloween!",
       "New firecrackers: Skulls, Pumpkin, Witch Hat.",
@@ -224,7 +224,7 @@ export const updates = [
     ],
   },
   {
-    version: "Version 2022.10.1 | Version Code 24",
+    version: "Version 2022.10.1",
     changes: [
       "New maps: Empty Town, Town Lite.",
       "New firecrackers: Spinning Det Cord, Mine 07.",
@@ -235,7 +235,7 @@ export const updates = [
     ],
   },
   {
-    version: "Version 2022.9.4 | Version Code 23",
+    version: "Version 2022.9.4",
     changes: [
       "Improved experience on Lighter, Fuse Line tools.",
       "New Super Slow fuse.",
@@ -243,7 +243,7 @@ export const updates = [
     ],
   },
   {
-    version: "Version 2022.9.3 | Version Code 22",
+    version: "Version 2022.9.3",
     changes: [
       "New explosions: NukeCraft, Nuke, Tiny Nuke.",
       "Jump Shoe.",
@@ -251,26 +251,26 @@ export const updates = [
     ],
   },
   {
-    version: "Version 2022.9.2 | Version Code 21",
+    version: "Version 2022.9.2",
     changes: ["New explosions: Grenade M67, M84, German Stick, Smoke Bombs."],
   },
   {
-    version: "Version 2022.9.1 | Version Code 20",
+    version: "Version 2022.9.1",
     changes: ["New explosion items: Black Powder Box, TNTs, Oil Drum."],
   },
   {
-    version: "Version 2022.8.3 | Version Code 19",
+    version: "Version 2022.8.3",
     changes: [
       "Magnet connection line tool.",
       "New firecrackers: Spinning Cobra, Spinning Wheel, Spinning Firecracker, Butterfly.",
     ],
   },
   {
-    version: "Version 2022.8.2 | Version Code 18",
+    version: "Version 2022.8.2",
     changes: ["Roman Candle.", "Hold and throw stuff."],
   },
   {
-    version: "Version 2022.8.1 | Version Code 17",
+    version: "Version 2022.8.1",
     changes: [
       "New fireworks: Classic 01-12, Dahlia 06-08, Chrysanthemum 07-08, Big Shell 05.",
       "New firework options: Color, Distance, Fuse time, Size, Launcher type: tube, rocket, missile.",
@@ -279,7 +279,7 @@ export const updates = [
     ],
   },
   {
-    version: "Version 2022.7.4 | Version Code 16",
+    version: "Version 2022.7.4",
     changes: [
       "New Firecrackers: FCR 04, FCR 05, Scream 1.",
       "New Fireworks: Ring Strobe, Ring Horsetail.",
@@ -287,11 +287,11 @@ export const updates = [
     ],
   },
   {
-    version: "Version 2022.7.3 | Version Code 15",
+    version: "Version 2022.7.3",
     changes: ["New Map."],
   },
   {
-    version: "Version 2022.7.1 | Version Code 14",
+    version: "Version 2022.7.1",
     changes: [
       "Added option to select the launcher type for each firework shell including tube, rocket, missile.",
       "New firecrackers: X1, X3, X6, X8, and Strobe Rocket 2, 3.",
@@ -302,7 +302,7 @@ export const updates = [
     ],
   },
   {
-    version: "Version 3.4.0 | Version Code 13",
+    version: "Version 3.4.0",
     changes: [
       "Added real Racks. Control timer and fireworks in each mortar tube.",
       "Added move, delete launcher features.",
@@ -310,7 +310,7 @@ export const updates = [
     ],
   },
   {
-    version: "Version 3.3.0 | Version Code 12",
+    version: "Version 3.3.0",
     changes: [
       "New fireworks: BINGO!, Big Shell 3, 4, Strobe Rocket.",
       "Different fireworks sizes, different tube/rocket skin sizes.",
@@ -318,11 +318,11 @@ export const updates = [
     ],
   },
   {
-    version: "Version 3.2.0 | Version Code 11",
+    version: "Version 3.2.0",
     changes: ["Big fireworks.", "Connection line."],
   },
   {
-    version: "Version 3.1.0 | Version Code 10",
+    version: "Version 3.1.0",
     changes: [
       "Optimize: compress sound to mp3 file if possible.",
       "Cherry firework.",
@@ -330,14 +330,14 @@ export const updates = [
     ],
   },
   {
-    version: "Version 3.0.0 | Version Code 9",
+    version: "Version 3.0.0",
     changes: [
       "New fireworks FPS mode.",
       "Allow you to walk around the town, do all the fun stuff with fireworks. Explode your neighborhood house and cars.",
     ],
   },
   {
-    version: "Version 2.2.0 | Version Code 8",
+    version: "Version 2.2.0",
     changes: [
       "New firework type: Cake.",
       "New scene: Town.",
@@ -349,7 +349,7 @@ export const updates = [
     ],
   },
   {
-    version: "Version 2.1.0 | Version Code 7",
+    version: "Version 2.1.0",
     changes: [
       "Option to input the values by keyboard.",
       "Option to random time/height/angle by specific ranges.",
@@ -357,11 +357,11 @@ export const updates = [
     ],
   },
   {
-    version: "Version 2.0.0 | Version Code 6",
+    version: "Version 2.0.0",
     changes: ["New Idle Mode. Tap on fireworks to fire.", "Bug fixes."],
   },
   {
-    version: "Version 1.3.0 | Version Code 5",
+    version: "Version 1.3.0",
     changes: [
       "Option to set up fly speed.",
       "Option to set up 4”, 6”, 8”, 10”, 12” sizes.",
@@ -369,7 +369,7 @@ export const updates = [
     ],
   },
   {
-    version: "Version 1.2.0 | Version Code 4",
+    version: "Version 1.2.0",
     changes: [
       "Flags. Pin and navigate to marked locations faster.",
       "Firework quick look option.",
@@ -382,7 +382,7 @@ export const updates = [
     ],
   },
   {
-    version: "Version 1.1.0 | Version Code 3",
+    version: "Version 1.1.0",
     changes: [
       "Option to show a None/Forest/City scene.",
       "Minor enhancement in tap mode.",

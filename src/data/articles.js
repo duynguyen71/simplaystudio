@@ -2,6 +2,112 @@ import { Box, Text, Heading, UnorderedList, ListItem } from "@chakra-ui/react";
 
 const articles = [
   {
+    id: 5,
+    title:
+      "🎆 Get Ready to Light Up the Sky: Introducing the Latest Update for 3D Fireworks Play! 🎇",
+    detail: (
+      <Box lineHeight={2}>
+        <Text>
+          We're thrilled to unveil the most exciting update yet for our beloved
+          3D fireworks extravaganza! Brace yourselves for an explosion of new
+          features, stunning effects, and endless possibilities to ignite your
+          imagination.
+        </Text>
+        {/* Content */}
+        <Heading
+          fontSize="2xl"
+          as="h2"
+          color="#F56565"
+          fontWeight="normal"
+          paddingY="2vh"
+        >
+          🎉 New 5 Props:
+        </Heading>
+        <Text>
+          We've added a dazzling array of props to elevate your fireworks
+          displays to new heights! From the mesmerizing Confetti Cannon and the
+          exhilarating Confetti Shooter to the dynamic Confetti Shooter 2, Dual
+          Spinner, and Spray Machine, your pyrotechnic arsenal just got a whole
+          lot more electrifying!
+        </Text>
+        <Heading
+          fontSize="2xl"
+          as="h2"
+          color="#F56565"
+          fontWeight="normal"
+          paddingY="2vh"
+        >
+          🐟 New Shells "Fish In Water":
+        </Heading>
+        <Text>
+          Dive into the depths of creativity with our latest addition: the
+          breathtaking Fish in Water shell. Watch as schools of luminous fish
+          dance through the night sky, adding an enchanting aquatic touch to
+          your fireworks spectacle!
+        </Text>
+        <Heading
+          fontSize="2xl"
+          as="h2"
+          color="#F56565"
+          fontWeight="normal"
+          paddingY="2vh"
+        >
+          🎂 51 Customizable Cakes:
+        </Heading>
+        <Text>
+          Indulge your creative flair with an expansive selection of 51
+          customizable cakes! Craft your own unique combinations of colors,
+          patterns, and effects to design awe-inspiring displays that leave
+          spectators spellbound.
+        </Text>
+        <Heading
+          fontSize="2xl"
+          as="h2"
+          color="#F56565"
+          fontWeight="normal"
+          paddingY="2vh"
+        >
+          💥 More Realistic Firework Effects:
+        </Heading>
+        <Text>
+          Experience fireworks like never before with enhanced realism! Our
+          latest update brings you even more lifelike firework effects, from
+          vibrant bursts of color to intricate patterns that paint the night sky
+          with unparalleled beauty.
+        </Text>
+        <Heading
+          fontSize="2xl"
+          as="h2"
+          color="#F56565"
+          fontWeight="normal"
+          paddingY="2vh"
+        >
+          💥 💥 💥 💥
+        </Heading>
+        <Text>
+          Prepare to be dazzled as you unleash your imagination and set the
+          night ablaze with the most spectacular fireworks displays yet! Whether
+          you're a seasoned pyrotechnic enthusiast or a newcomer to the world of
+          fireworks, there's never been a better time to dive into the
+          breathtaking world of 3D Fireworks Play.
+        </Text>
+        <Text>Update your game now and let the fireworks begin! 🚀✨</Text>
+      </Box>
+    ),
+    itemList: [
+      "New props: Confetti Cannon, Confetti Shooter, Confetti Shooter 2, Dual Spinner, Spray Machine.",
+      "New shells: Fish in water.",
+      "New 51 customizable cakes.",
+      "Firework effects more realistic.",
+    ],
+    description: " Explosive Update!",
+    thumb: "/articles/article66.PNG",
+    images: [],
+    video: "https://www.youtube.com/embed/ApgL0UASQm8",
+    embedYtbLink: "https://www.youtube.com/embed/ApgL0UASQm8",
+    tags: ["Update", "Fireworks Play"],
+  },
+  {
     id: 4,
     title:
       "  Fireworks Play Ver2023.12.1 - Merry Christmas: Introducing Exciting New Additions!",

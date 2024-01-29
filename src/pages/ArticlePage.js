@@ -45,9 +45,11 @@ const ArticlePage = () => {
           </VStack>
           <Box px={8}>
             <VStack alignItems={"flex-start"}>
-              <Heading as={"h2"} fontSize={"xl"}>
-                New Items:{" "}
-              </Heading>
+              {article.itemList && article.itemList.length > 0 && (
+                <Heading as={"h2"} fontSize={"xl"}>
+                  New Items:{" "}
+                </Heading>
+              )}
               {article.itemList.map((item, index) => {
                 return <Text index={index}>{item}</Text>;
               })}
