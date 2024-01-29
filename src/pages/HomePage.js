@@ -20,7 +20,7 @@ import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useNavigate } from "react-router-dom";
 import { ImageCarousel } from "../components/ImageCarousel";
-import hightlightVideos from "../data/hightlightvideos";
+import hightlightVideos, { hightligtVideos } from "../data/hightlightvideos";
 import { PUBLIC_HIGHTLIGHTS_URL } from "../hooks";
 
 const HomePage = () => {
@@ -115,7 +115,7 @@ const HomePage = () => {
         </Box>
       </Flex>
       {/* End of Main 1 */}
-      {/* <Box pt={10}>
+      <Box pt={10}>
         <Box>
           <video
             controls
@@ -126,13 +126,13 @@ const HomePage = () => {
             outline="none"
           >
             <source
-              src="https://d3egih0we6no8h.cloudfront.net/FWAppPreview.webm"
+              src="https://dyhsziddrog2s.cloudfront.net/FWAppPreview.webm"
               type="video/webm"
             />
             Your browser does not support the video tag.
           </video>
         </Box>
-      </Box> */}
+      </Box>
       {/* Main 2 */}
       <Flex direction={"column"} my={[8, 10, 12]} px={[4, 8]}>
         <Box height={["5vh"]}>
@@ -269,7 +269,7 @@ const HomePage = () => {
         direction={["column", "column", "row"]}
         p={[2, 4, 8]}
       >
-        {hightlightVideos.map((s, index) => {
+        {/* {hightlightVideos.map((s, index) => {
           return (
             <Box
               key={index}
@@ -285,6 +285,23 @@ const HomePage = () => {
                   src={`${PUBLIC_HIGHTLIGHTS_URL}/${s}`}
                   type="video/mp4"
                 />
+              </video>{" "}
+            </Box>
+          );
+        })} */}
+        {hightligtVideos.distribureHightlightVideos.map((s, index) => {
+          return (
+            <Box
+              key={index}
+              h={"100%"}
+              mr={[0, 0, 4]}
+              w={["100%", "100%", "50vw"]}
+              mb={[2, 4, 8]}
+              overflow={"hidden"}
+              borderRadius={"md"}
+            >
+              <video loop controls={false} autoPlay={true} muted>
+                <source src={s} type="video/webm" />
               </video>{" "}
             </Box>
           );
