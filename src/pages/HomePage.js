@@ -22,6 +22,8 @@ import { useNavigate } from "react-router-dom";
 import { ImageCarousel } from "../components/ImageCarousel";
 import hightlightVideos, { hightligtVideos } from "../data/hightlightvideos";
 import { PUBLIC_HIGHTLIGHTS_URL } from "../hooks";
+import articles from "../data/articles";
+import ArticleCard from "../components/ArticleCard";
 
 const HomePage = () => {
   const { ref: ref2, inView: inView2 } = useInView();
@@ -127,7 +129,7 @@ const HomePage = () => {
           >
             <source
               src="https://dyhsziddrog2s.cloudfront.net/FWAppPreview.webm"
-              type="video/webm"
+              type='video/webm; codecs="vp9, opus"'
             />
             Your browser does not support the video tag.
           </video>
@@ -155,9 +157,7 @@ const HomePage = () => {
             );
           })}
         </Grid>
-
         <Box height={"30px"} />
-
         <Center>
           <Button
             onClick={() => navigate("/games")}
