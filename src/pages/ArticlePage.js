@@ -51,7 +51,11 @@ const ArticlePage = () => {
                 </Heading>
               )}
               {article.itemList.map((item, index) => {
-                return <Text index={index}>{item}</Text>;
+                return (
+                  <Text key={index} index={index}>
+                    {item}
+                  </Text>
+                );
               })}
             </VStack>
           </Box>
@@ -64,19 +68,10 @@ const ArticlePage = () => {
           <iframe
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             title="YouTube video player"
-            frameborder="0"
-            allowfullscreen
+            allowFullScreen
             src={article.embedYtbLink}
           />
         </AspectRatio>
-        {/* <iframe
-          width="560"
-          height="315"
-          src="https://www.youtube.com/embed/zf-VPqxbPxQ"
-          title="YouTube video player"
-          frameborder="0"
-          allowfullscreen
-        ></iframe> */}
       </Box>
       {/* End of Ytb Video */}
     </Flex>

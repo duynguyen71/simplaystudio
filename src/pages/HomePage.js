@@ -20,6 +20,8 @@ import { useInView } from "react-intersection-observer";
 import { useNavigate } from "react-router-dom";
 import { ImageCarousel } from "../components/ImageCarousel";
 import { hightligtVideos } from "../data/hightlightvideos";
+import ArticleCard from "../components/ArticleCard";
+import articles from "../data/articles";
 
 const HomePage = () => {
   const { ref: ref2, inView: inView2 } = useInView();
@@ -307,6 +309,18 @@ const HomePage = () => {
         })}
       </Flex>
       {/* End of Main 5 */}
+
+      {/* Latest Ariticle */}
+      <Flex
+        justifyContent={"center"}
+        alignItems={"start"}
+        direction={["column", "column", "row"]}
+        w={"100%"}
+      >
+        {articles.slice(0, 4).map((article, index) => {
+          return <ArticleCard key={index} article={article} />;
+        })}
+      </Flex>
     </Flex>
   );
 };

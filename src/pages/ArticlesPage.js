@@ -29,7 +29,12 @@ const ArticleList = () => {
       </Heading>
       <Divider marginTop="5" />
       {/* Article List */}
-      <Flex>
+      <Flex
+        justifyContent={"center"}
+        alignItems={"start"}
+        direction={["column", "column", "row"]}
+        w={"100%"}
+      >
         {articles.slice(1).map((article, index) => {
           return <ArticleCard key={index} article={article} />;
         })}

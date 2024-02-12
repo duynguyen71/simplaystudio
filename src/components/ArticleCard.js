@@ -49,8 +49,8 @@ const ArticleCard = ({ article }) => {
   };
   return (
     <>
-      <Wrap p={[2, 4, 8]} spacing={["5px", "30px"]} marginTop="5">
-        <WrapItem minW={"20vw"} maxW={"300px"}>
+      <Wrap p={2} marginTop="5">
+        <WrapItem minW={"20vw"} maxW={["100%", "100%", "300px"]}>
           <Box w="100%">
             <Box borderRadius="lg" overflow="hidden">
               <Box
@@ -71,8 +71,12 @@ const ArticleCard = ({ article }) => {
                 />
               </Box>
             </Box>
-            {/* <BlogTags tags={["FW Play", "New Update"]} marginTop="3" /> */}
-            <Heading fontWeight={"600"} fontSize={["md", "xl"]} marginTop="2">
+            <Heading
+              fontWeight={"600"}
+              fontSize={["sm", "sm", "sm", "md"]}
+              marginTop="2"
+            >
+              {/* Titile */}
               <Text
                 onClick={onClick}
                 textDecoration="none"
@@ -84,10 +88,6 @@ const ArticleCard = ({ article }) => {
             <Text as="p" fontSize={["sm", "md"]} marginTop="2">
               {article.description}
             </Text>
-            {/* <BlogAuthor
-              name="Duy Nguyen"
-              date={new Date("2021-04-06T19:01:27Z")}
-            /> */}
           </Box>
         </WrapItem>
       </Wrap>
