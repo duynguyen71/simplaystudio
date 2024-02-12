@@ -120,16 +120,19 @@ const HomePage = () => {
       <Box pt={10}>
         <Box>
           <video
-            controls
             width="100%"
-            maxW="600px"
+            maxw="600px"
             rounded="md"
             shadow="md"
             outline="none"
+            autoPlay
+            loop
+            muted
+            playsInline
           >
             <source
-              src="https://dyhsziddrog2s.cloudfront.net/FWAppPreview.webm"
-              type='video/webm; codecs="vp9, opus"'
+              src="https://dyhsziddrog2s.cloudfront.net/FWAppPreview.mp4"
+              type="video/mp4"
             />
             Your browser does not support the video tag.
           </video>
@@ -300,8 +303,8 @@ const HomePage = () => {
               overflow={"hidden"}
               borderRadius={"md"}
             >
-              <video loop controls={false} autoPlay={true} muted>
-                <source src={s} type="video/webm" />
+              <video autoPlay loop muted playsInline>
+                <source src={s} type="video/mp4" />
               </video>{" "}
             </Box>
           );
