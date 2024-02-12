@@ -6,6 +6,7 @@ import {
   Grid,
   GridItem,
   Spacer,
+  Spinner,
   useColorModeValue,
 } from "@chakra-ui/react";
 import React, { useEffect } from "react";
@@ -22,6 +23,8 @@ import { ImageCarousel } from "../components/ImageCarousel";
 import { hightligtVideos } from "../data/hightlightvideos";
 import ArticleCard from "../components/ArticleCard";
 import articles from "../data/articles";
+import { logDOM } from "@testing-library/react";
+import { useState } from "react";
 
 const HomePage = () => {
   const { ref: ref2, inView: inView2 } = useInView();
@@ -97,6 +100,9 @@ const HomePage = () => {
       });
     }
   }, [inView2, animation4, animation5]);
+
+  const [isLoadingMainVideo, setLoadingMainVideo] = useState(false);
+
   return (
     <Flex direction={"column"} position={"relative"} minH={"80vh"}>
       {/* Main 1 */}
@@ -116,7 +122,21 @@ const HomePage = () => {
       </Flex>
       {/* End of Main 1 */}
       <Box pt={10}>
-        <Box>
+        <Box position={"relative"}>
+          {isLoadingMainVideo && (
+            <Spinner
+              position={"absolute"}
+              top={"50%"}
+              right={"50%"}
+              transform="translate(50%, -50%)"
+              thickness="4px"
+              speed="0.65s"
+              emptyColor="gray.200"
+              color={"red.400"}
+              size="xl"
+            />
+          )}
+
           <video
             width="100%"
             maxw="600px"
@@ -127,6 +147,15 @@ const HomePage = () => {
             loop
             muted
             playsInline
+            onLoadStart={() => {
+              setLoadingMainVideo(true);
+            }}
+            onLoadedData={() => {
+              // setLoadingMainVideo(false);
+            }}
+            onPlaying={() => {
+              setLoadingMainVideo(false);
+            }}
           >
             <source
               src="https://dyhsziddrog2s.cloudfront.net/FWAppPreview.mp4"
