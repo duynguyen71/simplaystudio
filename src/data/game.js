@@ -1,15 +1,8 @@
-import BambooDancing from "../components/description/BambooDancing";
 import Basketball from "../components/description/Basketball";
-import Cowboy from "../components/description/Cowboy";
-import DuckHunter from "../components/description/DuckHunter";
 import EggDunk from "../components/description/EggDunk";
-import FireworkBabyDescription from "../components/description/FireworkBabyDescription";
 import FireworkDescription from "../components/description/FireworkDescription";
 import KnifeGame from "../components/description/KnifeGame";
-import OneInchPunch from "../components/description/OneInchPunch.js";
-import ProtectIsland from "../components/description/ProtectIsland";
 import Spaceman from "../components/description/Spaceman";
-import TwinFly from "../components/description/TwinFly";
 
 const games = [
   {
@@ -17,9 +10,9 @@ const games = [
     shortDescription: "A Realistic 3D Fireworks Game!",
     bio: "Want to walk around the town and fire it up? Want to setup your own firework show? Everything you need about fireworks is in this Fireworks Play game.",
     description: <FireworkDescription />,
-    image: "/fireworks512.png",
+    image: "/fireworks512.jpg",
     video: "/FWplay.MP4",
-    thumb: "fwplay.png",
+    thumb: "fwplay.jpg",
     images: [
       "/fwplay/1.png",
       "/fwplay/2.png",
@@ -79,7 +72,7 @@ const games = [
     shortDescription: "Exploring the vast universe by a single tap.",
     bio: "In 2050, humankind has been building a vast number of star bases over the Solar system. The Crew brothers, one in their job of flying to Jupiter base, their ship hit a meteoroid and the explosion destroyed almost the ship, luckily one thrust engine still was working fine. Astronauts took turns to grab firmly on the engine, they continued on their journey to visit each star bases.",
     description: <Spaceman />,
-    thumb: "spaceman512.png",
+    thumb: "spaceman512.jpg",
     image: "spaceman512.png",
     images: ["/spaceman/spaceman1.png"],
     videos: [],
@@ -123,7 +116,7 @@ const games = [
     shortDescription: "Stab between the fingers game",
     bio: "Be careful! Do NOT try in real life.",
     description: <KnifeGame />,
-    thumb: "knifegame.png",
+    thumb: "knifegame.jpg",
     image: "knifegame.png",
     images: [],
     videos: ["/knifegame1.mp4", "/knifegame2.mp4", "/knifegame3.mp4"],
@@ -168,7 +161,7 @@ const games = [
       "A Real Basketball Arcade Machine!! Physic, Graphic and Sound are so real, so addictive.",
     bio: "This game will make you feel like your are in the real game center but it won’t cost your pocket because this game is completely FREE.",
     description: <Basketball />,
-    thumb: "basketball.png",
+    thumb: "basketball.jpg",
     image: "basketball.png",
     images: ["/basketball/basketball.jpg"],
     videos: ["/basketball1.mp4", "/basketball2.mp4", "/basketball3.mp4"],
@@ -233,7 +226,7 @@ const games = [
     shortDescription: "A Realistic 3D Fireworks Game!",
     bio: "Want to walk around the town and fire it up? Want to setup your own firework show? Everything you need about fireworks is in this Fireworks Play game.",
     description: <EggDunk />,
-    thumb: "eggdunkicon512.png",
+    thumb: "eggdunkicon512.jpg",
     image: "eggdunkicon512.png",
     images: ["/eggdunk/eggdunk.jpg"],
     videos: ["/eggdunk1.mp4", "/eggdunk2.mp4", "/eggdunk3.mp4"],

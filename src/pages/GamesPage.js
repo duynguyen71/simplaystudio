@@ -47,7 +47,7 @@ const GamesPage = () => {
                     aspectRatio={1}
                     backgroundPosition={"center"}
                     backgroundRepeat={"no-repeat"}
-                    borderRadius={"md"}
+                    borderRadius={"50"}
                     backgroundSize={"cover"}
                     src={`${PUBLIC_IMAGE_URL}/${game.thumb}`}
                   />

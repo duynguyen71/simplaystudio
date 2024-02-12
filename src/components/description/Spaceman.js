@@ -2,14 +2,9 @@ import {
   Box,
   Flex,
   HStack,
-  Icon,
   Image,
-  ListIcon,
   ListItem,
-  Stack,
-  Text,
   UnorderedList,
-  VStack,
   useColorModeValue,
 } from "@chakra-ui/react";
 import React from "react";

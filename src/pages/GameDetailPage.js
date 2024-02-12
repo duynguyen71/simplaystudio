@@ -70,7 +70,7 @@ const GameDetailPage = () => {
             initial={{ x: -100, y: -100, rotate: -45, scale: 0 }}
             animate={{ x: 0, y: 0, rotate: 0, scale: 1 }}
           >
-            <Box overflow={"hidden"} borderRadius={"md"} boxSize={"200"}>
+            <Box overflow={"hidden"} borderRadius={"100"} boxSize={"200"}>
               <AspectRatio ratio={1}>
                 <Image
                   objectFit={"cover"}

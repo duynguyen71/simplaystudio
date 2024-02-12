@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, AspectRatio, useColorModeValue, Text } from "@chakra-ui/react";
+import { Box, AspectRatio, useColorModeValue } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
 import { PUBLIC_IMAGE_URL } from "../hooks";
 const GameCard = (props) => {
@@ -14,7 +14,7 @@ const GameCard = (props) => {
         boxShadow={"lg"}
         onClick={() => navigate(`/games/${path}`)}
         cursor={"pointer"}
-        borderRadius={"20px"}
+        borderRadius={"40"}
         position="relative"
         objectFit={"cover"}
         backgroundImage={

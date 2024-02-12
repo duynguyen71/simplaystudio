@@ -5,11 +5,10 @@ import {
   Flex,
   Grid,
   GridItem,
-  SimpleGrid,
   Spacer,
   useColorModeValue,
 } from "@chakra-ui/react";
-import React, { useEffect, useMemo } from "react";
+import React, { useEffect } from "react";
 import GameCard from "../components/GameCard";
 import { CaptionCarousel } from "../components/CaptionCarousel";
 import games from "../data/game";
@@ -20,10 +19,7 @@ import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useNavigate } from "react-router-dom";
 import { ImageCarousel } from "../components/ImageCarousel";
-import hightlightVideos, { hightligtVideos } from "../data/hightlightvideos";
-import { PUBLIC_HIGHTLIGHTS_URL } from "../hooks";
-import articles from "../data/articles";
-import ArticleCard from "../components/ArticleCard";
+import { hightligtVideos } from "../data/hightlightvideos";
 
 const HomePage = () => {
   const { ref: ref2, inView: inView2 } = useInView();
