@@ -14,7 +14,7 @@ import {
 import games from "../data/game";
 import { PUBLIC_IMAGE_URL } from "../hooks";
 import { useNavigate } from "react-router";
-import "./games-page.css";
+import "./css/games-page.css";
 import { ChevronRightIcon } from "@chakra-ui/icons";
 
 const GamesPage = () => {

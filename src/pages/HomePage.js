@@ -23,7 +23,6 @@ import { ImageCarousel } from "../components/ImageCarousel";
 import { hightligtVideos } from "../data/hightlightvideos";
 import ArticleCard from "../components/ArticleCard";
 import articles from "../data/articles";
-import { logDOM } from "@testing-library/react";
 import { useState } from "react";
 
 const HomePage = () => {
@@ -108,6 +107,7 @@ const HomePage = () => {
       {/* Main 1 */}
       <Flex
         mx={[0, 4]}
+        mt={[0, 10]}
         direction={["column", "column", "column", "column", "row"]}
       >
         {/* Hero */}
@@ -122,18 +122,20 @@ const HomePage = () => {
       </Flex>
       {/* End of Main 1 */}
       <Box pt={10}>
-        <Box position={"relative"}>
+        <Box width="100%" position={"relative"}>
           {isLoadingMainVideo && (
             <Spinner
               position={"absolute"}
-              top={"50%"}
-              right={"50%"}
-              transform="translate(50%, -50%)"
-              thickness="4px"
+              top={0}
+              left={0}
+              bottom={0}
+              right={0}
+              margin={"auto"}
+              thickness="2px"
               speed="0.65s"
               emptyColor="gray.200"
-              color={"red.400"}
-              size="xl"
+              color="red.400"
+              size={["lg", "lg", "xl"]}
             />
           )}
 
@@ -299,26 +301,6 @@ const HomePage = () => {
         direction={["column", "column", "row"]}
         p={[2, 4, 8]}
       >
-        {/* {hightlightVideos.map((s, index) => {
-          return (
-            <Box
-              key={index}
-              h={"100%"}
-              mr={[0, 0, 4]}
-              w={["100%", "100%", "50vw"]}
-              mb={[2, 4, 8]}
-              overflow={"hidden"}
-              borderRadius={"md"}
-            >
-              <video loop controls={false} autoPlay={true} muted>
-                <source
-                  src={`${PUBLIC_HIGHTLIGHTS_URL}/${s}`}
-                  type="video/mp4"
-                />
-              </video>{" "}
-            </Box>
-          );
-        })} */}
         {hightligtVideos.distribureHightlightVideos.map((s, index) => {
           return (
             <Box

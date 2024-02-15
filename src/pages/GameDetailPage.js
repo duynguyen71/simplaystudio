@@ -151,6 +151,7 @@ const GameDetailPage = () => {
                 controls={false}
                 autoPlay
                 muted
+                playsInline
               >
                 <source src={`${PUBLIC_VIDEO_URL}/${video}`} type="video/mp4" />
               </video>

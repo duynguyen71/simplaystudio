@@ -36,6 +36,7 @@ export const ImageCarousel = ({ games }) => {
 
   const imgBgColor = useColorModeValue("gray.200", "gray.800");
   const navigateToFWPlay = () => navigate(`/games/${games[0].path}`);
+  
   return (
     <>
       <Box position={"relative"} overflow={"hidden"} borderRadius={"md"}>
