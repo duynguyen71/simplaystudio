@@ -13,6 +13,9 @@ import {
 import { HamburgerIcon, CloseIcon, MoonIcon, SunIcon } from "@chakra-ui/icons";
 import { useNavigate } from "react-router-dom";
 import CustomNavLink from "./CustomNavLink";
+import { SocialButton } from "./Footer";
+import socialMediaLinks from "../data/socialMediaLinks";
+import { FaTiktok, FaYoutube } from "react-icons/fa";
 const NavLinks = [
   {
     title: "Games",
@@ -82,7 +85,15 @@ export default function WithAction() {
             </HStack>
           </HStack>
           {/* LOGO */}
-          <HStack spacing={7} alignItems={"center"}>
+          <HStack spacing={[3, 7]} alignItems={"center"}>
+            <HStack display={["none", "none", "inline-block"]} spacing={[3, 7]}>
+              <SocialButton label={"YouTube"} href={socialMediaLinks.youtube}>
+                <FaYoutube />
+              </SocialButton>
+              <SocialButton label={"Tiktok"} href={socialMediaLinks.tiktok}>
+                <FaTiktok />
+              </SocialButton>
+            </HStack>
             <Button onClick={toggleColorMode}>
               {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
             </Button>

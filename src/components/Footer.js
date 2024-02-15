@@ -17,7 +17,7 @@ import {} from "@chakra-ui/icons";
 import { AppStoreBadge, PlayStoreBadge } from "./StoreBadges";
 import CustomNavLink from "./CustomNavLink";
 
-const SocialButton = ({ children, label, href }) => {
+export const SocialButton = ({ children, label, href }) => {
   return (
     <chakra.button
       bg={useColorModeValue("blackAlpha.100", "whiteAlpha.100")}
