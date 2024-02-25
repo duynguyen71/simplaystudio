@@ -6,7 +6,6 @@ import {
   Grid,
   GridItem,
   Spacer,
-  Spinner,
   useColorModeValue,
 } from "@chakra-ui/react";
 import React, { useEffect } from "react";
@@ -20,10 +19,10 @@ import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useNavigate } from "react-router-dom";
 import { ImageCarousel } from "../components/ImageCarousel";
-import { hightligtVideos } from "../data/hightlightvideos";
 import ArticleCard from "../components/ArticleCard";
 import articles from "../data/articles";
-import { useState } from "react";
+import { LazyLoadingHightlightVideos } from "../components/LazyLoadingHightlightVideos";
+import { LazyVideoComponent } from "../components/LazyVideoComponent";
 
 const HomePage = () => {
   const { ref: ref2, inView: inView2 } = useInView();
@@ -100,8 +99,6 @@ const HomePage = () => {
     }
   }, [inView2, animation4, animation5]);
 
-  const [isLoadingMainVideo, setLoadingMainVideo] = useState(false);
-
   return (
     <Flex direction={"column"} position={"relative"} minH={"80vh"}>
       {/* Main 1 */}
@@ -122,50 +119,9 @@ const HomePage = () => {
       </Flex>
       {/* End of Main 1 */}
       <Box pt={10}>
-        <Box width="100%" position={"relative"}>
-          {isLoadingMainVideo && (
-            <Spinner
-              position={"absolute"}
-              top={0}
-              left={0}
-              bottom={0}
-              right={0}
-              margin={"auto"}
-              thickness="2px"
-              speed="0.65s"
-              emptyColor="gray.200"
-              color="red.400"
-              size={["lg", "lg", "xl"]}
-            />
-          )}
-
-          <video
-            width="100%"
-            maxw="600px"
-            rounded="md"
-            shadow="md"
-            outline="none"
-            autoPlay
-            loop
-            muted
-            playsInline
-            onLoadStart={() => {
-              setLoadingMainVideo(true);
-            }}
-            onLoadedData={() => {
-              // setLoadingMainVideo(false);
-            }}
-            onPlaying={() => {
-              setLoadingMainVideo(false);
-            }}
-          >
-            <source
-              src="https://dyhsziddrog2s.cloudfront.net/FWAppPreview.mp4"
-              type="video/mp4"
-            />
-            Your browser does not support the video tag.
-          </video>
-        </Box>
+        <LazyVideoComponent
+          sourceSrc={"https://dyhsziddrog2s.cloudfront.net/FWAppPreview.mp4"}
+        />
       </Box>
       {/* Main 2 */}
       <Flex direction={"column"} my={[8, 10, 12]} px={[4, 8]}>
@@ -295,7 +251,8 @@ const HomePage = () => {
           </Flex>
         </motion.div>
       </Box>
-      <Flex
+      <LazyLoadingHightlightVideos />
+      {/* <Flex
         alignItems={"center"}
         justifyContent={"center"}
         direction={["column", "column", "row"]}
@@ -318,7 +275,7 @@ const HomePage = () => {
             </Box>
           );
         })}
-      </Flex>
+      </Flex> */}
       {/* End of Main 5 */}
 
       {/* Latest Ariticle */}
