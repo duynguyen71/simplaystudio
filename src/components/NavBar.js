@@ -9,13 +9,15 @@ import {
   useColorMode,
   Stack,
   Text,
+  Alert,
+  AlertIcon,
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon, MoonIcon, SunIcon } from "@chakra-ui/icons";
 import { useNavigate } from "react-router-dom";
 import CustomNavLink from "./CustomNavLink";
 import { SocialButton } from "./Footer";
 import socialMediaLinks from "../data/socialMediaLinks";
-import { FaTiktok, FaYoutube } from "react-icons/fa";
+import { FaDiscord, FaTiktok, FaYoutube } from "react-icons/fa";
 const NavLinks = [
   {
     title: "Games",
@@ -41,6 +43,33 @@ export default function WithAction() {
   const navigate = useNavigate();
   return (
     <>
+      <Alert
+        onClick={() => {
+          window.open("https://discord.com/invite/rC8xRFWq", "_blank");
+        }}
+        status="info"
+      >
+        <AlertIcon />
+        <Text
+          _hover={{
+            textDecoration: "underline",
+          }}
+          cursor={"pointer"}
+        >
+          Fireworks Play multiplayer mode is now available. Check out{" "}
+          <Text
+            as={"span"}
+            _hover={{
+              textDecoration: "underline",
+              textColor: "red.400",
+            }}
+            fontWeight={"bold"}
+          >
+            Discord
+          </Text>{" "}
+          for the latest updates.
+        </Text>
+      </Alert>
       <Box
         position={"sticky"}
         top={0}
@@ -87,6 +116,9 @@ export default function WithAction() {
           {/* LOGO */}
           <HStack spacing={[3, 7]} alignItems={"center"}>
             <HStack display={["none", "none", "inline-block"]} spacing={[3, 7]}>
+              <SocialButton label={"Discord"} href={socialMediaLinks.discord}>
+                <FaDiscord />
+              </SocialButton>
               <SocialButton label={"YouTube"} href={socialMediaLinks.youtube}>
                 <FaYoutube />
               </SocialButton>

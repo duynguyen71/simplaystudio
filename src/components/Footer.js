@@ -10,7 +10,7 @@ import {
   IconButton,
   useColorModeValue,
 } from "@chakra-ui/react";
-import { FaTiktok, FaYoutube } from "react-icons/fa";
+import { FaDiscord, FaTiktok, FaYoutube } from "react-icons/fa";
 import { BiMailSend } from "react-icons/bi";
 import socialMediaLinks from "../data/socialMediaLinks";
 import {} from "@chakra-ui/icons";
@@ -70,6 +70,9 @@ export default function LargeWithNewsletter() {
               © 2023 Simplay Studio. All rights reserved
             </Text>
             <Stack direction={"row"} spacing={6}>
+              <SocialButton label={"Discord"} href={socialMediaLinks.discord}>
+                <FaDiscord />
+              </SocialButton>
               <SocialButton label={"YouTube"} href={socialMediaLinks.youtube}>
                 <FaYoutube />
               </SocialButton>

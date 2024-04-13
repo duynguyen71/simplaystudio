@@ -1,5 +1,13 @@
 export const updates = [
   {
+    version: "Version 2024.4.1",
+    changes: [
+      "Early access Multiplayer Event",
+      "New shells: Brocade 08; Crossette 16, 17, 18; Salute 05.",
+      "Firework effects more realistic.",
+    ],
+  },
+  {
     version: "Version 2024.1.1",
     changes: [
       "New props: Confetti Cannon, Confetti Shooter, Confetti Shooter 2, Dual Spinner, Spray Machine.",
