@@ -23,6 +23,7 @@ import ArticleCard from "../components/ArticleCard";
 import articles from "../data/articles";
 import { LazyLoadingHightlightVideos } from "../components/LazyLoadingHightlightVideos";
 import { LazyVideoComponent } from "../components/LazyVideoComponent";
+import { PUBLIC_VIDEO_URL } from "../hooks";
 
 const HomePage = () => {
   const { ref: ref2, inView: inView2 } = useInView();
@@ -111,6 +112,7 @@ const HomePage = () => {
         <Box alignSelf={"center"} flex={5}>
           <Hero />
         </Box>
+
         <Box w={5} />
         {/* Game Hight Light */}
         <Box flex={7}>
@@ -118,11 +120,7 @@ const HomePage = () => {
         </Box>
       </Flex>
       {/* End of Main 1 */}
-      <Box pt={10}>
-        <LazyVideoComponent
-          sourceSrc={"https://dyhsziddrog2s.cloudfront.net/FWAppPreview.mp4"}
-        />
-      </Box>
+      <Box pt={10}></Box>
       {/* Main 2 */}
       <Flex direction={"column"} my={[8, 10, 12]} px={[4, 8]}>
         <Box height={["5vh"]}>
@@ -230,9 +228,9 @@ const HomePage = () => {
         <motion.div animate={animation4}>
           <Flex>
             <Spacer />
-            <BannerText text={"HIGHLIGHTS"} color="red.400" />
+            <BannerText text={"FIREWORKS"} color="red.400" />
             <BannerText
-              text={"OF"}
+              text={"PLAY"}
               color={useColorModeValue("orange", "white")}
             />
             <Spacer />
@@ -244,7 +242,7 @@ const HomePage = () => {
             <Spacer />
             <BannerText
               isStrokeStyle={true}
-              text={"THE WEEK"}
+              text={"MULTIPLAYER"}
               color={useColorModeValue("orange", "orange")}
             />
             <Spacer />
@@ -252,30 +250,6 @@ const HomePage = () => {
         </motion.div>
       </Box>
       <LazyLoadingHightlightVideos />
-      {/* <Flex
-        alignItems={"center"}
-        justifyContent={"center"}
-        direction={["column", "column", "row"]}
-        p={[2, 4, 8]}
-      >
-        {hightligtVideos.distribureHightlightVideos.map((s, index) => {
-          return (
-            <Box
-              key={index}
-              h={"100%"}
-              mr={[0, 0, 4]}
-              w={["100%", "100%", "50vw"]}
-              mb={[2, 4, 8]}
-              overflow={"hidden"}
-              borderRadius={"md"}
-            >
-              <video autoPlay loop muted playsInline>
-                <source src={s} type="video/mp4" />
-              </video>{" "}
-            </Box>
-          );
-        })}
-      </Flex> */}
       {/* End of Main 5 */}
 
       {/* Latest Ariticle */}

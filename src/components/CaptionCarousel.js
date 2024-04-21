@@ -99,10 +99,10 @@ export const CaptionCarousel = ({ games }) => {
                   backgroundPosition="center"
                   backgroundRepeat="no-repeat"
                   backgroundSize="cover"
-                  // backgroundImage={`${
-                  //   process.env.PUBLIC_URL
-                  // }/images/6.5_ver2023.4.1 ${index + 1}.png`}
-                  backgroundImage={`${PUBLIC_IMAGE_URL}/${game.thumb}`}
+                  backgroundImage={`${
+                    process.env.PUBLIC_URL
+                  }/images/6.5_ver2023.4.1 ${index + 1}.png`}
+                  // backgroundImage={`${PUBLIC_IMAGE_URL}/${game.thumb}`}
                   bgColor={imgBgColor}
                 >
                   <Container

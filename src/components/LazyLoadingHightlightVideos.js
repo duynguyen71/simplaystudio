@@ -32,33 +32,34 @@ export const LazyLoadingHightlightVideos = ({}) => {
   }, []);
 
   return (
-    <Box ref={containerRef}>
-      {isIntersecting && (
-        <Flex
-          alignItems={"center"}
-          justifyContent={"center"}
-          direction={["column", "column", "row"]}
-          p={[2, 4, 8]}
-        >
-          {hightligtVideos.distribureHightlightVideos.map((s, index) => {
-            return (
-              <Box
-                key={index}
-                h={"100%"}
-                mr={[0, 0, 4]}
-                w={["100%", "100%", "50vw"]}
-                mb={[2, 4, 8]}
-                overflow={"hidden"}
-                borderRadius={"md"}
-              >
-                <video autoPlay loop muted playsInline>
-                  <source src={s} type="video/mp4" />
-                </video>
-              </Box>
-            );
-          })}
-        </Flex>
-      )}
-    </Box>
+    <></>
+    // <Box ref={containerRef}>
+    //   {isIntersecting && (
+    //     <Flex
+    //       alignItems={"center"}
+    //       justifyContent={"center"}
+    //       direction={["column", "column", "row"]}
+    //       p={[2, 4, 8]}
+    //     >
+    //       {hightligtVideos.distribureHightlightVideos.map((s, index) => {
+    //         return (
+    //           <Box
+    //             key={index}
+    //             h={"100%"}
+    //             mr={[0, 0, 4]}
+    //             w={["100%", "100%", "50vw"]}
+    //             mb={[2, 4, 8]}
+    //             overflow={"hidden"}
+    //             borderRadius={"md"}
+    //           >
+    //             <video autoPlay loop muted playsInline>
+    //               <source src={s} type="video/mp4" />
+    //             </video>
+    //           </Box>
+    //         );
+    //       })}
+    //     </Flex>
+    //   )}
+    // </Box>
   );
 };
