@@ -45,7 +45,7 @@ export default function WithAction() {
     <>
       <Alert
         onClick={() => {
-          window.open("https://discord.com/invite/rC8xRFWq", "_blank");
+          window.open("https://discord.gg/4hTJcr8GUt", "_blank");
         }}
         status="info"
       >

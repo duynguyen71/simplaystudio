@@ -1,5 +1,12 @@
 export const updates = [
   {
+    version: "Version 2024.4.3",
+    changes: [
+      "Multiplayer: Kick, Cool Down features, and Customizable cake category.",
+      "New fireworks: Dahlia 20, Crossette 19, Ghost Shell 07.",
+    ],
+  },
+  {
     version: "Version 2024.4.1",
     changes: [
       "Early access Multiplayer Event",
