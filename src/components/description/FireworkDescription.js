@@ -12,8 +12,12 @@ const FireworkDescription = () => {
         letterSpacing={1}
       >
         <ListTitle>
-          Fireworks Pro is a simulation fireworks game. Download the game and
-          enjoy realistic graphics, and much more:
+          🎆🎇 Fireworks Play is a simulation fireworks game that lets you walk
+          around the town, fire it up, and share the excitement with friends.
+          Want to set up your own firework show collaboratively? Everything you
+          need about fireworks is in this Fireworks Play game, now with
+          multiplayer functionality! Download the game and enjoy realistic
+          graphics, and much more:
         </ListTitle>
         <ListItem>
           With FPS mode, you can walk around the town to fire fireworks and make
@@ -34,7 +38,6 @@ const FireworkDescription = () => {
           trail, size, angle, whistle.
         </ListItem>
         <ListItem>
-          {" "}
           Amazing tools: undo, copy, cut when setting up fireworks.
         </ListItem>
         <ListItem>
