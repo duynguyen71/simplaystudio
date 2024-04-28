@@ -1,35 +1,33 @@
 import { useRef, useState, useEffect } from "react";
-import { Flex, Box } from "@chakra-ui/react";
-import { hightligtVideos } from "../data/hightlightvideos";
 export const LazyLoadingHightlightVideos = ({}) => {
   const containerRef = useRef();
-  const [isIntersecting, setIsIntersecting] = useState(false);
+  // const [isIntersecting, setIsIntersecting] = useState(false);
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsIntersecting(true);
-          observer.disconnect();
-        }
-      },
-      {
-        root: null,
-        rootMargin: "0px",
-        threshold: 0.1,
-      }
-    );
+  // useEffect(() => {
+  //   const observer = new IntersectionObserver(
+  //     ([entry]) => {
+  //       if (entry.isIntersecting) {
+  //         setIsIntersecting(true);
+  //         observer.disconnect();
+  //       }
+  //     },
+  //     {
+  //       root: null,
+  //       rootMargin: "0px",
+  //       threshold: 0.1,
+  //     }
+  //   );
 
-    if (containerRef.current) {
-      observer.observe(containerRef.current);
-    }
+  //   if (containerRef.current) {
+  //     observer.observe(containerRef.current);
+  //   }
 
-    return () => {
-      if (containerRef.current) {
-        observer.unobserve(containerRef.current);
-      }
-    };
-  }, []);
+  //   return () => {
+  //     if (containerRef.current) {
+  //       observer.unobserve(containerRef.current);
+  //     }
+  //   };
+  // }, []);
 
   return (
     <></>

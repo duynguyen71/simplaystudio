@@ -22,8 +22,6 @@ import { ImageCarousel } from "../components/ImageCarousel";
 import ArticleCard from "../components/ArticleCard";
 import articles from "../data/articles";
 import { LazyLoadingHightlightVideos } from "../components/LazyLoadingHightlightVideos";
-import { LazyVideoComponent } from "../components/LazyVideoComponent";
-import { PUBLIC_VIDEO_URL } from "../hooks";
 
 const HomePage = () => {
   const { ref: ref2, inView: inView2 } = useInView();

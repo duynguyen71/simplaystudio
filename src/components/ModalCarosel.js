@@ -1,16 +1,11 @@
 import React, { useState } from "react";
 import {
   Box,
-  IconButton,
   useBreakpointValue,
   Stack,
-  Heading,
-  Text,
   Container,
-  Button,
   useColorModeValue,
 } from "@chakra-ui/react";
-import { BiLeftArrowAlt, BiRightArrowAlt } from "react-icons/bi";
 import Slider from "react-slick";
 import { useNavigate } from "react-router-dom";
 import { PUBLIC_IMAGE_URL } from "../hooks";
@@ -28,11 +23,7 @@ const settings = {
 };
 
 export const ModalCarosel = ({ images }) => {
-  const navigate = useNavigate();
-  const [slider, setSlider] = useState();
-
   const top = useBreakpointValue(["80%", "50%"]);
-  const side = useBreakpointValue([0, "10px"]);
 
   const imgBgColor = useColorModeValue("gray.200", "gray.800");
 
@@ -42,7 +33,7 @@ export const ModalCarosel = ({ images }) => {
         <Slider
           afterChange={(index) => {}}
           {...settings}
-          ref={(slider) => setSlider(slider)}
+          // ref={(slider) => setSlider(slider)}
         >
           {images.map((img, index) => {
             return (

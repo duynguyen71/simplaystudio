@@ -14,7 +14,6 @@ import {
 import { BiLeftArrowAlt, BiRightArrowAlt } from "react-icons/bi";
 import Slider from "react-slick";
 import { useNavigate } from "react-router-dom";
-import { PUBLIC_IMAGE_URL } from "../hooks";
 const settings = {
   dots: true,
   arrows: false,

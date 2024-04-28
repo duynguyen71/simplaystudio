@@ -17,8 +17,6 @@ import {
   useDisclosure,
 } from "@chakra-ui/react";
 import { AiOutlineArrowUp } from "react-icons/ai";
-import { ImageCarousel } from "./components/ImageCarousel";
-import games from "./data/game";
 import { ModalCarosel } from "./components/ModalCarosel";
 const RootLayout = () => {
   const { pathname } = useLocation();
