@@ -20,20 +20,20 @@ import socialMediaLinks from "../data/socialMediaLinks";
 import { FaDiscord, FaTiktok, FaYoutube } from "react-icons/fa";
 const NavLinks = [
   {
-    title: "Games",
-    href: "/games",
-  },
-  {
     title: "Articles",
     href: "/articles",
   },
   {
-    title: "Privacy",
-    href: "/privacy",
+    title: "Games",
+    href: "/games",
   },
   {
     title: "Release Note",
     href: "/release-note",
+  },
+  {
+    title: "Privacy",
+    href: "/privacy",
   },
 ];
 

@@ -3,7 +3,7 @@ export function PlayStoreBadge() {
     <svg
       onClick={() =>
         window.open(
-          "https://play.google.com/store/apps/dev?id=8281496798126662852&hl=en-VN"
+          "https://play.google.com/store/apps/dev?id=8281496798126662852&hl=en-VN",
         )
       }
       width={150}
@@ -124,7 +124,7 @@ export function AppStoreBadge() {
     <svg
       onClick={() =>
         window.open(
-          "https://apps.apple.com/vn/developer/duy-nguyen/id1459262315?l=vi"
+          "https://apps.apple.com/vn/developer/duy-nguyen/id1459262315?l=vi",
         )
       }
       width={150}
