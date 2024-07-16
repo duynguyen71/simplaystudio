@@ -96,19 +96,19 @@ export const ImageCarousel = ({ games }) => {
                     top="50%"
                     transform="translate(0, -50%)"
                   >
-                    <Heading
+                    {/* <Heading
                       // color={descriptionColor}
                       fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }}
                     >
                       {games[0].name}
-                    </Heading>
-                    <Text
+                    </Heading> */}
+                    {/* <Text
                       fontSize={{ base: "md", lg: "lg" }}
                       // color={'white'}
                     >
                       {games[0].shortDescription}
-                    </Text>
-                    <Box>
+                    </Text> */}
+                    {/* <Box>
                       <Button
                         onClick={navigateToFWPlay}
                         variant={"solid"}
@@ -119,7 +119,7 @@ export const ImageCarousel = ({ games }) => {
                       >
                         View Detail
                       </Button>
-                    </Box>
+                    </Box> */}
                   </Stack>
                 </Container>
               </Box>

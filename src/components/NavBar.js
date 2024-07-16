@@ -56,7 +56,7 @@ export default function WithAction() {
           }}
           cursor={"pointer"}
         >
-          Fireworks Play multiplayer mode is now available. Check out{" "}
+          Check out{" "}
           <Text
             as={"span"}
             _hover={{

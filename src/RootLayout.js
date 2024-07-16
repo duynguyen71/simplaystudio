@@ -53,8 +53,8 @@ const RootLayout = () => {
   const [overlay, setOverlay] = React.useState(<OverlayOne />);
 
   useEffect(() => {
-    setOverlay(<OverlayOne />);
-    onOpen();
+    // setOverlay(<OverlayOne />);
+    // onOpen();
   }, []);
 
   const navigate = useNavigate();

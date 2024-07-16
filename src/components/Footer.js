@@ -66,9 +66,7 @@ export default function LargeWithNewsletter() {
               src={`${process.env.PUBLIC_URL}/logo.svg`}
               alt="Logo"
             />
-            <Text fontSize={"sm"}>
-              © 2023 Simplay Studio. All rights reserved
-            </Text>
+            <Text fontSize={"sm"}>© 2024 Simplay Studio</Text>
             <Stack direction={"row"} spacing={6}>
               <SocialButton label={"Discord"} href={socialMediaLinks.discord}>
                 <FaDiscord />
@@ -102,7 +100,7 @@ export default function LargeWithNewsletter() {
               title={"Privacy"}
             />
           </Stack>
-          <Stack align={"flex-start"}>
+          {/* <Stack align={"flex-start"}>
             <ListHeader>Stay up to date</ListHeader>
             <Stack direction={"row"}>
               <Input
@@ -128,7 +126,7 @@ export default function LargeWithNewsletter() {
               <PlayStoreBadge />
               <AppStoreBadge />
             </Stack>
-          </Stack>
+          </Stack> */}
         </SimpleGrid>
       </Container>
     </Box>

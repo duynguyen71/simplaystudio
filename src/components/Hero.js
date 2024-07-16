@@ -42,7 +42,7 @@ const Hero = () => {
   }, [inView, animation, animation2]);
 
   return (
-    <Container py={["4vh", "6vh", "12vh"]} ref={ref} maxW={"3xl"}>
+    <Container py={["10vh", "15vh", "20vh"]} ref={ref} maxW={"3xl"}>
       <Stack
         as={Box}
         overflow={"hidden"}
@@ -57,7 +57,7 @@ const Hero = () => {
             color={useColorModeValue("gray.700", "gray.400")}
             fontSize={["md", "xl", "3xl"]}
           >
-            Our passion is crafting fun simulation games.
+            When making games is our passion, outstanding games are created.{" "}
           </Text>
         </Box>
         <Stack
@@ -92,10 +92,10 @@ const Hero = () => {
               top={"10px"}
             />
             <Text
-              fontSize={"lg"}
+              fontSize={["sm", "xl", "lg"]}
               fontFamily={"Caveat"}
               position={"absolute"}
-              right={"-125px"}
+              right={["-80px", "-125px"]}
               top={"-15px"}
               transform={"rotate(10deg)"}
             >

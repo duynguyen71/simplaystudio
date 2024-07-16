@@ -113,14 +113,10 @@ const HomePage = () => {
 
         <Box w={5} />
         {/* Game Hight Light */}
-        <Box flex={7}>
-          <CaptionCarousel games={games} />
-        </Box>
       </Flex>
       {/* End of Main 1 */}
-      <Box pt={10}></Box>
       {/* Main 2 */}
-      <Flex direction={"column"} my={[8, 10, 12]} px={[4, 8]}>
+      <Flex direction={"column"} mb={[8, 10, 12]} px={[4, 8]}>
         <Box height={["5vh"]}>
           <CustomHeading color={"white.400"} text={"Our Games"} />
         </Box>
