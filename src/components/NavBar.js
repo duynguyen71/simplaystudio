@@ -80,7 +80,7 @@ export default function WithAction() {
                   fontSize={"xl"}
                   letterSpacing={1}
                   fontWeight={"bold"}
-                  color={"black"}
+                  color={useColorModeValue("gray.800", "gray.200")}
                 >
                   Studio
                 </Text>
