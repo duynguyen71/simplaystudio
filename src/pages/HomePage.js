@@ -5,7 +5,10 @@ import {
   Flex,
   Grid,
   GridItem,
+  HStack,
   Spacer,
+  Stack,
+  Text,
   useColorModeValue,
 } from "@chakra-ui/react";
 import React, { useEffect } from "react";
@@ -101,61 +104,27 @@ const HomePage = () => {
   return (
     <Flex direction={"column"} position={"relative"} minH={"80vh"}>
       {/* Main 1 */}
-      <Flex
-        mx={[0, 4]}
-        mt={[0, 10]}
-        direction={["column", "column", "column", "column", "row"]}
-      >
-        {/* Hero */}
-        <Box alignSelf={"center"} flex={5}>
-          <Hero />
-        </Box>
+      {/* Hero */}
+      <Hero />
 
-        <Box w={5} />
-        {/* Game Hight Light */}
-      </Flex>
+      {/* Game Hight Light */}
       {/* End of Main 1 */}
       {/* Main 2 */}
-      <Flex direction={"column"} mb={[8, 10, 12]} px={[4, 8]}>
-        <Box height={["5vh"]}>
-          <CustomHeading color={"white.400"} text={"Our Games"} />
-        </Box>
-        <Grid
-          overflowX={"hidden"}
-          templateColumns={[
-            "repeat(2, 2fr)",
-            "repeat(3, 3fr)",
-            "repeat(5, 5fr)",
-          ]}
-          gap={[2, 10]}
-        >
-          {games.slice(0, 5).map((game, index) => {
-            return (
-              <GridItem key={index}>
-                <GameCard {...game} />
-              </GridItem>
-            );
-          })}
-        </Grid>
-        <Box height={"30px"} />
-        <Center>
-          <Button
-            onClick={() => navigate("/games")}
-            textColor={useColorModeValue("red.400", "gray.400")}
-            letterSpacing={2}
-            fontStyle={"normal"}
-            fontWeight={"normal"}
-            borderColor={"transparent"}
-            fontSize={["sm", "md"]}
-            alignSelf={"center"}
-            alignContent={"center"}
-            variant={"outline"}
-            textDecoration={"underline"}
-          >
-            Show More
-          </Button>
-        </Center>
-      </Flex>
+      <Stack
+        direction={["column", "column", "row"]}
+        my={["3rem", "8rem"]}
+        spacing={["1rem", "2rem", "1rem", "3rem", "8rem"]}
+        width={"95%"}
+        mx={"auto"}
+        justifyItems={"center"}
+        alignItems={"center"}
+        justifyContent={"center"}
+        alignContent={"center"}
+      >
+        {games.map((game, index) => {
+          return <GameCard {...game} />;
+        })}
+      </Stack>
       {/* End of Main 2 */}
 
       {/* Main 3 */}

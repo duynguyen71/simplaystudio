@@ -20,17 +20,18 @@ import socialMediaLinks from "../data/socialMediaLinks";
 import { FaDiscord, FaTiktok, FaYoutube } from "react-icons/fa";
 const NavLinks = [
   {
-    title: "Articles",
-    href: "/articles",
-  },
-  {
-    title: "Games",
-    href: "/games",
-  },
-  {
     title: "Release Note",
     href: "/release-note",
   },
+  {
+    title: "Articles",
+    href: "/articles",
+  },
+  // {
+  //   title: "Games",
+  //   href: "/games",
+  // },
+
   {
     title: "Privacy",
     href: "/privacy",
@@ -43,44 +44,21 @@ export default function WithAction() {
   const navigate = useNavigate();
   return (
     <>
-      <Alert
-        onClick={() => {
-          window.open("https://discord.gg/4hTJcr8GUt", "_blank");
-        }}
-        status="info"
-      >
-        <AlertIcon />
-        <Text
-          _hover={{
-            textDecoration: "underline",
-          }}
-          cursor={"pointer"}
-        >
-          Check out{" "}
-          <Text
-            as={"span"}
-            _hover={{
-              textDecoration: "underline",
-              textColor: "red.400",
-            }}
-            fontWeight={"bold"}
-          >
-            Discord
-          </Text>{" "}
-          for the latest updates.
-        </Text>
-      </Alert>
       <Box
+        border={isOpen ? "none" : "1px solid #eaeaea"}
+        borderRadius={isOpen ? "none" : "100px"}
         position={"sticky"}
-        top={0}
+        top={5}
+        px={[".1em", "1em"]}
+        py={[".1em", ".5em"]}
         zIndex={1000}
-        py={4}
         bg={useColorModeValue("gray.100", "gray.900")}
-        px={4}
+        mx={4}
       >
         <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
           <IconButton
-            size={"md"}
+            color={"red"}
+            size={["sm", "md"]}
             icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
             aria-label={"Open Menu"}
             display={{ md: "none" }}
@@ -89,15 +67,20 @@ export default function WithAction() {
           {/* LOGO */}
           <HStack spacing={8} alignItems={"center"}>
             <Box cursor={"pointer"} onClick={() => navigate("/")}>
-              <HStack>
-                <Text fontSize={"xl"} letterSpacing={1} fontWeight={"bold"}>
-                  Simplay
+              <HStack
+                color={"red.400"}
+                fontSize={"xl"}
+                letterSpacing={1}
+                fontWeight={"bold"}
+              >
+                <Text m={0} p={0} fontSize={"xl"} fontWeight={"bold"}>
+                  {"Simplay"}
                 </Text>
                 <Text
                   fontSize={"xl"}
                   letterSpacing={1}
                   fontWeight={"bold"}
-                  color={"red.400"}
+                  color={"black"}
                 >
                   Studio
                 </Text>
@@ -126,7 +109,7 @@ export default function WithAction() {
                 <FaTiktok />
               </SocialButton>
             </HStack>
-            <Button onClick={toggleColorMode}>
+            <Button size={["sm", "md"]} onClick={toggleColorMode}>
               {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
             </Button>
           </HStack>
