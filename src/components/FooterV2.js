@@ -86,15 +86,15 @@ export default function SmallWithSocial() {
           </Text>
         </Box>
         <Stack direction={"row"} spacing={6}>
-          <SocialButton label={"Discord"} href={socialMediaLinks.discord}>
+          {/* <SocialButton label={"Discord"} href={socialMediaLinks.discord}>
             <FaDiscord />
-          </SocialButton>
+          </SocialButton> */}
           <SocialButton label={"YouTube"} href={socialMediaLinks.youtube}>
             <FaYoutube />
           </SocialButton>
-          <SocialButton label={"Tiktok"} href={socialMediaLinks.tiktok}>
+          {/* <SocialButton label={"Tiktok"} href={socialMediaLinks.tiktok}>
             <FaTiktok />
-          </SocialButton>
+          </SocialButton> */}
         </Stack>
       </Container>
     </Box>

@@ -104,38 +104,9 @@ const HomePage = () => {
       position={"relative"}
       minH={"80vh"}
     >
-      <Box
-        m={5}
-        position={"fixed"}
-        top={["none", "6rem"]}
-        bottom={[10, "none"]}
-        right={["none", 0]}
-      >
-        <VStack spacing={[3, 7]} alignItems={"center"}>
-          <SocialButton
-            borderRadius={"100"}
-            size={["sm", "md"]}
-            onClick={toggleColorMode}
-          >
-            {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
-          </SocialButton>
-          <SocialButton label={"Discord"} href={socialMediaLinks.discord}>
-            <FaDiscord />
-          </SocialButton>
-          <SocialButton label={"YouTube"} href={socialMediaLinks.youtube}>
-            <FaYoutube />
-          </SocialButton>
-          <SocialButton label={"Tiktok"} href={socialMediaLinks.tiktok}>
-            <FaTiktok />
-          </SocialButton>
-        </VStack>
-      </Box>
       <Hero typeIsDone={typeIsDone} setTypeIsDone={setTypeIsDone} />
 
-      <motion.div
-      // animate={{ x: 100 }}
-      // transition={{ type: "spring", stiffness: 100 }}
-      >
+      <motion.div>
         <Stack
           direction={["column", "column", "row"]}
           my={["1rem", "4rem"]}
@@ -178,6 +149,7 @@ const HomePage = () => {
           {typeIsDone &&
             games.slice(1, 3).map((game, index) => (
               <motion.div
+                key={index}
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}

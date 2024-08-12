@@ -66,15 +66,15 @@ export default function LargeWithNewsletter() {
             />
             <Text fontSize={"sm"}>© 2024 Simplay Studio</Text>
             <Stack direction={"row"} spacing={6}>
-              <SocialButton label={"Discord"} href={socialMediaLinks.discord}>
+              {/* <SocialButton label={"Discord"} href={socialMediaLinks.discord}>
                 <FaDiscord />
-              </SocialButton>
+              </SocialButton> */}
               <SocialButton label={"YouTube"} href={socialMediaLinks.youtube}>
                 <FaYoutube />
               </SocialButton>
-              <SocialButton label={"Tiktok"} href={socialMediaLinks.tiktok}>
+              {/* <SocialButton label={"Tiktok"} href={socialMediaLinks.tiktok}>
                 <FaTiktok />
-              </SocialButton>
+              </SocialButton> */}
             </Stack>
           </Stack>
           {/* <Stack align={"flex-start"}> */}
