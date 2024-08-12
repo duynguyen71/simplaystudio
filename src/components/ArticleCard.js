@@ -49,7 +49,7 @@ const ArticleCard = ({ article }) => {
   };
   return (
     <>
-      <Wrap p={2} marginTop="5">
+      <Wrap m={"1rem"} p={2} marginTop="5">
         <WrapItem minW={"20vw"} maxW={["100%", "100%", "300px"]}>
           <Box w="100%">
             <Box borderRadius="lg" overflow="hidden">

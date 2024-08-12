@@ -6,24 +6,21 @@ import {
   Stack,
   Text,
   VisuallyHidden,
-  Input,
-  IconButton,
   useColorModeValue,
 } from "@chakra-ui/react";
 import { FaDiscord, FaTiktok, FaYoutube } from "react-icons/fa";
-import { BiMailSend } from "react-icons/bi";
 import socialMediaLinks from "../data/socialMediaLinks";
 import {} from "@chakra-ui/icons";
-import { AppStoreBadge, PlayStoreBadge } from "./StoreBadges";
 import CustomNavLink from "./CustomNavLink";
 
-export const SocialButton = ({ children, label, href }) => {
+export const SocialButton = ({ children, onClick, label, href }) => {
   return (
     <chakra.button
       bg={useColorModeValue("blackAlpha.100", "whiteAlpha.100")}
       rounded={"full"}
       w={8}
       h={8}
+      onClick={() => !href && onClick()}
       cursor={"pointer"}
       as={"a"}
       href={href}
@@ -57,8 +54,9 @@ export default function LargeWithNewsletter() {
     >
       <Container as={Stack} maxW={"6xl"} py={[5, 10]}>
         <SimpleGrid
+          mx={"auto"}
           templateColumns={{ sm: "1fr 1fr", md: "2fr 1fr 1fr 2fr" }}
-          spacing={[2, 4, 8]}
+          spacing={[10, 20, 40]}
         >
           <Stack spacing={6}>
             <img
@@ -79,9 +77,9 @@ export default function LargeWithNewsletter() {
               </SocialButton>
             </Stack>
           </Stack>
-          <Stack align={"flex-start"}>
-            <ListHeader>Contact</ListHeader>
-            <CustomNavLink
+          {/* <Stack align={"flex-start"}> */}
+          {/* <ListHeader>Contact</ListHeader> */}
+          {/* <CustomNavLink
               href={"/contact"}
               onClickCb={() => {}}
               title={"Contact"}
@@ -90,8 +88,8 @@ export default function LargeWithNewsletter() {
               href={"/articles"}
               onClickCb={() => {}}
               title={"Article"}
-            />
-          </Stack>
+            /> */}
+          {/* </Stack> */}
           <Stack align={"flex-start"}>
             <ListHeader>Support</ListHeader>
             <CustomNavLink

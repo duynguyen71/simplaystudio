@@ -1,26 +1,8 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: "Newsreader", serif !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-}
-
-/* Typewriter Effect */
-.typed-out {
-  overflow: hidden;
-  /* border-right: 0.15em solid orange; */
-  /* white-space: nowrap; */
-  /* font-size: 1.6rem; */
-  /* width: 0; */
-  /* animation: typewriter 4s steps(44) 1s 1 normal both, */
-  /* blinkTextCursor 500ms infinite; */
 }
 
 @keyframes typing {
@@ -61,6 +43,9 @@ code {
 /*  */
 
 .text-outline-wrapper {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif !important;
   width: fit-content;
   max-width: 100px;
   height: fit-content;
@@ -73,6 +58,9 @@ code {
 
 /* Text outlined */
 .text-outlined {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif !important;
   color: white;
   text-shadow: -1px -1px 0 #000, 0 -1px 0 #000, 1px -1px 0 #000, 1px 0 0 #000,
     1px 1px 0 #000, 0 1px 0 #000, -1px 1px 0 #000, -1px 0 0 #000;

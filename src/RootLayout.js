@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import LargeWithNewsletter from "./components/Footer";
 import NavBar from "./components/NavBar";
 import { Outlet, useLocation, useNavigate } from "react-router-dom";
 import {
@@ -18,6 +17,7 @@ import {
 } from "@chakra-ui/react";
 import { AiOutlineArrowUp } from "react-icons/ai";
 import { ModalCarosel } from "./components/ModalCarosel";
+import SmallWithSocial from "./components/FooterV2";
 const RootLayout = () => {
   const { pathname } = useLocation();
 
@@ -40,44 +40,15 @@ const RootLayout = () => {
     />
   );
 
-  const OverlayTwo = () => (
-    <ModalOverlay
-    // bg="none"
-    // backdropFilter="auto"
-    // backdropInvert="80%"
-    // backdropBlur="2px"
-    />
-  );
-
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [overlay, setOverlay] = React.useState(<OverlayOne />);
 
-  useEffect(() => {
-    // setOverlay(<OverlayOne />);
-    // onOpen();
-  }, []);
+  useEffect(() => {}, []);
 
   const navigate = useNavigate();
   return (
     <Box position={"relative"}>
       <>
-        {/* <Button
-          onClick={() => {
-            setOverlay(<OverlayOne />);
-            onOpen();
-          }}
-        >
-          Use Overlay one
-        </Button>
-        <Button
-          ml="4"
-          onClick={() => {
-            setOverlay(<OverlayTwo />);
-            onOpen();
-          }}
-        >
-          Use Overlay two
-        </Button> */}
         <Modal
           size={["xs", "1xl", "3xl"]}
           isCentered
@@ -127,7 +98,7 @@ const RootLayout = () => {
         <Outlet />
       </Box>
       <Box mt={10} />
-      <LargeWithNewsletter />
+      <SmallWithSocial />
       <IconButton
         aria-label="Scroll to Top"
         position={"fixed"}

@@ -10,12 +10,13 @@ const CustomNavLink = ({ title, href, onClickCb }) => (
     }}
   >
     <Text
+      fontWeight={"500"}
       px={2}
       py={1}
       rounded={"md"}
       _hover={{
         textDecoration: "none",
-        bg: useColorModeValue("gray.200", "gray.700"),
+        bg: useColorModeValue("gray.600", "gray.400"),
       }}
     >
       {title}

@@ -1,13 +1,7 @@
 import { Text } from "@chakra-ui/react";
 import React from "react";
 
-const BannerText = ({
-  color = "white",
-  text,
-  fontSize = "80px",
-  bgGradient,
-  isStrokeStyle,
-}) => {
+const BannerText = ({ color = "white", text, isStrokeStyle }) => {
   const useStrokeStyle = {
     WebkitTextStroke: `1px ${color}`,
     color: "transparent",
@@ -20,7 +14,7 @@ const BannerText = ({
       letterSpacing={"5px"}
       lineHeight={[1.1, 0.9]}
       fontWeight={"900"}
-      fontSize={["40px", "60px", "80px"]}
+      fontSize={["3xl", "4xl", "5xl", "6xl"]}
       color={color}
     >
       {text}

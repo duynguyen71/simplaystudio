@@ -1,30 +1,24 @@
-import {
-  Box,
-  Button,
-  Center,
-  Flex,
-  Grid,
-  GridItem,
-  HStack,
-  Spacer,
-  Stack,
-  Text,
-  useColorModeValue,
-} from "@chakra-ui/react";
-import React, { useEffect } from "react";
+import { Box, Flex, Stack, useColorMode, VStack } from "@chakra-ui/react";
+import React, { useEffect, useState } from "react";
 import GameCard from "../components/GameCard";
-import { CaptionCarousel } from "../components/CaptionCarousel";
 import games from "../data/game";
 import Hero from "../components/Hero";
-import CustomHeading from "../components/CustomHeading";
-import BannerText from "../components/BannerText";
-import { motion, useAnimation } from "framer-motion";
+import { useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useNavigate } from "react-router-dom";
-import { ImageCarousel } from "../components/ImageCarousel";
-import ArticleCard from "../components/ArticleCard";
-import articles from "../data/articles";
-import { LazyLoadingHightlightVideos } from "../components/LazyLoadingHightlightVideos";
+import { SocialButton } from "../components/Footer";
+import socialMediaLinks from "../data/socialMediaLinks";
+import { FaDiscord, FaTiktok, FaYoutube } from "react-icons/fa";
+import { MoonIcon, SunIcon } from "@chakra-ui/icons";
+import {
+  isAndroid,
+  isIOS,
+  isMacOs,
+  isWindows,
+  isWinPhone,
+} from "react-device-detect";
+import { isAppleProduct } from "../hooks";
+import { motion } from "framer-motion";
 
 const HomePage = () => {
   const { ref: ref2, inView: inView2 } = useInView();
@@ -100,132 +94,107 @@ const HomePage = () => {
       });
     }
   }, [inView2, animation4, animation5]);
+  const { colorMode, toggleColorMode } = useColorMode();
+  const [typeIsDone, setTypeIsDone] = useState(false);
 
   return (
-    <Flex direction={"column"} position={"relative"} minH={"80vh"}>
-      {/* Main 1 */}
-      {/* Hero */}
-      <Hero />
-
-      {/* Game Hight Light */}
-      {/* End of Main 1 */}
-      {/* Main 2 */}
-      <Stack
-        direction={["column", "column", "row"]}
-        my={["3rem", "8rem"]}
-        spacing={["1rem", "2rem", "1rem", "3rem", "8rem"]}
-        width={"95%"}
-        mx={"auto"}
-        justifyItems={"center"}
-        alignItems={"center"}
-        justifyContent={"center"}
-        alignContent={"center"}
-      >
-        {games.map((game, index) => {
-          return <GameCard {...game} />;
-        })}
-      </Stack>
-      {/* End of Main 2 */}
-
-      {/* Main 3 */}
+    <Flex
+      pos={"relative"}
+      direction={"column"}
+      position={"relative"}
+      minH={"80vh"}
+    >
       <Box
-        ref={ref}
-        mb={[4, 8, 10]}
-        alignItems={"center"}
-        width={"100%"}
-        textAlign={"center"}
-        cursor={"pointer"}
+        m={5}
+        position={"fixed"}
+        top={["none", "6rem"]}
+        bottom={[10, "none"]}
+        right={["none", 0]}
       >
-        <motion.div animate={animation}>
-          <Flex>
-            <Spacer />
-
-            <BannerText
-              color={useColorModeValue("gray.600", "white")}
-              text={"EXLORING"}
-            />
-
-            <BannerText
-              color={useColorModeValue("gray", "white")}
-              isStrokeStyle={true}
-              text={"THE"}
-            />
-            <Spacer />
-          </Flex>
-        </motion.div>
-        <motion.div animate={animation2}>
-          <Flex>
-            <Spacer />
-            <BannerText
-              color={useColorModeValue("black", "orange")}
-              isStrokeStyle={true}
-              text={"COOL"}
-            />
-            <BannerText text={"FEATURES"} color="orange" />
-            <Spacer />
-          </Flex>
-        </motion.div>
-        <motion.div animate={animation3}>
-          <Flex>
-            <Spacer />
-            <BannerText text={"EVERY WEEK"} color="red.400" />
-            <Spacer />
-          </Flex>
-        </motion.div>
+        <VStack spacing={[3, 7]} alignItems={"center"}>
+          <SocialButton
+            borderRadius={"100"}
+            size={["sm", "md"]}
+            onClick={toggleColorMode}
+          >
+            {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
+          </SocialButton>
+          <SocialButton label={"Discord"} href={socialMediaLinks.discord}>
+            <FaDiscord />
+          </SocialButton>
+          <SocialButton label={"YouTube"} href={socialMediaLinks.youtube}>
+            <FaYoutube />
+          </SocialButton>
+          <SocialButton label={"Tiktok"} href={socialMediaLinks.tiktok}>
+            <FaTiktok />
+          </SocialButton>
+        </VStack>
       </Box>
-      {/* End of Main 3 */}
+      <Hero typeIsDone={typeIsDone} setTypeIsDone={setTypeIsDone} />
 
-      {/* Main 4 */}
-      <ImageCarousel games={games} />
-      {/* End of Main 4 */}
-
-      {/* Main 5 */}
-      <Box
-        ref={ref2}
-        my={[4, 8, 10]}
-        alignItems={"center"}
-        width={"100%"}
-        textAlign={"center"}
-        cursor={"pointer"}
+      <motion.div
+      // animate={{ x: 100 }}
+      // transition={{ type: "spring", stiffness: 100 }}
       >
-        <motion.div animate={animation4}>
-          <Flex>
-            <Spacer />
-            <BannerText text={"FIREWORKS"} color="red.400" />
-            <BannerText
-              text={"PLAY"}
-              color={useColorModeValue("orange", "white")}
-            />
-            <Spacer />
-          </Flex>
-        </motion.div>
-
-        <motion.div animate={animation5}>
-          <Flex>
-            <Spacer />
-            <BannerText
-              isStrokeStyle={true}
-              text={"MULTIPLAYER"}
-              color={useColorModeValue("orange", "orange")}
-            />
-            <Spacer />
-          </Flex>
-        </motion.div>
-      </Box>
-      <LazyLoadingHightlightVideos />
-      {/* End of Main 5 */}
-
-      {/* Latest Ariticle */}
-      <Flex
-        justifyContent={"center"}
-        alignItems={"start"}
-        direction={["column", "column", "row"]}
-        w={"100%"}
-      >
-        {articles.slice(0, 4).map((article, index) => {
-          return <ArticleCard key={index} article={article} />;
-        })}
-      </Flex>
+        <Stack
+          direction={["column", "column", "row"]}
+          my={["1rem", "4rem"]}
+          spacing={["1rem", "2rem", "1rem", "3rem", "8rem"]}
+          width={"95%"}
+          mx={"auto"}
+          justifyItems={"center"}
+          alignItems={"center"}
+          justifyContent={"center"}
+          alignContent={"center"}
+        >
+          {typeIsDone && (
+            <motion.div
+              transition={{
+                ease: "linear",
+                duration: 2,
+                x: { duration: 1 },
+                delay: 0.5,
+              }}
+              animate={{
+                scale: [0.5, 1, 1, 0.5, 1],
+                rotate: [0, 0, 270, 270, 0],
+                borderRadius: ["20%", "20%", "50%", "50%", "20%"],
+              }}
+              initial="hidden"
+            >
+              <GameCard
+                onClickCustom={() =>
+                  window.open("https://fireworksplay.com", "_blank")
+                }
+                dowloadUrl={
+                  isAppleProduct
+                    ? games[0].platform.ios.link
+                    : games[0].platform.android.link
+                }
+                {...games[0]}
+              />
+            </motion.div>
+          )}
+          {typeIsDone &&
+            games.slice(1, 3).map((game, index) => (
+              <motion.div
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+              >
+                <GameCard
+                  key={index}
+                  dowloadUrl={
+                    isAppleProduct
+                      ? game.platform.ios.link
+                      : game.platform.android.link
+                  }
+                  {...game}
+                />
+              </motion.div>
+            ))}
+        </Stack>
+      </motion.div>
     </Flex>
   );
 };

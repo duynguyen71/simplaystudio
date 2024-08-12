@@ -123,7 +123,7 @@ const PrivacyPage = () => {
                 style={{
                   textDecoration: "underline",
                 }}
-                href="mailto:bluedotsofts@gmail.com"
+                href="mailto:contact@simplaystudio.com"
               >
                 Our Mail
               </a>

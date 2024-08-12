@@ -48,7 +48,7 @@ const GameDetailPage = () => {
     setLoading(false);
   };
   return (
-    <Box position={"relative"} minH={"80vh"} w={"100%"}>
+    <Box mt={"5vh"} position={"relative"} minH={"80vh"} w={"100%"}>
       <VStack
         alignSelf={"start"}
         alignItems={"start"}
@@ -95,7 +95,7 @@ const GameDetailPage = () => {
               key={game.platform.ios.rating}
               half={true}
               edit={false}
-              value={4.5}
+              value={5}
               // halfIcon={<i className="fa fa-star-half-alt"></i>}
               size={20}
               activeColor="#ffd700"
