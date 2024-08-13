@@ -25,7 +25,6 @@ const TypingText = ({
       }
     }, typingSpeed);
     return () => {
-      console.log("heheh");
       return clearInterval(interval);
     };
   }, [text, index]);

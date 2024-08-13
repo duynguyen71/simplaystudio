@@ -4,5 +4,20 @@
   "start_url": ".",
   "display": "standalone",
   "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "background_color": "#ffffff",
+  "icons": [
+    {
+      "src": "app-icon64.png",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/png"
+    },
+    {
+      "src": "app-icon64.png",
+      "type": "image/png"
+    },
+    {
+      "src": "app-icon64.png",
+      "type": "image/png"
+    }
+  ]
 }

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import {
   Box,
   useBreakpointValue,
@@ -7,7 +7,6 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 import Slider from "react-slick";
-import { useNavigate } from "react-router-dom";
 import { PUBLIC_IMAGE_URL } from "../hooks";
 const settings = {
   dots: true,

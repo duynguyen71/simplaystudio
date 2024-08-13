@@ -1,4 +1,4 @@
-import { Box, Flex, Stack, useColorMode, VStack } from "@chakra-ui/react";
+import { Box, Flex, Stack, useColorMode } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
 import GameCard from "../components/GameCard";
 import games from "../data/game";
@@ -6,17 +6,6 @@ import Hero from "../components/Hero";
 import { useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useNavigate } from "react-router-dom";
-import { SocialButton } from "../components/Footer";
-import socialMediaLinks from "../data/socialMediaLinks";
-import { FaDiscord, FaTiktok, FaYoutube } from "react-icons/fa";
-import { MoonIcon, SunIcon } from "@chakra-ui/icons";
-import {
-  isAndroid,
-  isIOS,
-  isMacOs,
-  isWindows,
-  isWinPhone,
-} from "react-device-detect";
 import { isAppleProduct } from "../hooks";
 import { motion } from "framer-motion";
 
