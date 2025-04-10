@@ -4,50 +4,60 @@ import { useNavigate } from "react-router-dom";
 
 export default function WithAction() {
   const navigate = useNavigate();
+  const [showNavbar, setShowNavbar] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY > lastScrollY && currentScrollY > 100) {
+        setShowNavbar(false); // scrolling down
+      } else {
+        setShowNavbar(true); // scrolling up
+      }
+
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [lastScrollY]);
+
   return (
-    <>
+    <Flex
+      cursor={"pointer"}
+      position={"sticky"}
+      top={showNavbar ? 5 : "-80px"}
+      transition="top 0.3s ease-in-out"
+      borderRadius={"full"}
+      justifyContent={"center"}
+      alignContent={"center"}
+      alignItems={"center"}
+      alignSelf={"center"}
+      zIndex={1000}
+      m={"auto"}
+      width={["98%"]}
+      bg={useColorModeValue("gray.100", "gray.900")}
+    >
       <Flex
         cursor={"pointer"}
-        position={"sticky"}
-        top={5}
-        borderRadius={"full"}
-        justifyContent={"center"}
-        alignContent={"center"}
+        onClick={() => {
+          navigate("/");
+        }}
+        py={2}
         alignItems={"center"}
-        alignSelf={"center"}
-        zIndex={1000}
-        m={"auto"}
-        width={["98%"]}
-        bg={useColorModeValue("gray.100", "gray.900")}
+        justifyContent={"space-between"}
       >
-        <Flex
-          cursor={"pointer"}
-          onClick={() => {
-            navigate("/");
-          }}
-          py={2}
-          alignItems={"center"}
-          justifyContent={"space-between"}
-        >
-          {/* <Text
-            cursor={"pointer"}
-            display={"inline-block"}
-            fontSize={["xl", "xl", "xl", "2xl"]}
-            fontWeight={"bold"}
-          >
-            Simplay Studio
-          </Text> */}
-          <TypingText
-            color={"red"}
-            // color={"#E53E3E"}
-            text={"Sim"}
-            text2={"play"}
-            text3={"Studio"}
-            speed={200}
-          />
-        </Flex>
+        <TypingText
+          color={"red"}
+          text={"Sim"}
+          text2={"play"}
+          text3={"Studio"}
+          speed={200}
+        />
       </Flex>
-    </>
+    </Flex>
   );
 }
 
