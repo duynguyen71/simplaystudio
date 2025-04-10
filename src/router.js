@@ -9,6 +9,7 @@ import NotFoundPage from "./pages/NotFound";
 import Contact from "./pages/Contact";
 import ArticlePage from "./pages/ArticlePage";
 import ReleaseNote from "./pages/ReleaseNote";
+import KnifeGamePrivacy from "./pages/KnifeGamePrivacy";
 
 const router = createBrowserRouter([
   {
@@ -31,6 +32,10 @@ const router = createBrowserRouter([
       {
         path: "privacy",
         element: <PrivacyPage />,
+      },
+      {
+        path: "knifegame/privacy",
+        element: <KnifeGamePrivacy />,
       },
       {
         path: "games/:name",
@@ -70,6 +75,10 @@ const router = createBrowserRouter([
       {
         path: "privacy",
         element: <PrivacyPage />,
+      },
+      {
+        path: "knifegame/privacy",
+        element: <KnifeGamePrivacy />,
       },
       {
         path: "games/:name",

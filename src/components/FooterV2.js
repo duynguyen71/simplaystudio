@@ -39,6 +39,7 @@ const SocialButton = ({ children, label, href }) => {
 
 export default function SmallWithSocial() {
   const navigate = useNavigate();
+  const currentYear = new Date().getFullYear();
   return (
     <Box
       bg={useColorModeValue("gray.50", "gray.900")}
@@ -55,7 +56,7 @@ export default function SmallWithSocial() {
       >
         <Box textAlign={"center"}>
           <Text display={["block", "inline"]} fontWeight={500} fontSize={"md"}>
-            © 2024 Simplay Studio
+            © {currentYear} Simplay Studio
           </Text>
           {<Text display={["none", "inline"]}> | </Text>}
           <Text
