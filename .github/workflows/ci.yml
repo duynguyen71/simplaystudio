@@ -51,18 +51,27 @@ jobs:
           user_email: "github-actions[bot]@users.noreply.github.com"
           github_token: ${{ secrets.ACTIONS_DEPLOY_ACCESS_TOKEN }}
           repository: ${{ github.repository }}
-
   notify:
     needs: build
     runs-on: ubuntu-latest
+    if: always()
     steps:
       - name: Checkout
         uses: actions/checkout@v2
 
       - name: Notify Telegram
         uses: up9cloud/action-notify@v0.4
-        if: always()
         env:
-          GITHUB_JOB_STATUS: ${{ job.status }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          TELEGRAM_MESSAGE: |
+            📣 CI/CD Notification for SimplayStudio 🚀
+
+            ✅ Repository: ${{ github.repository }}
+            ✅ Branch: ${{ github.ref_name }}
+            ✅ Commit: ${{ github.sha }}
+            ✅ Workflow: ${{ github.workflow }}
+            ✅ Job Status: ${{ job.status }}
+
+            👉 View Run: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
+
