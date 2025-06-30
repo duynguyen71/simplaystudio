@@ -9,7 +9,7 @@ import {
   useColorModeValue,
   VisuallyHidden,
 } from "@chakra-ui/react";
-import { FaDiscord, FaTiktok, FaYoutube } from "react-icons/fa";
+import { FaYoutube } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import socialMediaLinks from "../data/socialMediaLinks";
 

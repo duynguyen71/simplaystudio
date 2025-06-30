@@ -36,14 +36,14 @@ const RootLayout = () => {
   const OverlayOne = () => (
     <ModalOverlay
       bg="blackAlpha.900"
-      // backdropFilter="blur(10px) hue-rotate(90deg)"
+    // backdropFilter="blur(10px) hue-rotate(90deg)"
     />
   );
 
-  const { isOpen, onOpen, onClose } = useDisclosure();
-  const [overlay, setOverlay] = React.useState(<OverlayOne />);
+  const { isOpen, onClose } = useDisclosure();
+  const [overlay] = React.useState(<OverlayOne />);
 
-  useEffect(() => {}, []);
+  useEffect(() => { }, []);
 
   const navigate = useNavigate();
   return (

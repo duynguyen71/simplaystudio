@@ -1,4 +1,3 @@
-import React from "react";
 import {
   Box,
   useBreakpointValue,
@@ -22,7 +21,6 @@ const settings = {
 };
 
 export const ModalCarosel = ({ images }) => {
-  const top = useBreakpointValue(["80%", "50%"]);
 
   const imgBgColor = useColorModeValue("gray.200", "gray.800");
 
@@ -30,15 +28,15 @@ export const ModalCarosel = ({ images }) => {
     <>
       <Box position={"relative"} overflow={"hidden"} borderRadius={"md"}>
         <Slider
-          afterChange={(index) => {}}
+          afterChange={(index) => { }}
           {...settings}
-          // ref={(slider) => setSlider(slider)}
+        // ref={(slider) => setSlider(slider)}
         >
           {images.map((img, index) => {
             return (
               <Box
                 key={index}
-                onClick={() => {}}
+                onClick={() => { }}
                 position="relative"
                 backgroundPosition="center"
                 backgroundRepeat="no-repeat"
