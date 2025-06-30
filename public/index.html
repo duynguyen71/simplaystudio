@@ -1,80 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" sizes="180x180" href="%PUBLIC_URL%/app-icon180.png" />
-    <link rel="icon" sizes="64x64" href="%PUBLIC_URL%/app-icon64.png" />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="%PUBLIC_URL%/app-icon180.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="64x64"
-      href="%PUBLIC_URL%/app-icon64.png"
-    />
-    <link rel="icon" href="%PUBLIC_URL%/app-icon64.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <meta
-      name="description"
-      content="Simplay Studio. Develop iOS and Android games for FREE. Fireworks Play,Fireworks Baby, One Inch Punch, Dunk, Twin Fly, King Kong protect island, Hero Jump, Basketball Mini, Knife Game, Cowboy Shooting, Bamboo Dancing, Spaceman, One Inch Punch, Fireworks Play"
-    />
-    <base href="/" />
-    <!-- Start Single Page Apps for GitHub Pages -->
-    <script type="text/javascript">
-      // Single Page Apps for GitHub Pages
-      // MIT License
-      // https://github.com/rafgraph/spa-github-pages
-      // This script checks to see if a redirect is present in the query string,
-      // converts it back into the correct url and adds it to the
-      // browser's history using window.history.replaceState(...),
-      // which won't cause the browser to attempt to load the new url.
-      // When the single page app is loaded further down in this file,
-      // the correct url will be waiting in the browser's history for
-      // the single page app to route accordingly.
-      (function (l) {
-        if (l.search[1] === "/") {
-          var decoded = l.search
-            .slice(1)
-            .split("&")
-            .map(function (s) {
-              return s.replace(/~and~/g, "&");
-            })
-            .join("?");
-          window.history.replaceState(
-            null,
-            null,
-            l.pathname.slice(0, -1) + decoded + l.hash
-          );
-        }
-      })(window.location);
-    </script>
-    <!-- End Single Page Apps for GitHub Pages -->
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, user-scalable=no"
-    />
-    <meta
-      name="google-site-verification"
-      content="-0fhG2LqvjnbPLDETNlnfw7FDzCkh-CeS__3quwfEA0"
-    />
-    <link
-      rel="apple-touch-icon"
-      href="%PUBLIC_URL%/SimplayStudioLogoDarkMode.png"
-    />
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap"
-      rel="stylesheet"
-    />
-    <title>Simplay Studio</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-  </body>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <meta name="theme-color" content="#000000" />
+
+  <!-- ✅ SEO Meta -->
+  <title>Simplay Studio - Free Mobile Game Development</title>
+  <meta name="description"
+    content="Simplay Studio - Develop fun iOS and Android games for free. Play Fireworks Play, Fireworks Baby, One Inch Punch, Dunk, Twin Fly, King Kong Protect Island, Hero Jump, Basketball Mini, Knife Game, Cowboy Shooting, Bamboo Dancing, Spaceman and more." />
+
+  <!-- ✅ Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://simplaystudio.com/" />
+  <meta property="og:title" content="Simplay Studio - Free Mobile Game Development" />
+  <meta property="og:description"
+    content="Simplay Studio - Develop and play fun mobile games like Fireworks Play, Fireworks Baby, Dunk and more." />
+  <meta property="og:image" content="https://simplaystudio.com/og-image.png" />
+
+  <!-- ✅ Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://simplaystudio.com/" />
+  <meta name="twitter:title" content="Simplay Studio - Free Mobile Game Development" />
+  <meta name="twitter:description"
+    content="Simplay Studio - Develop and play fun mobile games like Fireworks Play, Fireworks Baby, Dunk and more." />
+  <meta name="twitter:image" content="https://simplaystudio.com/og-image.png" />
+
+  <!-- ✅ Favicon -->
+  <link rel="icon" href="%PUBLIC_URL%/app-icon64.png" sizes="64x64" />
+  <link rel="apple-touch-icon" sizes="180x180" href="%PUBLIC_URL%/app-icon180.png" />
+  <link rel="apple-touch-icon" href="%PUBLIC_URL%/SimplayStudioLogoDarkMode.png" />
+
+  <!-- ✅ Manifest -->
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+  <!-- ✅ Google Site Verification -->
+  <meta name="google-site-verification" content="-0fhG2LqvjnbPLDETNlnfw7FDzCkh-CeS__3quwfEA0" />
+
+  <!-- ✅ Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap"
+    rel="stylesheet" />
+
+  <!-- ✅ Base URL for GitHub Pages -->
+  <base href="/" />
+
+  <!-- ✅ SPA Redirect for GitHub Pages -->
+  <script type="text/javascript">
+    (function (l) {
+      if (l.search[1] === "/") {
+        var decoded = l.search
+          .slice(1)
+          .split("&")
+          .map(function (s) {
+            return s.replace(/~and~/g, "&");
+          })
+          .join("?");
+        window.history.replaceState(null, null, l.pathname.slice(0, -1) + decoded + l.hash);
+      }
+    })(window.location);
+  </script>
+</head>
+
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root"></div>
+</body>
+
 </html>
