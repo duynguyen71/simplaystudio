@@ -51,6 +51,7 @@ jobs:
           user_email: "github-actions[bot]@users.noreply.github.com"
           github_token: ${{ secrets.ACTIONS_DEPLOY_ACCESS_TOKEN }}
           repository: ${{ github.repository }}
+          
   notify:
     needs: build
     runs-on: ubuntu-latest
@@ -65,13 +66,12 @@ jobs:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           TELEGRAM_MESSAGE: |
-            📣 CI/CD Notification for SimplayStudio 🚀
+            ${{ job.status == 'success' && '✅ CI/CD Success - SimplayStudio ✅' || (job.status == 'failure' && '❌ CI/CD Failed - SimplayStudio ❌' || '⚠️ CI/CD Cancelled - SimplayStudio ⚠️') }}
 
-            ✅ Repository: ${{ github.repository }}
-            ✅ Branch: ${{ github.ref_name }}
-            ✅ Commit: ${{ github.sha }}
-            ✅ Workflow: ${{ github.workflow }}
-            ✅ Job Status: ${{ job.status }}
+            📂 *Repository*: `${{ github.repository }}`
+            🌱 *Branch*: `${{ github.ref_name }}`
+            🔢 *Commit*: `${{ github.sha }}`
+            🛠️ *Workflow*: `${{ github.workflow }}`
+            🏁 *Status*: `${{ job.status }}`
 
-            👉 View Run: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
-
+            🔗 [View Run](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }})
