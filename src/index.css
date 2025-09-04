@@ -9,6 +9,7 @@ body {
   from {
     width: 0;
   }
+
   to {
     width: 100%;
   }
@@ -28,18 +29,22 @@ body {
   from {
     width: 0;
   }
+
   to {
     width: 100%;
   }
 }
+
 @keyframes blinkTextCursor {
   from {
     border-right-color: hsl(0, 0%, 80%);
   }
+
   to {
     border-right-color: transparent;
   }
 }
+
 /*  */
 
 .text-outline-wrapper {
