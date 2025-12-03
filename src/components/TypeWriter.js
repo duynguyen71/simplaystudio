@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Text } from "@chakra-ui/react";
+import { Text, Box } from "@chakra-ui/react";
 
 const TypingText = ({
   text,
@@ -30,11 +30,20 @@ const TypingText = ({
   }, [text, index]);
 
   return (
-    <>
-      <Text fontWeight={"bold"} fontSize={fontSize} color={color}>
-        {displayedText}
+    <Box
+      fontWeight={"bold"}
+      fontSize={fontSize}
+      color={color}
+      minHeight="1.2em"
+      lineHeight="1.2"
+      whiteSpace="pre-wrap"
+      wordBreak="break-word"
+    >
+      {displayedText}
+      <Text as="span" opacity={0}>
+        {text.slice(displayedText.length)}
       </Text>
-    </>
+    </Box>
   );
 };
 
