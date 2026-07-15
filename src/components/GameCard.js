@@ -1,26 +1,37 @@
 import { Box, Image } from "@chakra-ui/react";
-import { useNavigate } from "react-router-dom";
 import { PUBLIC_IMAGE_URL } from "../hooks";
 
 const GameCard = (props) => {
-  const { name, thumb, onClickCustom, dowloadUrl } = props;
+  const { name, thumb, onClickCustom, downloadUrl } = props;
 
-  const navigate = useNavigate();
+  const openGame = () => {
+    if (onClickCustom) {
+      onClickCustom();
+      return;
+    }
+
+    window.open(downloadUrl, "_blank", "noopener,noreferrer");
+  };
 
   return (
     <Box
-      onClick={() =>
-        onClickCustom ? onClickCustom() : window.open(dowloadUrl, "_blank")
-      }
+      as="button"
+      type="button"
+      aria-label={`Open ${name}`}
+      onClick={openGame}
       cursor={"pointer"}
       p={"1.5rem"}
       transition="0.3s ease-in-out"
+      width={"100%"}
+      maxW={"23rem"}
+      justifySelf={"center"}
     >
       <Image
         border={"1px solid #eaeaea"}
         borderRadius={"25%"}
-        height={"auto"}
-        width={["17rem", "23rem", "25rem"]}
+        aspectRatio={1}
+        objectFit={"cover"}
+        width={"100%"}
         src={`${PUBLIC_IMAGE_URL}/${thumb}`}
         alt={name}
       />

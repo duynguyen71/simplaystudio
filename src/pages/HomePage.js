@@ -1,4 +1,4 @@
-import { Flex, Stack } from "@chakra-ui/react";
+import { Flex, SimpleGrid } from "@chakra-ui/react";
 import React, { useState } from "react";
 import GameCard from "../components/GameCard";
 import games from "../data/game";
@@ -7,6 +7,17 @@ import { isAppleProduct } from "../hooks";
 
 const HomePage = () => {
   const [typeIsDone, setTypeIsDone] = useState(false);
+
+  const getGameUrl = (game) => {
+    if (game.website) return game.website;
+
+    const preferredStore = isAppleProduct() ? "ios" : "android";
+    return (
+      game.platform?.[preferredStore]?.link ||
+      game.platform?.ios?.link ||
+      game.platform?.android?.link
+    );
+  };
 
   return (
     <Flex
@@ -17,43 +28,24 @@ const HomePage = () => {
     >
       <Hero typeIsDone={typeIsDone} setTypeIsDone={setTypeIsDone} />
 
-      <Stack
-        direction={["column", "column", "row"]}
+      <SimpleGrid
+        columns={[1, 2, 2, 4]}
         my={["1rem", "4rem"]}
-        spacing={["1rem", "2rem", "1rem", "3rem", "8rem"]}
-        width={"95%"}
+        spacing={["1rem", "2rem", "2.5rem"]}
+        width={"90%"}
+        maxW={"90rem"}
         mx={"auto"}
-        justifyItems={"center"}
         alignItems={"center"}
-        justifyContent={"center"}
-        alignContent={"center"}
       >
-        {typeIsDone && (
-          <GameCard
-            onClickCustom={() =>
-              window.open("https://fireworksplay.com", "_blank")
-            }
-            dowloadUrl={
-              isAppleProduct
-                ? games[0].platform.ios.link
-                : games[0].platform.android.link
-            }
-            {...games[0]}
-          />
-        )}
         {typeIsDone &&
-          games.slice(1, 3).map((game, index) => (
+          games.map((game) => (
             <GameCard
-              key={index}
-              dowloadUrl={
-                isAppleProduct
-                  ? game.platform.ios.link
-                  : game.platform.android.link
-              }
+              key={game.name}
+              downloadUrl={getGameUrl(game)}
               {...game}
             />
           ))}
-      </Stack>
+      </SimpleGrid>
     </Flex>
   );
 };

@@ -32,6 +32,23 @@ const games = [
       },
     },
     path: "Fireworks_Play",
+    website: "https://fireworksplay.com",
+  },
+  {
+    name: "Fireworks Show Simulator",
+    shortDescription: "Design and run professional fireworks displays.",
+    bio: "Place racks, load shells, connect fuses, and watch your show from any viewpoint.",
+    thumb: "fireworks-show-simulator.png",
+    image: "fireworks-show-simulator.png",
+    images: [],
+    videos: [],
+    platform: {
+      steam: {
+        link: "https://store.steampowered.com/app/4668450/Fireworks_Show_Simulator",
+        rating: "",
+      },
+    },
+    website: "https://fireworksshowsimulator.com/",
   },
   {
     name: "Knife Game",

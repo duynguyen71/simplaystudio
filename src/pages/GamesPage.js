@@ -6,7 +6,6 @@ import {
   Text,
   VStack,
   HStack,
-  Button,
   Spacer,
   Center,
   useColorModeValue,
@@ -15,21 +14,34 @@ import games from "../data/game";
 import { PUBLIC_IMAGE_URL } from "../hooks";
 import { useNavigate } from "react-router";
 import "./css/games-page.css";
-import { ChevronRightIcon } from "@chakra-ui/icons";
+import { ChevronRightIcon, ExternalLinkIcon } from "@chakra-ui/icons";
 
 const GamesPage = () => {
   const navigate = useNavigate();
   const bgColor = useColorModeValue("gray.200", "gray.800");
+
+  const openGame = (game) => {
+    if (game.path) {
+      navigate(`/games/${game.path}`);
+      return;
+    }
+
+    window.open(game.website, "_blank", "noopener,noreferrer");
+  };
+
   return (
     <Box>
-      <Box p={[4, 8]}>
+      <Box p={[4, 8]} maxW={"90rem"} mx={"auto"}>
         <SimpleGrid
+          columns={[1, 2, 3, 4]}
           spacing={["20px", "40px", "50px"]}
-          minChildWidth={["30vw", "20vw"]}
         >
-          {games.map((game, index) => {
+          {games.map((game) => {
             return (
               <VStack
+                as="button"
+                type="button"
+                aria-label={`Open ${game.name}`}
                 className="game-container"
                 cursor={"pointer"}
                 spacing={2}
@@ -38,35 +50,35 @@ const GamesPage = () => {
                 boxShadow={"lg"}
                 bgColor={bgColor}
                 borderRadius={"md"}
-                key={index}
-                onClick={() => navigate(`/games/${game.path}`)}
+                key={game.path || game.name}
+                onClick={() => openGame(game)}
               >
-                <Center>
+                <Center width={"100%"}>
                   <Image
-                    height={"100%"}
+                    width={"100%"}
                     aspectRatio={1}
-                    backgroundPosition={"center"}
-                    backgroundRepeat={"no-repeat"}
                     borderRadius={"50"}
-                    backgroundSize={"cover"}
+                    objectFit={"cover"}
                     src={`${PUBLIC_IMAGE_URL}/${game.thumb}`}
+                    alt={game.name}
                   />
                 </Center>
                 <Spacer />
-                <HStack px={"30px"} width={"100%"}>
+                <HStack px={4} width={"100%"} alignItems={"center"}>
                   <Text
                     fontSize={["sm", "md"]}
                     fontWeight={"500"}
-                    letterSpacing={2}
+                    letterSpacing={0}
+                    textAlign={"left"}
                   >
                     {game.name}
                   </Text>
                   <Spacer />
-                  <Button
-                    size={"xl"}
-                    bg={"transparent"}
-                    as={ChevronRightIcon}
-                  />
+                  {game.path ? (
+                    <ChevronRightIcon boxSize={6} flexShrink={0} />
+                  ) : (
+                    <ExternalLinkIcon boxSize={5} flexShrink={0} />
+                  )}
                 </HStack>
               </VStack>
             );
