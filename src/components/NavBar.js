@@ -1,4 +1,4 @@
-import { Flex, useColorModeValue, Text } from "@chakra-ui/react";
+import { Flex, Text } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -30,22 +30,19 @@ export default function WithAction() {
       position={"sticky"}
       top={showNavbar ? 5 : "-80px"}
       transition="top 0.3s ease-in-out"
-      borderRadius={"full"}
       justifyContent={"center"}
       alignContent={"center"}
       alignItems={"center"}
       alignSelf={"center"}
       zIndex={1000}
       m={"auto"}
-      width={["98%"]}
-      bg={useColorModeValue("gray.100", "gray.900")}
     >
       <Flex
         cursor={"pointer"}
         onClick={() => {
           navigate("/");
         }}
-        py={2}
+        py={1}
         alignItems={"center"}
         justifyContent={"space-between"}
       >
@@ -54,7 +51,7 @@ export default function WithAction() {
           text={"Sim"}
           text2={"play"}
           text3={"Studio"}
-          speed={200}
+          fontSize={["3xl", "4xl"]}
         />
       </Flex>
     </Flex>
@@ -96,10 +93,10 @@ const TypingText = ({
 
   useEffect(() => {
     if (text3) {
-      text3 = space + text3;
+      const textWithLeadingSpace = space + text3;
       const interval2 = setInterval(() => {
-        if (index2 < text3.length) {
-          setDisplayedText2((prev) => prev + text3[index2]);
+        if (index2 < textWithLeadingSpace.length) {
+          setDisplayedText2((prev) => prev + textWithLeadingSpace[index2]);
           setIndex2((prev) => prev + 1);
         } else {
           setIsDone2(true);
@@ -118,7 +115,7 @@ const TypingText = ({
       <Text
         cursor={"pointer"}
         display={"inline-block"}
-        fontSize={["2xl"]}
+        fontSize={fontSize || ["2xl"]}
         fontWeight={"bold"}
         color={color}
         opacity={isFaded ? 0.5 : 1}

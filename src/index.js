@@ -17,11 +17,16 @@ const config = {
   useSystemColorMode: false,
 };
 const theme = extendTheme({ config });
+const darkModeManager = {
+  type: "localStorage",
+  get: () => "dark",
+  set: () => {},
+};
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <ChakraProvider theme={theme}>
+    <ChakraProvider theme={theme} colorModeManager={darkModeManager}>
       <RouterProvider router={router} />
     </ChakraProvider>
   </React.StrictMode>,

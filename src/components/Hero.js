@@ -31,7 +31,7 @@ const Hero = ({ typeIsDone, setTypeIsDone }) => {
   }, [inView, animation, animation2]);
 
   return (
-    <Container mt={["10vh", "15vh"]} ref={ref}>
+    <Container mt={["4vh", "6vh"]} ref={ref}>
       <Stack as={Box} overflow={"hidden"} textAlign={"center"}>
         <Box p={"1rem"} textAlign={"center"} display={"inline-block"}>
           <TypingText
@@ -40,6 +40,7 @@ const Hero = ({ typeIsDone, setTypeIsDone }) => {
             }
             typeIsDone={typeIsDone}
             setTypeIsDone={setTypeIsDone}
+            typingSpeed={20}
             color={useColorModeValue("gray.600", "gray.400")}
             fontSize={["3xl", "4xl", "4xl", "5xl"]}
           />

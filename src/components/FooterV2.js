@@ -7,10 +7,8 @@ import {
   Text,
   useColorModeValue,
   VisuallyHidden,
-  IconButton,
-  useColorMode,
 } from "@chakra-ui/react";
-import { FaYoutube, FaSun, FaMoon } from "react-icons/fa";
+import { FaYoutube } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import socialMediaLinks from "../data/socialMediaLinks";
 
@@ -38,24 +36,6 @@ const SocialButton = ({ children, label, href }) => {
   );
 };
 
-const ThemeToggle = () => {
-  const { colorMode, toggleColorMode } = useColorMode();
-  const icon = colorMode === "light" ? <FaMoon /> : <FaSun />;
-  const label = colorMode === "light" ? "Switch to dark mode" : "Switch to light mode";
-
-  return (
-    <IconButton
-      aria-label={label}
-      icon={icon}
-      onClick={toggleColorMode}
-      variant="ghost"
-      rounded="full"
-      w={8}
-      h={8}
-    />
-  );
-};
-
 const SmallWithSocial = () => {
   const navigate = useNavigate();
   const currentYear = new Date().getFullYear();
@@ -76,7 +56,11 @@ const SmallWithSocial = () => {
       >
         <Box textAlign="center">
           <Text display={["block", "inline"]} fontWeight={500} fontSize="md">
-            © {currentYear} Simplay Studio
+            © {currentYear}{" "}
+            <Text as="span" color="red">
+              Sim
+            </Text>
+            <Text as="span">play Studio</Text>
           </Text>
           <Text display={["none", "inline"]}> | </Text>
           <Text
@@ -103,7 +87,6 @@ const SmallWithSocial = () => {
         </Box>
 
         <Stack direction="row" spacing={6} align="center">
-          <ThemeToggle />
           <SocialButton label="YouTube" href={socialMediaLinks.youtube}>
             <FaYoutube />
           </SocialButton>
