@@ -56,7 +56,11 @@ const SmallWithSocial = () => {
       >
         <Box textAlign="center">
           <Text display={["block", "inline"]} fontWeight={500} fontSize="md">
-            © {currentYear} Simplay Studio
+            © {currentYear}{" "}
+            <Text as="span" color="red">
+              Sim
+            </Text>
+            <Text as="span">play Studio</Text>
           </Text>
           <Text display={["none", "inline"]}> | </Text>
           <Text
