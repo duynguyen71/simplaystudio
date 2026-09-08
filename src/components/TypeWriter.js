@@ -27,7 +27,7 @@ const TypingText = ({
     return () => {
       return clearInterval(interval);
     };
-  }, [text, index]);
+  }, [index, setTypeIsDone, text, typingSpeed]);
 
   return (
     <Box
