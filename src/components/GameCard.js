@@ -26,9 +26,9 @@ const GameCard = (props) => {
         aria-label={`Open ${name}`}
         onClick={openGame}
         cursor={"pointer"}
-        p={"1.5rem"}
+        p={["0.75rem", "1rem"]}
         width={"100%"}
-        maxW={"23rem"}
+        maxW={"27rem"}
         justifySelf={"center"}
       >
         <Image

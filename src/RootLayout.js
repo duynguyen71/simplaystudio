@@ -89,7 +89,13 @@ const RootLayout = () => {
         </Modal>
       </>
       <NavBar />
-      <Box as="main" flex="1" maxW="100vw" overflow="hidden">
+      <Box
+        as="main"
+        flex="1"
+        display="flex"
+        maxW="100vw"
+        overflow="hidden"
+      >
         <Outlet />
       </Box>
       <SmallWithSocial />
