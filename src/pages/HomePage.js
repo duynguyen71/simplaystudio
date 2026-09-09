@@ -23,19 +23,22 @@ const HomePage = () => {
 
   return (
     <Flex
-      pos={"relative"}
-      direction={"column"}
-      position={"relative"}
+      position="relative"
+      direction="column"
+      flex="1"
+      width="100%"
+      justifyContent={{ base: "flex-start", lg: "space-around" }}
+      py={{ base: "1rem", lg: "2rem" }}
     >
       <Hero typeIsDone={typeIsDone} setTypeIsDone={setTypeIsDone} />
 
       <SimpleGrid
         columns={[1, 2, 2, 4]}
-        mt={["1rem", "4rem"]}
-        mb={0}
-        spacing={["1rem", "2rem", "2.5rem"]}
-        width={"90%"}
-        maxW={"90rem"}
+        mt={{ base: "1rem", lg: 0 }}
+        mb={{ base: "1.5rem", lg: 0 }}
+        spacing={["1rem", "1.5rem", "2rem"]}
+        width="94%"
+        maxW="112rem"
         mx={"auto"}
         alignItems={"center"}
       >

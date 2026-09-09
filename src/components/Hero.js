@@ -7,7 +7,7 @@ const Hero = ({ typeIsDone, setTypeIsDone }) => {
   const shouldReduceMotion = useReducedMotion();
 
   return (
-    <Container mt={["4vh", "6vh"]}>
+    <Container mt={{ base: "2rem", lg: 0 }}>
       <motion.div
         initial={shouldReduceMotion ? false : { opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
