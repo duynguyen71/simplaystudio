@@ -5,7 +5,6 @@ const GameCard = (props) => {
   const {
     name,
     thumb,
-    imageFit = "cover",
     onClickCustom,
     downloadUrl,
   } = props;
@@ -36,7 +35,7 @@ const GameCard = (props) => {
           border={"1px solid #eaeaea"}
           borderRadius={"25%"}
           aspectRatio={1}
-          objectFit={imageFit}
+          objectFit="cover"
           bg="black"
           width={"100%"}
           src={`${PUBLIC_IMAGE_URL}/${thumb}`}

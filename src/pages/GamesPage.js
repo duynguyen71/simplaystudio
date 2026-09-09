@@ -58,7 +58,7 @@ const GamesPage = () => {
                     width={"100%"}
                     aspectRatio={1}
                     borderRadius={"50"}
-                    objectFit={game.imageFit || "cover"}
+                    objectFit="cover"
                     bg="black"
                     src={`${PUBLIC_IMAGE_URL}/${game.thumb}`}
                     alt={game.name}

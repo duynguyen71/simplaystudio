@@ -51,7 +51,7 @@ const SmallWithSocial = () => {
         py={4}
         direction={{ base: "column", md: "row" }}
         spacing={4}
-        justify={{ base: "center", md: "space-between" }}
+        justify="center"
         align={{ base: "center", md: "center" }}
       >
         <Box textAlign="center">
