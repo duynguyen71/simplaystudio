@@ -37,7 +37,12 @@ const RootLayout = () => {
 
   const navigate = useNavigate();
   return (
-    <Box position={"relative"}>
+    <Box
+      position="relative"
+      minH="100vh"
+      display="flex"
+      flexDirection="column"
+    >
       <>
         <Modal
           size={["xs", "1xl", "3xl"]}
@@ -84,7 +89,7 @@ const RootLayout = () => {
         </Modal>
       </>
       <NavBar />
-      <Box maxW={"100vw"} overflow={"hidden"}>
+      <Box as="main" flex="1" maxW="100vw" overflow="hidden">
         <Outlet />
       </Box>
       <SmallWithSocial />

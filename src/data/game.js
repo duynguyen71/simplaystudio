@@ -40,7 +40,6 @@ const games = [
     bio: "Place racks, load shells, connect fuses, and watch your show from any viewpoint.",
     thumb: "fireworks-show-simulator.png",
     image: "fireworks-show-simulator.png",
-    imageFit: "contain",
     images: [],
     videos: [],
     platform: {

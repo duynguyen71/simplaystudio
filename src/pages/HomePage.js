@@ -26,7 +26,6 @@ const HomePage = () => {
       pos={"relative"}
       direction={"column"}
       position={"relative"}
-      minH={"80vh"}
     >
       <Hero typeIsDone={typeIsDone} setTypeIsDone={setTypeIsDone} />
 
