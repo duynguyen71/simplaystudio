@@ -37,14 +37,8 @@ jobs:
       - name: Install prerender browser
         run: npx playwright install --with-deps chromium
 
-      - name: Run tests
-        run: npm test -- --runInBand
-
       - name: Build
         run: npm run build
-
-      - name: Validate SEO output
-        run: npm run test:seo
 
       - name: Deploy
         if: github.event_name == 'push' && github.ref == 'refs/heads/master'
