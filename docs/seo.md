@@ -21,6 +21,10 @@ On Linux, use `npx playwright install --with-deps chromium`. CI installs the
 browser, builds, and validates SEO on pull requests. Only a push to `master`
 deploys the validated `build/` directory.
 
+Telegram notifications run only for pushes to `master`, not pull-request test
+runs. They use the build/deploy job result and a custom template; the temporary
+`refs/pull/.../merge` test commit is not reported as a production merge.
+
 ## URL policy
 
 - Canonical URLs end in `/`, matching GitHub Pages directory hosting.

@@ -1,0 +1,10 @@
+${GITHUB_JOB_STATUS_EMOJI} SIMPLAY STUDIO — CI/CD: ${GITHUB_JOB_STATUS}
+
+Trigger: push to master (not a pull-request test)
+Repository: ${GITHUB_REPOSITORY}
+Branch: ${NOTIFY_BRANCH}
+Triggered by: ${NOTIFY_ACTOR}
+Commit: ${GITHUB_SHA_SHORT}
+
+Workflow: ${NOTIFY_RUN_URL}
+Commit: ${NOTIFY_COMMIT_URL}

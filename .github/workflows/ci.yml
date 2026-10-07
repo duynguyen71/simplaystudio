@@ -62,23 +62,19 @@ jobs:
   notify:
     needs: build
     runs-on: ubuntu-latest
-    if: always()
+    if: always() && github.event_name == 'push' && github.ref == 'refs/heads/master'
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Notify Telegram
         uses: up9cloud/action-notify@v0.4
         env:
+          GITHUB_JOB_STATUS: ${{ needs.build.result }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-          TELEGRAM_MESSAGE: |
-            ${{ job.status == 'success' && '✅ CI/CD Success - SimplayStudio ✅' || (job.status == 'failure' && '❌ CI/CD Failed - SimplayStudio ❌' || '⚠️ CI/CD Cancelled - SimplayStudio ⚠️') }}
-
-            📂 *Repository*: `${{ github.repository }}`
-            🌱 *Branch*: `${{ github.ref_name }}`
-            🔢 *Commit*: `${{ github.sha }}`
-            🛠️ *Workflow*: `${{ github.workflow }}`
-            🏁 *Status*: `${{ job.status }}`
-
-            🔗 [View Run](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }})
+          TELEGRAM_TEMPLATE_PATH: .github/telegram-notification.txt
+          NOTIFY_ACTOR: ${{ github.actor }}
+          NOTIFY_BRANCH: ${{ github.ref_name }}
+          NOTIFY_RUN_URL: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          NOTIFY_COMMIT_URL: https://github.com/${{ github.repository }}/commit/${{ github.sha }}
