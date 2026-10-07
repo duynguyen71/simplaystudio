@@ -16,6 +16,7 @@ import {
 } from "@chakra-ui/react";
 import { ModalCarosel } from "./components/ModalCarosel";
 import SmallWithSocial from "./components/FooterV2";
+import Seo from "./components/Seo";
 const RootLayout = () => {
   const { pathname } = useLocation();
 
@@ -88,6 +89,7 @@ const RootLayout = () => {
           </ModalContent>
         </Modal>
       </>
+      <Seo />
       <NavBar />
       <Box
         as="main"

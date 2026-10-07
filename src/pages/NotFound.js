@@ -1,14 +1,13 @@
 import { Box, Heading, Text, Button } from "@chakra-ui/react";
-import { useNavigate } from "react-router-dom";
+import { Link as RouterLink } from "react-router-dom";
 
 const NotFoundPage = () => {
-  const navigate = useNavigate();
 
   return (
     <Box textAlign="center" py={10} px={6}>
       <Heading
         display="inline-block"
-        as="h2"
+        as="h1"
         size="2xl"
         bgGradient="linear(to-r, teal.400, teal.600)"
         backgroundClip="text"
@@ -23,7 +22,8 @@ const NotFoundPage = () => {
       </Text>
 
       <Button
-        onClick={() => navigate("/", { replace: true })}
+        as={RouterLink}
+        to="/"
         colorScheme="teal"
         bgGradient="linear(to-r, teal.400, teal.500, teal.600)"
         color="white"

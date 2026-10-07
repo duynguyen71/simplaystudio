@@ -9,7 +9,7 @@ import {
   HStack,
   Tag,
 } from "@chakra-ui/react";
-import { useNavigate } from "react-router-dom";
+import { Link as RouterLink } from "react-router-dom";
 import { PUBLIC_IMAGE_URL } from "../hooks";
 
 export const BlogTags = (props) => {
@@ -42,11 +42,6 @@ export const BlogAuthor = (props) => {
   );
 };
 const ArticleCard = ({ article }) => {
-  const navigate = useNavigate();
-
-  const onClick = () => {
-    navigate(`/articles/${article.id}`);
-  };
   return (
     <>
       <Wrap m={"1rem"} p={2} marginTop="5">
@@ -54,14 +49,16 @@ const ArticleCard = ({ article }) => {
           <Box w="100%">
             <Box borderRadius="lg" overflow="hidden">
               <Box
-                onClick={onClick}
+                as={RouterLink}
+                to={`/articles/${article.id}/`}
                 textDecoration="none"
                 _hover={{ textDecoration: "none" }}
               >
                 <Image
                   transform="scale(1.0)"
                   src={`${PUBLIC_IMAGE_URL}/${article.thumb}`}
-                  alt="some text"
+                  alt={article.title}
+                  loading="lazy"
                   objectFit="contain"
                   width="100%"
                   transition="0.3s ease-in-out"
@@ -78,7 +75,8 @@ const ArticleCard = ({ article }) => {
             >
               {/* Titile */}
               <Text
-                onClick={onClick}
+                as={RouterLink}
+                to={`/articles/${article.id}/`}
                 textDecoration="none"
                 _hover={{ textDecoration: "none" }}
               >

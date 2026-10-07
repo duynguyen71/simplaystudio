@@ -33,8 +33,10 @@
   "scripts": {
     "start": "react-scripts start",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d build --dotfiles",
     "build": "CI=false react-scripts build",
+    "postbuild": "node scripts/prerender.cjs",
+    "test:seo": "node scripts/test-seo.cjs",
     "test": "react-scripts test --watchAll=false",
     "eject": "react-scripts eject"
   },
@@ -55,5 +57,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "playwright": "1.63.0"
   }
 }

@@ -1,9 +1,8 @@
 import React from "react";
-import { Box, Container, Stack, useColorModeValue } from "@chakra-ui/react";
+import { Box, Container, Heading, Stack, Text, useColorModeValue } from "@chakra-ui/react";
 import { motion, useReducedMotion } from "framer-motion";
-import TypingText from "./TypeWriter";
 
-const Hero = ({ typeIsDone, setTypeIsDone }) => {
+const Hero = () => {
   const shouldReduceMotion = useReducedMotion();
 
   return (
@@ -15,16 +14,20 @@ const Hero = ({ typeIsDone, setTypeIsDone }) => {
       >
         <Stack as={Box} overflow={"hidden"} textAlign={"center"}>
           <Box p={"1rem"} textAlign={"center"} display={"inline-block"}>
-            <TypingText
-              text={
-                "When making games is our passion, outstanding games are created."
-              }
-              typeIsDone={typeIsDone}
-              setTypeIsDone={setTypeIsDone}
-              typingSpeed={20}
+            <Heading as="h1" fontSize={["2xl", "3xl"]} mb={4}>
+              Mobile & PC Games by Simplay Studio
+            </Heading>
+            <Text
               color={useColorModeValue("gray.600", "gray.400")}
               fontSize={["3xl", "4xl", "4xl", "5xl"]}
-            />
+            >
+              When making games is our passion, outstanding games are created.
+            </Text>
+            <Text mt={4}>
+              Explore Fireworks Play, Fireworks Show Simulator, Knife Game, and
+              Basketball. Discover realistic fireworks simulations and arcade
+              games for mobile and PC through our official websites and stores.
+            </Text>
           </Box>
         </Stack>
       </motion.div>

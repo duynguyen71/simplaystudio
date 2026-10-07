@@ -11,13 +11,14 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import articles from "../data/articles";
 import { PUBLIC_IMAGE_URL } from "../hooks";
+import NotFoundPage from "./NotFound";
 
 const ArticlePage = () => {
   const { id } = useParams();
 
-  const article = articles.find((a) => a.id == id);
+  const article = articles.find((a) => String(a.id) === id);
 
-  if (!article) return <></>;
+  if (!article) return <NotFoundPage />;
 
   return (
     <Flex direction={"column"}>
@@ -29,6 +30,7 @@ const ArticlePage = () => {
           objectPosition={"center"}
           bgRepeat={"no-repeat"}
           src={`${PUBLIC_IMAGE_URL}/${article.thumb}`}
+          alt={article.title}
         />
       </Box>
       {/* End of Image Cover */}
@@ -66,6 +68,7 @@ const ArticlePage = () => {
       <Box px={8}>
         <AspectRatio w={"100%"} ratio={16 / 9}>
           <iframe
+            loading="lazy"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             title="YouTube video player"
             allowFullScreen

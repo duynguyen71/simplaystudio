@@ -14,7 +14,7 @@ import {
 import ArticleCard, { BlogTags } from "../components/ArticleCard";
 import articles from "../data/articles";
 import { PUBLIC_IMAGE_URL } from "../hooks";
-import { useNavigate } from "react-router-dom";
+import { Link as RouterLink } from "react-router-dom";
 
 const ArticleList = () => {
   return (
@@ -60,11 +60,6 @@ export default ArticleList;
 
 const MainArticle = () => {
   const article = articles[0];
-  const navigate = useNavigate();
-
-  const onClick = (id) => {
-    navigate("/articles/" + article.id);
-  };
   return (
     <Box
       marginTop={{ base: "1", sm: "5" }}
@@ -80,16 +75,17 @@ const MainArticle = () => {
         alignItems="center"
       >
         <Box
+          as={RouterLink}
+          to={`/articles/${article.id}/`}
           width={{ base: "100%", sm: "85%" }}
           zIndex="2"
           marginLeft={{ base: "0", sm: "5%" }}
           marginTop="5%"
         >
           <Image
-            onClick={onClick}
             borderRadius="lg"
             src={`${PUBLIC_IMAGE_URL}/${article.thumb}`}
-            alt="bg image"
+            alt={article.title}
             objectFit="contain"
           />
         </Box>
@@ -106,7 +102,6 @@ const MainArticle = () => {
         </Box>
       </Box>
       <Box
-        onClick={onClick}
         display="flex"
         flex="1"
         flexDirection="column"
@@ -115,7 +110,7 @@ const MainArticle = () => {
       >
         <BlogTags tags={["FW Play", "New Update"]} />
         <Heading fontSize={["md", "2xl"]} as={"h2"} marginTop="1">
-          <Link textDecoration="none" _hover={{ textDecoration: "none" }}>
+          <Link as={RouterLink} to={`/articles/${article.id}/`} textDecoration="none" _hover={{ textDecoration: "none" }}>
             {article.title}
           </Link>
         </Heading>

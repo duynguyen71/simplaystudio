@@ -12,7 +12,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [16.x]
+        node-version: [22.x]
 
     steps:
       - name: Checkout repository
@@ -32,20 +32,27 @@ jobs:
             ${{ runner.os }}-node-
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci
 
-      # - name: Run tests
-      #   run: npm test -- --coverage
+      - name: Install prerender browser
+        run: npx playwright install --with-deps chromium
+
+      - name: Run tests
+        run: npm test -- --runInBand
 
       - name: Build
         run: npm run build
 
+      - name: Validate SEO output
+        run: npm run test:seo
+
       - name: Deploy
+        if: github.event_name == 'push' && github.ref == 'refs/heads/master'
         run: |
           git config --global user.name $user_name
           git config --global user.email $user_email
           git remote set-url origin https://${github_token}@github.com/${repository}
-          npm run deploy
+          ./node_modules/.bin/gh-pages -d build --dotfiles
         env:
           user_name: "github-actions[bot]"
           user_email: "github-actions[bot]@users.noreply.github.com"

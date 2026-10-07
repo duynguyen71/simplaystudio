@@ -11,18 +11,16 @@ const ReleaseVersionContainer = ({ title, listItem }) => {
         p={1}
         letterSpacing={1}
         color={"red.400"}
-        as={"h1"}
+        as={"h2"}
         fontSize={"lg"}
       >
         {title}
       </Heading>
       {listItem.map((item, index) => (
-        <>
-          <Text fontWeight={"normal"} p={1}>
-            {"- "}
-            {item}
-          </Text>
-        </>
+        <Text key={index} fontWeight={"normal"} p={1}>
+          {"- "}
+          {item}
+        </Text>
       ))}
     </Box>
   );
@@ -30,14 +28,16 @@ const ReleaseVersionContainer = ({ title, listItem }) => {
 
 const ReleaseNote = () => {
   return (
-    <>
-      {updates.map((update, index) => (
+    <Box width="100%">
+      <Heading as="h1" m={4}>Fireworks Play Release Notes</Heading>
+      {updates.map((update) => (
         <ReleaseVersionContainer
+          key={update.version}
           title={update.version}
           listItem={update.changes}
         />
       ))}
-    </>
+    </Box>
   );
 };
 

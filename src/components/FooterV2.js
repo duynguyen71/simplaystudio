@@ -9,7 +9,7 @@ import {
   VisuallyHidden,
 } from "@chakra-ui/react";
 import { FaYoutube } from "react-icons/fa";
-import { useNavigate } from "react-router-dom";
+import { Link as RouterLink } from "react-router-dom";
 import socialMediaLinks from "../data/socialMediaLinks";
 
 const SocialButton = ({ children, label, href }) => {
@@ -37,11 +37,11 @@ const SocialButton = ({ children, label, href }) => {
 };
 
 const SmallWithSocial = () => {
-  const navigate = useNavigate();
   const currentYear = new Date().getFullYear();
 
   return (
     <Box
+      as="footer"
       bg={useColorModeValue("gray.50", "gray.900")}
       color={useColorModeValue("gray.700", "gray.200")}
     >
@@ -64,27 +64,34 @@ const SmallWithSocial = () => {
           </Text>
           <Text display={["none", "inline"]}> | </Text>
           <Text
+            as={RouterLink}
+            to="/privacy/"
             display="inline"
             fontWeight={500}
             fontSize="md"
             cursor="pointer"
-            onClick={() => navigate("/privacy")}
           >
             Privacy
           </Text>
           <Text display="inline"> | </Text>
           <Text
+            as="a"
+            href="mailto:contact@simplaystudio.com"
             display="inline"
             fontWeight={500}
             fontSize="md"
             cursor="pointer"
-            onClick={() => {
-              window.location.href = "mailto:contact@simplaystudio.com";
-            }}
           >
             contact@simplaystudio.com
           </Text>
         </Box>
+
+        <Stack as="nav" aria-label="Footer navigation" direction="row" spacing={4}>
+          <Text as={RouterLink} to="/games/">Games</Text>
+          <Text as={RouterLink} to="/articles/">News</Text>
+          <Text as={RouterLink} to="/release-note/">Release notes</Text>
+          <Text as={RouterLink} to="/contact/">Contact</Text>
+        </Stack>
 
         <Stack direction="row" spacing={6} align="center">
           <SocialButton label="YouTube" href={socialMediaLinks.youtube}>

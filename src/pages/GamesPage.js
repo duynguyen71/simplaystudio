@@ -1,9 +1,9 @@
 import React from "react";
 import {
   Box,
+  Heading,
   SimpleGrid,
   Image,
-  Text,
   VStack,
   HStack,
   Spacer,
@@ -12,26 +12,17 @@ import {
 } from "@chakra-ui/react";
 import games from "../data/game";
 import { PUBLIC_IMAGE_URL } from "../hooks";
-import { useNavigate } from "react-router";
+import { Link as RouterLink } from "react-router-dom";
 import "./css/games-page.css";
 import { ChevronRightIcon, ExternalLinkIcon } from "@chakra-ui/icons";
 
 const GamesPage = () => {
-  const navigate = useNavigate();
   const bgColor = useColorModeValue("gray.200", "gray.800");
-
-  const openGame = (game) => {
-    if (game.path) {
-      navigate(`/games/${game.path}`);
-      return;
-    }
-
-    window.open(game.website, "_blank", "noopener,noreferrer");
-  };
 
   return (
     <Box>
       <Box p={[4, 8]} maxW={"90rem"} mx={"auto"}>
+        <Heading as="h1" mb={6}>Our Mobile & PC Games</Heading>
         <SimpleGrid
           columns={[1, 2, 3, 4]}
           spacing={["20px", "40px", "50px"]}
@@ -39,8 +30,11 @@ const GamesPage = () => {
           {games.map((game) => {
             return (
               <VStack
-                as="button"
-                type="button"
+                as={game.path ? RouterLink : "a"}
+                to={game.path ? `/games/${game.path}/` : undefined}
+                href={game.path ? undefined : game.website}
+                target={game.path ? undefined : "_blank"}
+                rel={game.path ? undefined : "noopener noreferrer"}
                 aria-label={`Open ${game.name}`}
                 className="game-container"
                 cursor={"pointer"}
@@ -51,7 +45,6 @@ const GamesPage = () => {
                 bgColor={bgColor}
                 borderRadius={"md"}
                 key={game.path || game.name}
-                onClick={() => openGame(game)}
               >
                 <Center width={"100%"}>
                   <Image
@@ -66,14 +59,14 @@ const GamesPage = () => {
                 </Center>
                 <Spacer />
                 <HStack px={4} width={"100%"} alignItems={"center"}>
-                  <Text
+                  <Heading as="h2"
                     fontSize={["sm", "md"]}
                     fontWeight={"500"}
                     letterSpacing={0}
                     textAlign={"left"}
                   >
                     {game.name}
-                  </Text>
+                  </Heading>
                   <Spacer />
                   {game.path ? (
                     <ChevronRightIcon boxSize={6} flexShrink={0} />

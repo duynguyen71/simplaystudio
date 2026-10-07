@@ -1,9 +1,8 @@
 import { Flex, Text } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link as RouterLink } from "react-router-dom";
 
 export default function WithAction() {
-  const navigate = useNavigate();
   const [showNavbar, setShowNavbar] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
 
@@ -38,10 +37,10 @@ export default function WithAction() {
       m={"auto"}
     >
       <Flex
+        as={RouterLink}
+        to="/"
+        aria-label="Simplay Studio home"
         cursor={"pointer"}
-        onClick={() => {
-          navigate("/");
-        }}
         py={1}
         alignItems={"center"}
         justifyContent={"space-between"}
