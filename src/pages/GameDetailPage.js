@@ -1,11 +1,13 @@
-import React, { useEffect, useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import React, { useState } from "react";
+import { Link as RouterLink, useParams } from "react-router-dom";
+import NotFoundPage from "./NotFound";
 import games from "../data/game";
 import {
   AspectRatio,
   Box,
   Image,
   Text,
+  Heading,
   VStack,
   Grid,
   GridItem,
@@ -15,26 +17,18 @@ import {
 import ReactStars from "react-rating-stars-component";
 import { PUBLIC_IMAGE_URL, PUBLIC_VIDEO_URL, isAppleProduct } from "../hooks";
 import CustomHeading from "../components/CustomHeading";
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import BouncingDotsLoader from "../components/utils/BouncingDotsLoader";
 const GameDetailPage = () => {
   const [isLoading, setLoading] = useState(true);
+  const shouldReduceMotion = useReducedMotion();
 
   // Get game name on param
   const { name } = useParams();
 
   const game = games.find((game) => game.path === name);
 
-  const navigate = useNavigate();
-
-  useEffect(() => {
-    if (!game) {
-      navigate("/");
-      return;
-    }
-  }, [game, navigate]);
-
-  if (!game) return <></>;
+  if (!game) return <NotFoundPage />;
 
   const onLoadStart = () => {
     setLoading(true);
@@ -67,7 +61,7 @@ const GameDetailPage = () => {
         >
           {/* Image */}
           <motion.div
-            initial={{ x: -100, y: -100, rotate: -45, scale: 0 }}
+            initial={shouldReduceMotion ? false : { x: -100, y: -100, rotate: -45, scale: 0 }}
             animate={{ x: 0, y: 0, rotate: 0, scale: 1 }}
           >
             <Box overflow={"hidden"} borderRadius={"100"} boxSize={"200"}>
@@ -75,6 +69,7 @@ const GameDetailPage = () => {
                 <Image
                   objectFit={"cover"}
                   src={`${PUBLIC_IMAGE_URL}/${game.thumb}`}
+                  alt={`${game.name} game icon`}
                 />
               </AspectRatio>
             </Box>
@@ -83,9 +78,9 @@ const GameDetailPage = () => {
 
           {/* Game Download */}
           <VStack spacing={1} alignItems={"start"} alignSelf={"start"}>
-            <Text fontSize={"2xl"} fontWeight={"500"} letterSpacing={1.5}>
+            <Heading as="h1" fontSize={"2xl"} fontWeight={"500"} letterSpacing={1.5}>
               {game.name}
-            </Text>
+            </Heading>
             {game.shortDescription && (
               <Text color={"gray.400"} fontStyle={"italic"}>
                 {game.shortDescription}
@@ -102,15 +97,15 @@ const GameDetailPage = () => {
             />
             <Box height={"100%"} />
             <Button
-              onClick={() =>
-                isAppleProduct
-                  ? window.open(game.platform.ios.link)
-                  : window.open(game.platform.android.link)
-              }
+              as="a"
+              href={isAppleProduct() ? game.platform.ios.link : game.platform.android.link}
               bg={"red.400"}
             >
-              Dowload now
+              Download now
             </Button>
+            {game.path === "Knife_Game" && (
+              <Text as={RouterLink} to="/knifegame/privacy/">Knife Game privacy policy</Text>
+            )}
           </VStack>
           {/* End of Game Download */}
         </Stack>
@@ -152,6 +147,7 @@ const GameDetailPage = () => {
                 autoPlay
                 muted
                 playsInline
+                preload="none"
               >
                 <source src={`${PUBLIC_VIDEO_URL}/${video}`} type="video/mp4" />
               </video>
@@ -181,6 +177,8 @@ const GameDetailPage = () => {
                   <Image
                     objectFit={"cover"}
                     src={`${PUBLIC_IMAGE_URL}/${image}`}
+                    alt={`${game.name} gameplay screenshot ${index + 1}`}
+                    loading="lazy"
                   />
                 </Box>
               </GridItem>

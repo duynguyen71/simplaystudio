@@ -5,6 +5,7 @@ import KnifeGame from "../components/description/KnifeGame";
 const games = [
   {
     name: "Fireworks Play",
+    seoDescription: "Play Fireworks Play, a realistic 3D fireworks game for iOS and Android. Build custom fireworks shows, explore the town, and enjoy multiplayer with friends.",
     shortDescription: "A Realistic 3D Fireworks Game!",
     bio: "Want to walk around the town, fire it up, and share the excitement with friends? Want to set up your own firework show collaboratively? Everything you need about fireworks is in this Fireworks Play game, now with multiplayer functionality!",
     description: <FireworkDescription />,
@@ -52,6 +53,7 @@ const games = [
   },
   {
     name: "Knife Game",
+    seoDescription: "Try Knife Game, a digital finger-stabbing arcade game for iOS and Android from Simplay Studio. Find official download links. Do not try it in real life.",
     shortDescription: "Stab between the fingers game",
     bio: "Be careful! Do NOT try in real life.",
     description: <KnifeGame />,
@@ -73,6 +75,7 @@ const games = [
   },
   {
     name: "Basketball",
+    seoDescription: "Play Basketball, a free arcade basketball game for iOS and Android from Simplay Studio, featuring realistic physics, graphics, and sound. Find store links.",
     shortDescription:
       "A Real Basketball Arcade Machine!! Physic, Graphic and Sound are so real, so addictive.",
     bio: "This game will make you feel like your are in the real game center but it won’t cost your pocket because this game is completely FREE.",

@@ -3,6 +3,8 @@ import { Box, Text, Heading, UnorderedList, ListItem } from "@chakra-ui/react";
 const articles = [
   {
     id: 5,
+    seoTitle: "Fireworks Play Update: New Props & Shells",
+    seoDescription: "Explore the Fireworks Play update with five new props, Fish in Water shells, and new fireworks effects. Read the official feature details from Simplay Studio.",
     title:
       "🎆 Get Ready to Light Up the Sky: Introducing the Latest Update for 3D Fireworks Play! 🎇",
     detail: (
@@ -109,6 +111,8 @@ const articles = [
   },
   {
     id: 4,
+    seoTitle: "Fireworks Play Christmas Update",
+    seoDescription: "Discover the Fireworks Play Christmas update from Simplay Studio. Explore seasonal fireworks, new items, and features to bring festive shows to life.",
     title:
       "  Fireworks Play Ver2023.12.1 - Merry Christmas: Introducing Exciting New Additions!",
     detail: (
@@ -253,6 +257,7 @@ const articles = [
   },
   {
     id: 3,
+    seoDescription: "Read the Fireworks Play version 2023.8.1 update from Simplay Studio, introducing 14 new shells. Explore the new fireworks and full list of added items.",
     title: "FW Play update to Version 2023.8.1",
     detail: "Fireworks Play v2023.8.1 - 14 new shells",
     itemList: [
@@ -280,6 +285,7 @@ const articles = [
   },
   {
     id: 2,
+    seoDescription: "Explore Fireworks Play version 2023.7.1 with the new Farm map and Molotov Cocktail explosion. Read the official update details from Simplay Studio.",
     title: "FW Play update to Version 2023.7.1",
     detail: "Update date new Farm map and Molotov Cocktail",
     itemList: [" New map: Farm.", "New explosion: Molotov Cocktail."],
@@ -298,6 +304,7 @@ const articles = [
   },
   {
     id: 1,
+    seoDescription: "Discover Fireworks Play version 2023.6.1, featuring the Big City map, events feature, and new items. Read the official update details from Simplay Studio.",
     title: "FW Play update to Version 2023.6.1",
     detail: "Update new City map and Fireworks",
     itemList: [

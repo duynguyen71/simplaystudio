@@ -9,22 +9,16 @@ const GameCard = (props) => {
     downloadUrl,
   } = props;
 
-  const openGame = () => {
-    if (onClickCustom) {
-      onClickCustom();
-      return;
-    }
-
-    window.open(downloadUrl, "_blank", "noopener,noreferrer");
-  };
-
   return (
     <Tooltip label={downloadUrl} hasArrow openDelay={200} placement="top">
       <Box
-        as="button"
-        type="button"
+        as={onClickCustom ? "button" : "a"}
+        type={onClickCustom ? "button" : undefined}
+        href={onClickCustom ? undefined : downloadUrl}
+        target={onClickCustom ? undefined : "_blank"}
+        rel={onClickCustom ? undefined : "noopener noreferrer"}
         aria-label={`Open ${name}`}
-        onClick={openGame}
+        onClick={onClickCustom}
         cursor={"pointer"}
         p={["0.75rem", "1rem"]}
         width={"100%"}

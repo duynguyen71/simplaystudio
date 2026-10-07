@@ -1,5 +1,5 @@
 import { Flex, SimpleGrid } from "@chakra-ui/react";
-import React, { useState } from "react";
+import React from "react";
 import GameCard from "../components/GameCard";
 import games from "../data/game";
 import Hero from "../components/Hero";
@@ -7,7 +7,6 @@ import { isAppleProduct } from "../hooks";
 import { motion, useReducedMotion } from "framer-motion";
 
 const HomePage = () => {
-  const [typeIsDone, setTypeIsDone] = useState(false);
   const shouldReduceMotion = useReducedMotion();
 
   const getGameUrl = (game) => {
@@ -30,7 +29,7 @@ const HomePage = () => {
       justifyContent={{ base: "flex-start", lg: "space-around" }}
       py={{ base: "1rem", lg: "2rem" }}
     >
-      <Hero typeIsDone={typeIsDone} setTypeIsDone={setTypeIsDone} />
+      <Hero />
 
       <SimpleGrid
         columns={[1, 2, 2, 4]}
@@ -42,8 +41,7 @@ const HomePage = () => {
         mx={"auto"}
         alignItems={"center"}
       >
-        {typeIsDone &&
-          games.map((game, index) => (
+        {games.map((game, index) => (
             <motion.div
               key={game.name}
               initial={

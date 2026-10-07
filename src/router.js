@@ -53,6 +53,10 @@ const router = createBrowserRouter([
         path: "release-note",
         element: <ReleaseNote />,
       },
+      {
+        path: "*",
+        element: <NotFoundPage />,
+      },
     ],
   },
   {
