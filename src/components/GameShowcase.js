@@ -236,11 +236,6 @@ const GameShowcase = ({ game }) => {
         {/* Screenshots */}
         {shots.length > 0 && (
           <Box mt={{ base: "3.5rem", md: "6rem" }}>
-            <Reveal>
-              <Heading as="h2" size="lg" textAlign="center" mb="1.5rem">
-                Screenshots
-              </Heading>
-            </Reveal>
             <SimpleGrid columns={{ base: 1, sm: 2, lg: 4 }} spacing="1rem">
               {shots.map((shot, index) => (
                 <Reveal key={shot} delay={(index % 4) * 0.08}>
@@ -281,9 +276,6 @@ const GameShowcase = ({ game }) => {
               spacing="1.25rem"
               textAlign="center"
             >
-              <Heading as="h2" size="lg">
-                Ready to clear the swarm?
-              </Heading>
               <SteamButton link={steamLink} comingSoon={comingSoon} />
             </VStack>
           </Reveal>
