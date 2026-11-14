@@ -151,7 +151,10 @@ const GameShowcase = ({ game }) => {
         </Container>
       </Box>
 
-      <Container maxW="72rem" px={{ base: "1rem", md: "2rem" }}>
+      <Container
+        maxW={{ base: "72rem", xl: "88rem", "2xl": "100rem" }}
+        px={{ base: "1rem", md: "2rem" }}
+      >
         {/* Features */}
         {showcase.features?.length > 0 && (
           <VStack
@@ -170,7 +173,7 @@ const GameShowcase = ({ game }) => {
                   align="center"
                 >
                   <Box
-                    flex="1.4"
+                    flex={{ md: 1.4, xl: 2 }}
                     w="100%"
                     borderRadius="xl"
                     overflow="hidden"
@@ -207,10 +210,7 @@ const GameShowcase = ({ game }) => {
                       letterSpacing="0.02em"
                       lineHeight="1.05"
                       fontSize={{ base: "2rem", md: "2.75rem", xl: "3.25rem" }}
-                      color="transparent"
-                      bgGradient="linear(to-b, #ffffff 0%, #e2e8f0 45%, #8a94a6 55%, #f7fafc 100%)"
-                      bgClip="text"
-                      filter="drop-shadow(0 3px 0 rgba(155, 28, 28, 0.9)) drop-shadow(0 8px 20px rgba(0, 0, 0, 0.6))"
+                      color="white"
                     >
                       {feature.title}
                     </Heading>
