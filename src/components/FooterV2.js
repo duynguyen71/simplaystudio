@@ -9,7 +9,7 @@ import {
   VisuallyHidden,
 } from "@chakra-ui/react";
 import { FaYoutube } from "react-icons/fa";
-import { useNavigate } from "react-router-dom";
+import { Link as RouterLink, useNavigate } from "react-router-dom";
 import socialMediaLinks from "../data/socialMediaLinks";
 
 const SocialButton = ({ children, label, href }) => {
@@ -56,7 +56,15 @@ const SmallWithSocial = () => {
         align={{ base: "center", md: "center" }}
       >
         <Box textAlign="center">
-          <Text display={["block", "inline"]} fontWeight={500} fontSize="md">
+          <Text
+            as={RouterLink}
+            to="/"
+            aria-label="Simplay Studio home"
+            display={["block", "inline"]}
+            fontWeight={500}
+            fontSize="md"
+            _hover={{ textDecoration: "underline" }}
+          >
             © {currentYear}{" "}
             <Text as="span" color="red">
               Sim
