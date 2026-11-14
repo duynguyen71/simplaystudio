@@ -196,19 +196,46 @@ const GameShowcase = ({ game }) => {
                     flex="1"
                     align={{ base: "center", md: "flex-start" }}
                     textAlign={{ base: "center", md: "left" }}
-                    spacing="0.75rem"
+                    spacing="0"
                   >
                     <Text
-                      fontSize="sm"
-                      fontWeight="bold"
-                      letterSpacing="0.12em"
-                      color="#66c0f4"
+                      fontFamily="'Exo 2', sans-serif"
+                      fontStyle="italic"
+                      fontWeight="900"
+                      fontSize={{ base: "4rem", md: "6rem" }}
+                      lineHeight="1"
+                      color="transparent"
+                      bgGradient="linear(to-b, #ffe066, #f5a300)"
+                      bgClip="text"
+                      opacity={0.9}
+                      filter="drop-shadow(0 4px 18px rgba(245, 163, 0, 0.35))"
+                      aria-hidden="true"
                     >
                       {String(index + 1).padStart(2, "0")}
                     </Text>
-                    <Heading as="h2" size="lg">
+                    <Heading
+                      as="h2"
+                      fontFamily="'Exo 2', sans-serif"
+                      fontStyle="italic"
+                      fontWeight="900"
+                      textTransform="uppercase"
+                      letterSpacing="0.02em"
+                      lineHeight="1.05"
+                      fontSize={{ base: "2rem", md: "2.75rem", xl: "3.25rem" }}
+                      color="transparent"
+                      bgGradient="linear(to-b, #ffffff 0%, #e2e8f0 45%, #8a94a6 55%, #f7fafc 100%)"
+                      bgClip="text"
+                      filter="drop-shadow(0 3px 0 rgba(155, 28, 28, 0.9)) drop-shadow(0 8px 20px rgba(0, 0, 0, 0.6))"
+                    >
                       {feature.title}
                     </Heading>
+                    <Box
+                      mt="1rem"
+                      h="4px"
+                      w="4.5rem"
+                      borderRadius="full"
+                      bgGradient="linear(to-r, #ffe066, #f5a300)"
+                    />
                     {feature.text && (
                       <Text color="gray.400" fontSize="lg">
                         {feature.text}
