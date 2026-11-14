@@ -3,7 +3,6 @@ import {
   Box,
   IconButton,
   useBreakpointValue,
-  useColorModeValue,
   Image,
 } from "@chakra-ui/react";
 import { BiLeftArrowAlt, BiRightArrowAlt } from "react-icons/bi";
@@ -66,11 +65,7 @@ export const ImageCarousel = ({ games }) => {
         >
           <BiRightArrowAlt size="40px" />
         </IconButton>
-        <Slider
-          afterChange={(index) => {}}
-          {...settings}
-          ref={(slider) => setSlider(slider)}
-        >
+        <Slider {...settings} ref={(slider) => setSlider(slider)}>
           {games[0].images.map((img, index) => {
             return (
               <Box key={index} onClick={navigateToFWPlay} position="relative">

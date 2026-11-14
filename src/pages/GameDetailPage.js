@@ -17,6 +17,7 @@ import { PUBLIC_IMAGE_URL, PUBLIC_VIDEO_URL, isAppleProduct } from "../hooks";
 import CustomHeading from "../components/CustomHeading";
 import { motion } from "framer-motion";
 import BouncingDotsLoader from "../components/utils/BouncingDotsLoader";
+import GameShowcase from "../components/GameShowcase";
 const GameDetailPage = () => {
   const [isLoading, setLoading] = useState(true);
 
@@ -35,6 +36,8 @@ const GameDetailPage = () => {
   }, [game, navigate]);
 
   if (!game) return <></>;
+
+  if (game.showcase) return <GameShowcase game={game} />;
 
   const onLoadStart = () => {
     setLoading(true);

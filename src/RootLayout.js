@@ -16,8 +16,13 @@ import {
 } from "@chakra-ui/react";
 import { ModalCarosel } from "./components/ModalCarosel";
 import SmallWithSocial from "./components/FooterV2";
+import games from "./data/game";
 const RootLayout = () => {
   const { pathname } = useLocation();
+  const gamePath = pathname.match(/\/games\/([^/]+)\/?$/)?.[1];
+  const isShowcasePage = games.some(
+    (game) => game.showcase && game.path === gamePath,
+  );
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -32,8 +37,6 @@ const RootLayout = () => {
 
   const { isOpen, onClose } = useDisclosure();
   const [overlay] = React.useState(<OverlayOne />);
-
-  useEffect(() => { }, []);
 
   const navigate = useNavigate();
   return (
@@ -88,7 +91,7 @@ const RootLayout = () => {
           </ModalContent>
         </Modal>
       </>
-      <NavBar />
+      {!isShowcasePage && <NavBar />}
       <Box
         as="main"
         flex="1"

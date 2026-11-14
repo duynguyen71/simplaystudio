@@ -1,6 +1,5 @@
 import {
   Box,
-  useBreakpointValue,
   Stack,
   Container,
   useColorModeValue,
@@ -21,22 +20,16 @@ const settings = {
 };
 
 export const ModalCarosel = ({ images }) => {
-
   const imgBgColor = useColorModeValue("gray.200", "gray.800");
 
   return (
     <>
       <Box position={"relative"} overflow={"hidden"} borderRadius={"md"}>
-        <Slider
-          afterChange={(index) => { }}
-          {...settings}
-        // ref={(slider) => setSlider(slider)}
-        >
+        <Slider {...settings}>
           {images.map((img, index) => {
             return (
               <Box
                 key={index}
-                onClick={() => { }}
                 position="relative"
                 backgroundPosition="center"
                 backgroundRepeat="no-repeat"
