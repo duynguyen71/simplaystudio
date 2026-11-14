@@ -214,13 +214,6 @@ const GameShowcase = ({ game }) => {
                     >
                       {feature.title}
                     </Heading>
-                    <Box
-                      mt="1rem"
-                      h="4px"
-                      w="4.5rem"
-                      borderRadius="full"
-                      bgGradient="linear(to-r, #ffe066, #f5a300)"
-                    />
                     {feature.text && (
                       <Text color="gray.400" fontSize="lg">
                         {feature.text}
