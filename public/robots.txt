@@ -1,5 +1,5 @@
-User-agent: Google-adstxt
-Disallow:
-
+# https://www.robotstxt.org/robotstxt.html
 User-agent: *
 Disallow:
+
+Sitemap: https://simplaystudio.com/sitemap.xml

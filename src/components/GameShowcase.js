@@ -110,13 +110,14 @@ const GameShowcase = ({ game }) => {
           pb={{ base: "2rem", md: "3rem" }}
         >
           <VStack spacing={{ base: "1rem", md: "1.25rem" }} textAlign="center">
-            <Image
-              src={`${PUBLIC_IMAGE_URL}/${showcase.logo}`}
-              alt={name}
-              w={{ base: "85%", md: "34rem" }}
-              maxW="100%"
-              filter="drop-shadow(0 8px 24px rgba(0,0,0,0.6))"
-            />
+            <Heading as="h1" w={{ base: "85%", md: "34rem" }} maxW="100%" m={0}>
+              <Image
+                src={`${PUBLIC_IMAGE_URL}/${showcase.logo}`}
+                alt={name}
+                w="100%"
+                filter="drop-shadow(0 8px 24px rgba(0,0,0,0.6))"
+              />
+            </Heading>
             {showcase.tagline && (
               <Text
                 fontSize={{ base: "md", md: "xl" }}

@@ -3,16 +3,29 @@ import { FaSteam } from "react-icons/fa";
 import { PUBLIC_IMAGE_URL } from "../hooks";
 
 const GameCard = (props) => {
-  const { name, thumb, onClickCustom, downloadUrl, comingSoon, platform } =
-    props;
+  const {
+    name,
+    thumb,
+    onClickCustom,
+    downloadUrl,
+    href,
+    comingSoon,
+    platform,
+  } = props;
 
   const isAvailable = Boolean(onClickCustom || downloadUrl);
 
-  const openGame = () => {
+  const link = href || downloadUrl;
+  const isExternal = Boolean(link) && !link.startsWith("/");
+
+  const openGame = (event) => {
     if (onClickCustom) {
+      event.preventDefault();
       onClickCustom();
       return;
     }
+
+    if (link) return; // the anchor handles it
 
     if (!downloadUrl) return;
     window.open(downloadUrl, "_blank", "noopener,noreferrer");
@@ -26,8 +39,17 @@ const GameCard = (props) => {
       placement="top"
     >
       <Box
-        as="button"
-        type="button"
+        {...(link
+          ? {
+              as: "a",
+              href: link,
+              ...(isExternal && {
+                target: "_blank",
+                rel: "noopener noreferrer",
+              }),
+            }
+          : { as: "button", type: "button" })}
+        display="block"
         aria-label={isAvailable ? `Open ${name}` : `${name} - coming soon`}
         aria-disabled={!isAvailable}
         onClick={openGame}

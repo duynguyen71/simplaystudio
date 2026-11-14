@@ -1,0 +1,38 @@
+{
+  "siteUrl": "https://simplaystudio.com",
+  "siteName": "Simplay Studio",
+  "defaultImage": "https://simplaystudio.com/og-image.png",
+  "organization": {
+    "name": "Simplay Studio",
+    "url": "https://simplaystudio.com/",
+    "logo": "https://simplaystudio.com/app-icon180.png",
+    "email": "contact@simplaystudio.com",
+    "sameAs": [
+      "https://www.youtube.com/@simplaystudio",
+      "https://play.google.com/store/apps/dev?id=8281496798126662852"
+    ]
+  },
+  "pages": {
+    "/": {
+      "title": "Simplay Studio – Indie Games for PC and Mobile",
+      "description": "Simplay Studio makes indie games for PC and mobile: Kill 1 Million Mosquitoes, Fireworks Show Simulator, Fireworks Play, Knife Game and Basketball.",
+      "h1": "Simplay Studio – Indie Games for PC and Mobile"
+    },
+    "/games/Kill_1_Million_Mosquitoes": {
+      "title": "Kill 1 Million Mosquitoes – Coming Soon on Steam",
+      "description": "Burn through a million mosquitoes with flame guns, upgrade weapons in the workshop and take on missions. Wishlist Kill 1 Million Mosquitoes on Steam.",
+      "image": "https://simplaystudio.com/images/kill-mosquito/hero.webp",
+      "game": {
+        "name": "Kill 1 Million Mosquitoes",
+        "platform": "PC",
+        "genre": ["Action", "Shooter"],
+        "url": "https://store.steampowered.com/app/5594260/Kill_1_Million_Mosquitoes",
+        "screenshots": [
+          "https://simplaystudio.com/images/kill-mosquito/shot-1.webp",
+          "https://simplaystudio.com/images/kill-mosquito/shot-4.webp",
+          "https://simplaystudio.com/images/kill-mosquito/shot-6.webp"
+        ]
+      }
+    }
+  }
+}
