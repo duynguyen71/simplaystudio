@@ -1,33 +1,38 @@
 import React, { useState, useEffect } from "react";
 import { Text, Box } from "@chakra-ui/react";
+import { useReducedMotion } from "framer-motion";
 
 const TypingText = ({
   text,
-  typeIsDone,
-  setTypeIsDone,
   color,
   fontSize,
   typingSpeed = 50,
 }) => {
-  const [displayedText, setDisplayedText] = useState("");
-  const [index, setIndex] = useState(0);
+  const [displayedLength, setDisplayedLength] = useState(0);
+  const shouldReduceMotion = useReducedMotion();
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      if (index < text.length) {
-        setDisplayedText((prev) => prev + text[index]);
-        setIndex((prev) => prev + 1);
-      } else {
-        clearInterval(interval);
-        if (setTypeIsDone) {
-          setTypeIsDone(true);
+    if (shouldReduceMotion) {
+      setDisplayedLength(text.length);
+      return undefined;
+    }
+
+    setDisplayedLength(0);
+    const interval = window.setInterval(() => {
+      setDisplayedLength((currentLength) => {
+        if (currentLength >= text.length) {
+          window.clearInterval(interval);
+          return currentLength;
         }
-      }
+
+        return currentLength + 1;
+      });
     }, typingSpeed);
-    return () => {
-      return clearInterval(interval);
-    };
-  }, [index, setTypeIsDone, text, typingSpeed]);
+
+    return () => window.clearInterval(interval);
+  }, [shouldReduceMotion, text, typingSpeed]);
+
+  const displayedText = text.slice(0, displayedLength);
 
   return (
     <Box
@@ -41,7 +46,7 @@ const TypingText = ({
     >
       {displayedText}
       <Text as="span" opacity={0}>
-        {text.slice(displayedText.length)}
+        {text.slice(displayedLength)}
       </Text>
     </Box>
   );

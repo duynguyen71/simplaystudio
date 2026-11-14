@@ -3,7 +3,7 @@ import { Box, Container, Stack, useColorModeValue } from "@chakra-ui/react";
 import { motion, useReducedMotion } from "framer-motion";
 import TypingText from "./TypeWriter";
 
-const Hero = ({ typeIsDone, setTypeIsDone }) => {
+const Hero = () => {
   const shouldReduceMotion = useReducedMotion();
 
   return (
@@ -19,8 +19,6 @@ const Hero = ({ typeIsDone, setTypeIsDone }) => {
               text={
                 "When making games is our passion, outstanding games are created."
               }
-              typeIsDone={typeIsDone}
-              setTypeIsDone={setTypeIsDone}
               typingSpeed={20}
               color={useColorModeValue("gray.600", "gray.400")}
               fontSize={["3xl", "4xl", "4xl", "5xl"]}

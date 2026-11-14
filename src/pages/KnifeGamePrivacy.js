@@ -1,6 +1,5 @@
 import React from "react";
 import {
-  Box,
   Container,
   Heading,
   Text,
@@ -10,10 +9,6 @@ import {
   VStack,
   Icon,
   HStack,
-  chakra,
-  useColorModeValue,
-  Stack,
-  VisuallyHidden,
   Divider,
 } from "@chakra-ui/react";
 import { MdLockOutline } from "react-icons/md";

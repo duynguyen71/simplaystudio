@@ -15,7 +15,7 @@ import { PUBLIC_IMAGE_URL } from "../hooks";
 const ArticlePage = () => {
   const { id } = useParams();
 
-  const article = articles.find((a) => a.id == id);
+  const article = articles.find((a) => String(a.id) === id);
 
   if (!article) return <></>;
 
