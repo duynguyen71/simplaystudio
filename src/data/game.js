@@ -4,6 +4,55 @@ import KnifeGame from "../components/description/KnifeGame";
 
 const games = [
   {
+    name: "Kill 1 Million Mosquitoes",
+    shortDescription: "Wipe out a million-strong mosquito swarm.",
+    bio: "Pick up flame guns and other weapons, upgrade them in the workshop, and burn through endless swarms of mosquitoes and new insects.",
+    thumb: "kill-mosquito.png",
+    image: "kill-mosquito.png",
+    images: [],
+    videos: [],
+    comingSoon: true,
+    platform: {
+      steam: {
+        link: "https://store.steampowered.com/app/5594260/Kill_1_Million_Mosquitoes",
+        rating: "",
+      },
+    },
+    path: "Kill_1_Million_Mosquitoes",
+    showcase: {
+      hero: "kill-mosquito/hero.webp",
+      logo: "kill-mosquito/logo.webp",
+      features: [
+        {
+          title: "A million targets",
+          video: "kill-mosquito/million-targets.mp4",
+        },
+        {
+          title: "Different types of weapons",
+          video: "kill-mosquito/weapons.mp4",
+        },
+        {
+          title: "Upgrade in the workshop",
+          video: "kill-mosquito/workshop.mp4",
+        },
+        {
+          title: "New insects",
+          video: "kill-mosquito/new-insects.mp4",
+        },
+      ],
+      screenshots: [
+        "kill-mosquito/shot-1.webp",
+        "kill-mosquito/shot-4.webp",
+        "kill-mosquito/shot-6.webp",
+        "kill-mosquito/shot-2.webp",
+        "kill-mosquito/shot-5.webp",
+        "kill-mosquito/shot-3.webp",
+        "kill-mosquito/shot-7.webp",
+        "kill-mosquito/shot-8.webp",
+      ],
+    },
+  },
+  {
     name: "Fireworks Play",
     shortDescription: "A Realistic 3D Fireworks Game!",
     bio: "Want to walk around the town, fire it up, and share the excitement with friends? Want to set up your own firework show collaboratively? Everything you need about fireworks is in this Fireworks Play game, now with multiplayer functionality!",

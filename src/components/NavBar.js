@@ -28,14 +28,16 @@ export default function WithAction() {
     <Flex
       cursor={"pointer"}
       position={"sticky"}
-      top={showNavbar ? 5 : "-80px"}
+      top={showNavbar ? 0 : "-80px"}
       transition="top 0.3s ease-in-out"
       justifyContent={"center"}
       alignContent={"center"}
       alignItems={"center"}
-      alignSelf={"center"}
+      w={"100%"}
+      py={2}
+      bg={"rgba(26, 32, 44, 0.85)"}
+      backdropFilter={"blur(10px)"}
       zIndex={1000}
-      m={"auto"}
     >
       <Flex
         cursor={"pointer"}
