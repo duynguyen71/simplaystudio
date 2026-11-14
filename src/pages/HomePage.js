@@ -75,6 +75,7 @@ const HomePage = () => {
             >
               <GameCard
                 downloadUrl={getGameUrl(game)}
+                href={game.showcase ? `/games/${game.path}` : getGameUrl(game)}
                 {...game}
                 onClickCustom={
                   game.showcase

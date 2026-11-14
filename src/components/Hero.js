@@ -1,5 +1,12 @@
 import React from "react";
-import { Box, Container, Stack, useColorModeValue } from "@chakra-ui/react";
+import {
+  Box,
+  Container,
+  Stack,
+  useColorModeValue,
+  VisuallyHidden,
+} from "@chakra-ui/react";
+import seo from "../data/seo.json";
 import { motion, useReducedMotion } from "framer-motion";
 import TypingText from "./TypeWriter";
 
@@ -14,6 +21,7 @@ const Hero = () => {
         transition={{ duration: 0.5, ease: "easeOut" }}
       >
         <Stack as={Box} overflow={"hidden"} textAlign={"center"}>
+          <VisuallyHidden as="h1">{seo.pages["/"].h1}</VisuallyHidden>
           <Box p={"1rem"} textAlign={"center"} display={"inline-block"}>
             <TypingText
               text={

@@ -17,8 +17,10 @@ import {
 import { ModalCarosel } from "./components/ModalCarosel";
 import SmallWithSocial from "./components/FooterV2";
 import games from "./data/game";
+import useSeo from "./hooks/useSeo";
 const RootLayout = () => {
   const { pathname } = useLocation();
+  useSeo();
   const gamePath = pathname.match(/\/games\/([^/]+)\/?$/)?.[1];
   const isShowcasePage = games.some(
     (game) => game.showcase && game.path === gamePath,
