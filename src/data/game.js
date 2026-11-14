@@ -36,7 +36,7 @@ const games = [
           video: "kill-mosquito/workshop.mp4",
         },
         {
-          title: "New insects",
+          title: "Many missions & insect types",
           video: "kill-mosquito/new-insects.mp4",
         },
       ],

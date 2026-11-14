@@ -198,21 +198,6 @@ const GameShowcase = ({ game }) => {
                     textAlign={{ base: "center", md: "left" }}
                     spacing="0"
                   >
-                    <Text
-                      fontFamily="'Exo 2', sans-serif"
-                      fontStyle="italic"
-                      fontWeight="900"
-                      fontSize={{ base: "4rem", md: "6rem" }}
-                      lineHeight="1"
-                      color="transparent"
-                      bgGradient="linear(to-b, #ffe066, #f5a300)"
-                      bgClip="text"
-                      opacity={0.9}
-                      filter="drop-shadow(0 4px 18px rgba(245, 163, 0, 0.35))"
-                      aria-hidden="true"
-                    >
-                      {String(index + 1).padStart(2, "0")}
-                    </Text>
                     <Heading
                       as="h2"
                       fontFamily="'Exo 2', sans-serif"
