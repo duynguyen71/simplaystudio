@@ -22,6 +22,7 @@ const games = [
     showcase: {
       hero: "kill-mosquito/hero.webp",
       logo: "kill-mosquito/logo.webp",
+      trailer: "XkvaiH8nS2E",
       features: [
         {
           title: "A million targets",
@@ -49,6 +50,8 @@ const games = [
         "kill-mosquito/shot-3.webp",
         "kill-mosquito/shot-7.webp",
         "kill-mosquito/shot-8.webp",
+        "kill-mosquito/shot-9.webp",
+        "kill-mosquito/shot-10.webp",
       ],
     },
   },
