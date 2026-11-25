@@ -270,19 +270,6 @@ const GameShowcase = ({ game }) => {
               spacing={{ base: "1.5rem", md: "2rem" }}
               textAlign="center"
             >
-              <Heading
-                as="h2"
-                fontFamily="'Exo 2', sans-serif"
-                fontStyle="italic"
-                fontWeight="900"
-                textTransform="uppercase"
-                letterSpacing="0.02em"
-                lineHeight="1.05"
-                fontSize={{ base: "2rem", md: "2.75rem", xl: "3.25rem" }}
-                color="white"
-              >
-                More to come
-              </Heading>
               <SteamButton link={steamLink} comingSoon={comingSoon} />
             </VStack>
           </Reveal>
