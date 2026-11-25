@@ -156,6 +156,37 @@ const GameShowcase = ({ game }) => {
         maxW={{ base: "72rem", xl: "88rem", "2xl": "100rem" }}
         px={{ base: "1rem", md: "2rem" }}
       >
+        {/* Trailer */}
+        {showcase.trailer && (
+          <Reveal>
+            <Box
+              mt={{ base: "2rem", md: "3rem" }}
+              mx="auto"
+              maxW="72rem"
+              borderRadius="xl"
+              overflow="hidden"
+              border="1px solid"
+              borderColor="whiteAlpha.300"
+              boxShadow="0 12px 40px rgba(0,0,0,0.45)"
+              bg="black"
+            >
+              <Box
+                as="iframe"
+                src={`https://www.youtube-nocookie.com/embed/${showcase.trailer}?rel=0`}
+                title={`${name} trailer`}
+                loading="lazy"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+                referrerPolicy="strict-origin-when-cross-origin"
+                display="block"
+                w="100%"
+                border="0"
+                style={{ aspectRatio: "16 / 9" }}
+              />
+            </Box>
+          </Reveal>
+        )}
+
         {/* Features */}
         {showcase.features?.length > 0 && (
           <VStack
@@ -230,9 +261,9 @@ const GameShowcase = ({ game }) => {
         {/* Screenshots */}
         {shots.length > 0 && (
           <Box mt={{ base: "3.5rem", md: "6rem" }}>
-            <SimpleGrid columns={{ base: 1, sm: 2, lg: 4 }} spacing="1rem">
+            <SimpleGrid columns={{ base: 1, sm: 2, xl: 5 }} spacing="1rem">
               {shots.map((shot, index) => (
-                <Reveal key={shot} delay={(index % 4) * 0.08}>
+                <Reveal key={shot} delay={(index % 5) * 0.08}>
                   <Box
                     as="button"
                     type="button"
